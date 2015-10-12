@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BDD - Behavior Driven Development</title>
+    <!-- <link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme"> -->
+    <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="node_modules/reveal.js/css/theme/beige.css" id="theme">
+    <link rel="stylesheet" href="global.css">
+    <!--Add support for earlier versions of Internet Explorer -->
+    <!--[if lt IE 9]>
+	<script src="node_modules/reveal.js/lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Behavior Driven Development</h1>
+                <p>Vom Use Case zum Test Case</p>
+            </section>
+
+            <section id="me">
+                <img src="me.jpg" />
+                <h2>Manfred Hantschel</h2>
+                <hr />
+                <p>Software Entwickler, Porsche Informatik GmbH</p>
+            </section>
+
+            <section class="constrast-bright" data-background="weltmaschine.jpg">
+                <p>Was ist das jetzt schon wieder?</p>
+                <p>Wie soll das funktionieren?</p>
+                <hr />
+                <h2>Behavior Driven Developement</h2>
+
+                <aside class="notes">
+                    <p>
+                        Dieser Vortrag konzentriert sich auf folgende zwei Punkte:
+                        <ol>
+                            <li>
+                                Was ist BDD (Behavior-Driven Development) eigentlich?
+                                <ul>
+                                    <li>Was sind die Vorteile und Ziele von BDD?</li>
+                                    <li>Woraus ist BDD entstanden?</li>
+                                    <li>In welchem Bereich der Entwicklung ist die Vorgehensweise angesiedelt?</li>
+                                    <li>Wie wird BDD umgesetzt?</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Wie funktioniert die Umsetzung von BDD in der Praxis?
+                                <ul>
+                                    <li>Wie sieht der typische Entwicklungsprozess aus?
+                                    </li>
+                                    <li>Wie werden Stories verarbeitet?</li>
+                                    <li>Wie werden Tests umgesetzt?</li>
+                                    <li>Woraus lassen sich Vorteile ziehen?</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </p>
+                </aside>
+            </section>
+
+            <section>
+                <section>
+                    <h1 class="quote">Methode der agilen Softwareentwicklung</h1>
+
+                    <aside class="notes">
+                        <p>
+                            Entstanden ist BDD aus ursprünglich aus dem Test-Driven Development. Es wurde zum ersten Mal 2006 von Dan North beschrieben.
+                        </p>
+                        <p>
+                            Er bemerkte, dass TDD oft nicht erfolgreich war. TDD wurde zwar umgesetzt, aber eher als Last empfunden, da TDD nicht in
+                            den Designprozess integriert wurde.
+                        </p>
+                        <p>
+                            BDD versucht nun die Probleme zu lösen und geht dabei einen guten Schritt weiter.
+                        </p>
+                    </aside>
+                </section>
+
+                <section>
+                    <h1>Bessere Zusammenarbeit</h1>
+                    <div class="fragment development" style="height: 480px; left: 512px;">Development</div>
+                    <div class="fragment qa" style="height: 480px; left: 128px;">QA</div>
+                    <div class="fragment customer" style="height: 480px; left: 896px;">Customer</div>
+
+                    <aside class="notes">
+                        <p>In erster Linie soll die Zusammenarbeit zwischen</p>
+                        <ul>
+                            <li>der Entwicklungsabteilung</li>
+                            <li>der Qualitätssicherung</li>
+                            <li>und dem Kunden, bzw. Product Owner</li>
+                        </ul>
+                        <p>verbessert werden. Aus dieser Zusammenarbeit soll dann TDD als Benefit entstehen.</p>
+                    </aside>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h1>Anhang</h1>
+                </section>
+
+                <section>
+                    <h3>Media</h3>
+                    <div class="image-reference">
+                        <img src="weltmaschine.jpg" /> &quot;
+                        <a href="https://flic.kr/p/9nrSJH">Die Weltmaschine</a>&quot; by Gery Wolf (<a href="https://www.flickr.com/photos/arselectronica/">Ars Electronica</a>)
+                        is licensed under
+                        <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-NC-ND 2.0</a>.
+                    </div>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="node_modules/reveal.js/lib/js/head.min.js"></script>
+    <script src="node_modules/reveal.js/js/reveal.js"></script>
+
+    <script>
+        Reveal.initialize({
+            width: 1024,
+            height: 640,
+
+            dependencies: [{
+                src: 'node_modules/reveal.js/lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: 'node_modules/reveal.js/plugin/markdown/marked.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'node_modules/reveal.js/plugin/markdown/markdown.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'node_modules/reveal.js/plugin/highlight/highlight.js',
+                async: true,
+                condition: function() {
+                    return !!document.querySelector('pre code');
+                },
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: 'node_modules/reveal.js/plugin/zoom-js/zoom.js',
+                async: true
+            }, {
+                src: 'node_modules/reveal.js/plugin/notes/notes.js',
+                async: true
+            }]
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+hr {
+    border: none;
+    height: 4px;
+    background-color: black;
+    border-radius: 2px;
+    /*background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(215, 215, 215, 1), rgba(215, 215, 215, 1), rgba(0, 0, 0, 0));
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(215, 215, 215, 1), rgba(215, 215, 215, 1), rgba(0, 0, 0, 0));
+    background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(215, 215, 215, 1), rgba(215, 215, 215, 1), rgba(0, 0, 0, 0));
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(215, 215, 215, 1), rgba(215, 215, 215, 1), rgba(0, 0, 0, 0));*/
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.75), 0px 1px 4px rgba(255, 255, 255, 0.5);
+}
+
+.constrast-bright {
+    color: white;
+    text-shadow: 0 2px 2px black, 0 -2px 2px black, 2px 0 2px black, -2px 0 2px black, 0 4px 8px black;
+}
+
+.constrast-bright h1, .constrast-bright h2, .constrast-bright h3 {
+    color: white;
+    text-shadow: 0 2px 2px black, 0 -2px 2px black, 2px 0 2px black, -2px 0 2px black, 0 4px 8px black;
+}
+
+.reveal .huge {
+    font-size: 200%;
+}
+
+img[src="me.jpg"] {
+    width: 120px;
+    height: 160px;
+    float: right;
+}
+
+.reveal .customer, .reveal .development, .reveal .qa {
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+    margin-left: -160px;
+    width: 320px;
+    height: 400px;
+    position: absolute;
+    text-align: center;
+}
+
+.reveal .customer {
+    background-image: url('customer.png');
+}
+
+.reveal .development {
+    background-image: url('developers.png');
+}
+
+.reveal .qa {
+    background-image: url('qa.png');
+}
+
+.image-reference img {
+    display: block;
+    max-width: 230px;
+    max-height: 95px;
+    width: auto;
+    height: auto;
+    float: left;
+}
