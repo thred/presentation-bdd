@@ -1,13 +1,25 @@
+.reveal .header {
+    opacity: 0.5;
+    border-bottom: 1px solid black;
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+.reveal .flex {
+    display: flex;
+    flex-direction: row;
+}
+
 hr {
     border: none;
-    height: 4px;
+    height: 2px;
     background-color: black;
     border-radius: 2px;
     /*background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(215, 215, 215, 1), rgba(215, 215, 215, 1), rgba(0, 0, 0, 0));
     background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(215, 215, 215, 1), rgba(215, 215, 215, 1), rgba(0, 0, 0, 0));
     background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(215, 215, 215, 1), rgba(215, 215, 215, 1), rgba(0, 0, 0, 0));
     background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(215, 215, 215, 1), rgba(215, 215, 215, 1), rgba(0, 0, 0, 0));*/
-    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.75), 0px 1px 4px rgba(255, 255, 255, 0.5);
+    /*box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.75), 0px 1px 2px rgba(255, 255, 255, 0.5);*/
 }
 
 .constrast-bright {
@@ -20,8 +32,10 @@ hr {
     text-shadow: 0 2px 2px black, 0 -2px 2px black, 2px 0 2px black, -2px 0 2px black, 0 4px 8px black;
 }
 
-.reveal .huge {
-    font-size: 200%;
+
+
+.reveal .readable {
+    text-transform: none;
 }
 
 img[src="me.jpg"] {
@@ -53,7 +67,7 @@ img[src="me.jpg"] {
     background-image: url('qa.png');
 }
 
-.image-reference img {
+.reveal .image-reference img {
     display: block;
     max-width: 230px;
     max-height: 95px;
