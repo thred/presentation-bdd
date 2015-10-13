@@ -8,11 +8,20 @@
     <!-- <link rel="stylesheet" href="node_modules/reveal.js/css/theme/black.css" id="theme"> -->
     <link rel="stylesheet" href="node_modules/reveal.js/css/theme/beige.css" id="theme">
     <!-- <link rel="stylesheet" href="node_modules/reveal.js/css/theme/solarized.css" id="theme"> -->
+    <link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css">
     <link rel="stylesheet" href="global.css">
     <!--Add support for earlier versions of Internet Explorer -->
     <!--[if lt IE 9]>
 	<script src="node_modules/reveal.js/lib/js/html5shiv.js"></script>
 	<![endif]-->
+
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
 </head>
 
 <body>
@@ -23,8 +32,26 @@
             </section>
 
             <section>
-                <h1>Behavior Driven Development</h1>
+                <h1 style="font-size: 250%;">Behavior Driven Development</h1>
                 <p>Vom Use Case zum Test Case</p>
+
+                <div class="flex">
+                    <div class="project-cartoon">
+                        <img src="project-cartoon-13.jpg" />
+                    </div>
+                    <div class="project-cartoon">
+                        <img src="project-cartoon-13.jpg" />
+                    </div>
+                    <div class="project-cartoon">
+                        <img src="project-cartoon-13.jpg" />
+                    </div>
+                    <div class="project-cartoon">
+                        <img src="project-cartoon-13.jpg" />
+                    </div>
+                    <div class="project-cartoon">
+                        <img src="project-cartoon-13.jpg" />
+                    </div>
+                </div>
             </section>
 
             <section id="me">
@@ -34,7 +61,7 @@
                 <p>Software Entwickler, Porsche Informatik GmbH</p>
             </section>
 
-            <section class="constrast-bright" data-background="weltmaschine.jpg">
+            <section class="contrast-bright" data-background="weltmaschine.jpg">
                 <p>Was ist das jetzt schon wieder?</p>
                 <p>Wie soll das funktionieren?</p>
                 <hr />
@@ -69,7 +96,7 @@
             </section>
 
             <section>
-                <section data-background="LightSteelBlue" data-transition="zoom">
+                <section data-background="LightSteelBlue">
                     <h1 class="readable">Methode der agilen Softwareentwicklung</h1>
 
                     <aside class="notes">
@@ -77,7 +104,8 @@
                             Entstanden ist BDD aus ursprünglich aus dem Test-Driven Development. Es wurde zum ersten Mal 2006 von Dan North beschrieben.
                         </p>
                         <p>
-                            Er bemerkte, dass TDD oft nicht erfolgreich war. TDD wurde zwar umgesetzt, aber eher als Last empfunden, da TDD nicht in den Designprozess integriert wurde.
+                            Er bemerkte, dass TDD oft nicht erfolgreich war. TDD wurde zwar umgesetzt, aber eher als Last empfunden, da TDD nicht in
+                            den Designprozess integriert wurde.
                         </p>
                         <p>
                             BDD versucht nun die Probleme zu lösen und geht dabei einen guten Schritt weiter.
@@ -102,23 +130,33 @@
                     </aside>
                 </section>
 
-                <section class="constrast-bright" data-background="boxing-gloves.jpg" data-background-transition="zoom">
+                <section class="contrast-bright" data-background="boxing-gloves.jpg" data-background-transition="zoom">
                     <h1 class="fragment fade-in readable">Domain-Driven Design</h1>
                     <h1 class="fragment fade-in readable">Test-Driven Development</h1>
                     <hr />
                     <h3>Vereinigung zweier Prinzipien</h3>
 
                     <aside class="notes">
-                        <p>Behavior-Driven Development versucht die Prinzipien von Domain-Driven Design mit denen von Test-Driven Development zu vereinen.</p>
-                        <p>Domain-Driven Design legt den Schwerpunkt der Softwareentwicklung auf die Fachlogik der Anwendung anstatt auf die technische Umsetzung. Die komplexen fachlichen Zusammenhänge werden zunächst in einer Geschäftslogikschicht abgebildet
-                            und erst dann werden die Teilbereiche umgesetzt.</p>
-                        <p>In der Praxis bewährt sich der DDD Ansatz im höchsten Maße. Durch die Schichtenarchitektur generell wird die Problemlösung vereinfacht und die Arbeitsteilung erleichtert. Leider laufen Entwickler aber auch Gefahr die eigentliche
-                            Aufgabe aus den Augen zu verlieren. Die Umsetzung ist toll, nur hilft sie dem Benutzer nicht.</p>
-                        <p>Test-Driven Development soll ja den Entwickler dazu anhalten einen evolutionären Prozess in der Entwicklung einzuhalten. Es soll den Entwickler dazu bringen, sich in erster Linie um das Problem selbst zu kümmern, und nicht nur
-                            um die Umsetzung einer Lösung. Dazu soll der Entwickler vor der Umsetzung zuerst Tests dazu schreiben.</p>
-                        <p>In der Praxis ist das leider nicht so einfach. Unit-Tests fokussieren den Entwickler schon sehr stark auf die Umsetzung der Lösung. Konzentriert sich der Entwickler zuerst auf Unit-Tests wird er schon frühzeitig mit Problemen konfrontiert,
-                            die technische Entscheidungen fordern. Mit Integrations-Tests verhält es sich etwas besser, jedoch decken diese meist nur die Serviceschicht ab ohne auf Details der eigentlichen Aufgabenstellung einzugehen.</p>
-                        <p>Und wie auch für Domain-Driven Design, gilt auf für Behavior-Driven Development: BDD ist nicht nur eine Technik, BDD ist eine Methode der Softwareentwicklung.</p>
+                        <p>Behavior-Driven Development versucht die Prinzipien von Domain-Driven Design mit denen von Test-Driven
+                            Development zu vereinen.</p>
+                        <p>Domain-Driven Design legt den Schwerpunkt der Softwareentwicklung auf die Fachlogik der Anwendung
+                            anstatt auf die technische Umsetzung. Die komplexen fachlichen Zusammenhänge werden zunächst
+                            in einer Geschäftslogikschicht abgebildet und erst dann werden die Teilbereiche umgesetzt.</p>
+                        <p>In der Praxis bewährt sich der DDD Ansatz im höchsten Maße. Durch die Schichtenarchitektur generell
+                            wird die Problemlösung vereinfacht und die Arbeitsteilung erleichtert. Leider laufen Entwickler
+                            aber auch Gefahr die eigentliche Aufgabe aus den Augen zu verlieren. Die Umsetzung ist toll,
+                            nur hilft sie dem Benutzer nicht.</p>
+                        <p>Test-Driven Development soll ja den Entwickler dazu anhalten einen evolutionären Prozess in der Entwicklung
+                            einzuhalten. Es soll den Entwickler dazu bringen, sich in erster Linie um das Problem selbst
+                            zu kümmern, und nicht nur um die Umsetzung einer Lösung. Dazu soll der Entwickler vor der Umsetzung
+                            zuerst Tests dazu schreiben.</p>
+                        <p>In der Praxis ist das leider nicht so einfach. Unit-Tests fokussieren den Entwickler schon sehr stark
+                            auf die Umsetzung der Lösung. Konzentriert sich der Entwickler zuerst auf Unit-Tests wird er
+                            schon frühzeitig mit Problemen konfrontiert, die technische Entscheidungen fordern. Mit Integrations-Tests
+                            verhält es sich etwas besser, jedoch decken diese meist nur die Serviceschicht ab ohne auf Details
+                            der eigentlichen Aufgabenstellung einzugehen.</p>
+                        <p>Und wie auch für Domain-Driven Design, gilt auf für Behavior-Driven Development: BDD ist nicht nur
+                            eine Technik, BDD ist eine Methode der Softwareentwicklung.</p>
                     </aside>
                 </section>
 
@@ -168,13 +206,18 @@ Then &lt;POSTCONDITION&gt;
                     </div>
 
                     <aside class="notes">
-                        <p>Für das Domain-Driven Design stellt BDD eine Sprache zur Verfügung, mit der es möglich ist die fachlichen Abläufe detailliert und standardisiert zu formulieren. Mit Hilfe der Sprache lassen sich UserStories verfassen und Akzeptanzkriterien
-                            definieren.
+                        <p>Für das Domain-Driven Design stellt BDD eine Sprache zur Verfügung, mit der es möglich ist die fachlichen
+                            Abläufe detailliert und standardisiert zu formulieren. Mit Hilfe der Sprache lassen sich UserStories
+                            verfassen und Akzeptanzkriterien definieren.
                         </p>
-                        <p>Die Sprache orientiert sich dabei am Benutzer selbst und ist für alle Beteiligten verständlich. Bei der Beschreibung wird gänzlich auf technische Feinheiten verzichtet, lediglich dem fachlichen Ablauf wird ein logischer Prozess
-                            zugrunde gelegt.</p>
-                        <p>Und bereits da werden viele Probleme gelöst. Aus meiner Erfahrung tauchen hier oft schon die großen Probleme der Umsetzung auf – nämlich dann wenn der fachliche Prozess schon nicht logisch ausgereift ist. Die Entwicklung kann fast
-                            alles umsetzen, einzige Vorbedingung: die Aufgabe muss deterministisch sein. Für die Formulierung des Akzeptanztests muss das Problem auf einem Level beleuchtet werden, das logische Probleme frühzeitig zu Tage fördert.</p>
+                        <p>Die Sprache orientiert sich dabei am Benutzer selbst und ist für alle Beteiligten verständlich. Bei
+                            der Beschreibung wird gänzlich auf technische Feinheiten verzichtet, lediglich dem fachlichen
+                            Ablauf wird ein logischer Prozess zugrunde gelegt.</p>
+                        <p>Und bereits da werden viele Probleme gelöst. Aus meiner Erfahrung tauchen hier oft schon die großen
+                            Probleme der Umsetzung auf – nämlich dann wenn der fachliche Prozess schon nicht logisch ausgereift
+                            ist. Die Entwicklung kann fast alles umsetzen, einzige Vorbedingung: die Aufgabe muss deterministisch
+                            sein. Für die Formulierung des Akzeptanztests muss das Problem auf einem Level beleuchtet werden,
+                            das logische Probleme frühzeitig zu Tage fördert.</p>
                     </aside>
                 </section>
 
@@ -186,7 +229,7 @@ Then &lt;POSTCONDITION&gt;
                     <div class=flex>
                         <div style="width: 60%">
                             <div>
-                                <pre><code class="AsciiDoc">
+                                <pre><code class="Gherkin">
 Feature: Sales list
 
 As a manager
@@ -210,20 +253,196 @@ Then the detail page of the emplyee should open.
                     </div>
 
                     <aside class="notes">
-                        <p>Für das Domain-Driven Design stellt BDD eine Sprache zur Verfügung, mit der es möglich ist die fachlichen Abläufe detailliert und standardisiert zu formulieren. Mit Hilfe der Sprache lassen sich UserStories verfassen und Akzeptanzkriterien
-                            definieren.
+                        <p>Für das Domain-Driven Design stellt BDD eine Sprache zur Verfügung, mit der es möglich ist die fachlichen
+                            Abläufe detailliert und standardisiert zu formulieren. Mit Hilfe der Sprache lassen sich UserStories
+                            verfassen und Akzeptanzkriterien definieren.
                         </p>
-                        <p>Die Sprache orientiert sich dabei am Benutzer selbst und ist für alle Beteiligten verständlich. Bei der Beschreibung wird gänzlich auf technische Feinheiten verzichtet, lediglich dem fachlichen Ablauf wird ein logischer Prozess
-                            zugrunde gelegt.</p>
-                        <p>Und bereits da werden viele Probleme gelöst. Aus meiner Erfahrung tauchen hier oft schon die großen Probleme der Umsetzung auf – nämlich dann wenn der fachliche Prozess schon nicht logisch ausgereift ist. Die Entwicklung kann fast
-                            alles umsetzen, einzige Vorbedingung: die Aufgabe muss deterministisch sein. Für die Formulierung des Akzeptanztests muss das Problem auf einem Level beleuchtet werden, das logische Probleme frühzeitig zu Tage fördert.</p>
+                        <p>Die Sprache orientiert sich dabei am Benutzer selbst und ist für alle Beteiligten verständlich. Bei
+                            der Beschreibung wird gänzlich auf technische Feinheiten verzichtet, lediglich dem fachlichen
+                            Ablauf wird ein logischer Prozess zugrunde gelegt.</p>
+                        <p>Und bereits da werden viele Probleme gelöst. Aus meiner Erfahrung tauchen hier oft schon die großen
+                            Probleme der Umsetzung auf – nämlich dann wenn der fachliche Prozess schon nicht logisch ausgereift
+                            ist. Die Entwicklung kann fast alles umsetzen, einzige Vorbedingung: die Aufgabe muss deterministisch
+                            sein. Für die Formulierung des Akzeptanztests muss das Problem auf einem Level beleuchtet werden,
+                            das logische Probleme frühzeitig zu Tage fördert.</p>
                     </aside>
                 </section>
             </section>
 
             <section>
+                <section class="contrast-bright" data-background="usecase.jpg">
+                    <h1 style="text-align: left;">Leitfaden für die Umsetzung</h1>
+                    <hr/>
+                    <h2>1. Fallbeispiele</h2>
+
+                    <aside class="notes">
+                        <p>Wie kann man sich nun vorstellen, dass BDD im Entwicklungsprozess umgesetzt werden kann?</p>
+                        <p>Zunächst werden die Anforderungen textuell durch Fallbeispiele beschrieben.</p>
+                    </aside>
+                </section>
+
                 <section>
-                    <h1>Leitfaden für die Umsetzung</h1>
+                    <h2>Fallbeispiel = User Story</h2>
+                    <p>genau ein Anwendungsfall</p>
+                    <p>Einfachheit ist Trumpf</p>
+
+                    <pre><code class="Gherkin">
+User Story: Add article to cart
+
+As a customer
+I want to select an article
+in order to put it into my shopping cart.
+                    </code></pre>
+
+                    <aside class="notes">
+                        <p>Fallbeispiele haben einen anderen Fokus als Use Cases, Konzepte, Protokolle, Lasten- oder Pflichtenhefte:
+                            Fallbeispiele beschreiben genau einen Anwendungsfall aus der Sicht eines Benutzers. Wir schreiben
+                            Applikationen für Benutzer und darauf liegt der Fokus.</p>
+                        <p>Klar, wir können auch Lasten- und Pflichtenhefte scheiben, aber die sind für Kunden. Wir können auch
+                            UseCases scheiben, aber die sind für Tester. Wir können auch Konzepte schreiben, aber die sind
+                            für Entwickler. Unser Ziel ist eine Sprache zu sprechen, die alle verstehen, und daher schreiben
+                            wir User Stories.</p>
+                    </aside>
+                </section>
+
+                <section class="contrast-bright" data-background="scrum.jpg">
+                    <h1>Agil</h1>
+
+                    <aside class="notes">
+                        <p>Und weil wir agil entwickeln, brauchen wir die User Stories sowieso, nämlich als Sprintziele. Aber
+                            erst durch BDD finden sie User Stories wirklich Einzug in unser Projekt, da sie maschinell verarbeitet
+                            werden müssen.</p>
+                    </aside>
+                </section>
+
+                <section class="contrast-bright darker-background" data-background="acceptance.jpg">
+                    <h1 style="text-align: left;">Leitfaden für die Umsetzung</h1>
+                    <hr />
+                    <h2>2. Akzeptanzkriterien</h2>
+
+                    <aside class="notes">
+                        <p>Als nächster Schritt werden die Fallbeispiele um Akzeptanzkriterien erweitert und automatisiert.</p>
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Akzeptanzkriterien = Scenarios</h2>
+                    <p>mehrere Szenarien je Story</p>
+                    <p>Einfachheit ist Trumpf</p>
+
+                    <pre><code class="Gherkin">
+Scenario: Add article to cart
+
+[...]
+
+Given the shopping cart already contains an article.
+
+When the user selects the same article
+And clicks the "Add to Cart" button
+
+Then the cart should contain the article only once
+But with a count of 2.
+                    </code></pre>
+
+                    <aside class="notes">
+                        <p>Als nächster Schritt werden die Fallbeispiele um Akzeptanzkriterien erweitert und automatisiert.</p>
+                        <p>Die User Stories werden um Akzeptanzkriterien erweitert. Zu jeder User Story können natürlich mehrere
+                            Akzeptanzkriterien verfasst werden. Diese Scenarios detaillieren die Story, beschreiben Sonder-
+                            und Problemfälle und listen mögliche Aktionen des Benutzers auf.</p>
+                        <p>Aus diese User Stories sind in einer Sprache verfasst, die alle Beteiligten lesen und verstehen können.</p>
+                        <p>Die Texte basieren auf Schlüsselwörtern, im Normalfall „Given“, „When“ und „Then“. Um den Text besser
+                            lesbar zu gestalten bieten machen Frameworks auch andere Schlüsselwörter wie z.B. „And“ und „But“
+                            an. Ebenso bieten die Frameworks das Parsen von Variablen und Tabellen aus den Texten selbst
+                            an. Der restliche Text wird 1:1 an das Testframework übergeben.</p>
+                    </aside>
+                </section>
+
+                <section>
+                    <div class="customer" style="left: 100%;"></div>
+
+                    <h2>Abstimmung mit Kunden</h2>
+                    <p>Gemeinsame Entwicklung</p>
+                    <p>Einbindung in Entwicklungsprozess</p>
+                    <p>Ersatz für Lasten- und Pflichtenheft</p>
+
+
+                    <aside class="notes">
+                        <p>Die fertigen User Stories und Akzeptanzkriterien werden mit dem Kunden gemeinsam entwickelt, oder
+                            zumindest mit ihm abgestimmt. Der Kunde wird somit in den Entwicklungsprozess mit eingebunden.
+                            Hier zeigt sich schon ein erster Vorteil. Früher sind fachliche Fehler erst im fertigen Produkt
+                            aufgetaucht. Die Stories geben dem Entwicklungsteam ein Werkzeug in die Hand, mit dem der fachliche
+                            Ablauf vollständig definiert werden kann.</p>
+                        <p>Wenn man wirklich agil arbeitet, können die Akzeptanzkriterien ein Lasten- und Pflichtenheft zumindest
+                            teilweise ersetzen.</p>
+                    </aside>
+                </section>
+
+                <section>
+                    <div class="qa"></div>
+
+                    <h2>Abstimmung mit QA</h2>
+                    <p>Szenarios als automatisierte Testfälle</p>
+                    <p>Ergänzen Testkatalog
+                        <small>(aber kein Ersatz!)</small>
+                    </p>
+                    <p>Bessere Kommunikation</p>
+
+                    <aside class="notes">
+                        <p>Auch die Qualitätssicherung wird frühzeitig in den Prozess eingebunden. Schon das ist ein enormer
+                            Vorteil. Oft wird die Qualitätssicherung in Projekten stiefmütterlich behandelt. Die fertige
+                            Applikation wird übergeben und die Qualitätssicherung soll schauen wie sie damit zurecht kommt.</p>
+                        <p>Da die Akzeptanzkriterien den Testkatalog ergänzen wird der Qualitätssicherung auch viel Arbeit abgenommen.
+                            GUI-Tests werden mit dem Produkt mitgeliefert und muss nicht nachträglich und umständlich definiert
+                            werden.
+                        </p>
+                    </aside>
+                </section>
+
+                <section>
+                    <div class="development-male"></div>
+                    <div class="development-female" style="left: 100%;"></div>
+
+                    <h2>Umsetzung der Tests</h2>
+                    <p>Implementation: Given, When, Then</p>
+                    <p>Test first</p>
+                    <p>Eingebunden in Spezifikations- und Testprozess</p>
+
+                    <aside class="notes">
+                        <p>Die Entwickler kümmern sich zunächst um die Umsetzung der Tests. Bevor die Applikation fertig ist,
+                            könnte sie theoretisch schon getestet werden. Auch hier zeigt sich der Vorteil, dass Entwickler
+                            schon frühzeitig in den Spezifikationsprozess eingebunden werden.</p>
+                    </aside>
+                </section>
+
+                <section class="contrast-bright" data-background="hacking.jpg">
+                    <h1 style="text-align: left;">Leitfaden für die Umsetzung</h1>
+                    <hr/>
+                    <h2>3. Umsetzung</h2>
+
+                    <aside class="notes">
+                        <p>Erst jetzt folgt die Umsetzung der Anforderung. </p>
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Umsetzung und Abnahme</h2>
+                    <p>Umsetzung nach User Stories und Acceptance Tests
+                        <p>QA testet zunächst manuell, dann automatisiert</p>
+                        <p>Automatische Spezifikation für Kunden</p>
+
+                        <div class="development" style="height: 480px; left: 512px;"></div>
+                        <div class="qa" style="height: 480px; left: 256px;"></div>
+                        <div class="customer" style="height: 480px; left: 768px;"></div>
+
+                        <aside class="notes">
+                            <p>Erst im dritten Schritt wird die Anforderung umgesetzt. Das Entwicklungsteam hat bereits automatische
+                                Tests an der Hand.</p>
+                            <p>Die Qualitätssicherung für die Test zunächst manuell durch, bis klar ist, dass die Szenarien
+                                den nötigen Testumfang abdecken. Danach können diese Tests jederzeit automatisch durchgeführt
+                                werden.</p>
+                            <p>Als zusätzlicher Benefit kann aus den User Stories auch automatisch eine Spezifikation der Applikation
+                                abgeleitet werden.</p>
+                        </aside>
                 </section>
             </section>
 
@@ -232,17 +451,54 @@ Then the detail page of the emplyee should open.
                     <h1>Anhang</h1>
                 </section>
 
-                <section>
+                <section class="references">
                     <h3>Media</h3>
-                    <div class="image-reference">
-                        <img src="weltmaschine.jpg" /> &quot;
-                        <a href="https://flic.kr/p/9nrSJH">Die Weltmaschine</a>&quot; by Gery Wolf (<a href="https://www.flickr.com/photos/arselectronica/">Ars Electronica</a>) is licensed under
-                        <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-NC-ND 2.0</a>.
-                    </div>
-                    <div class="image-reference">
-                        <img src="boxing-gloves.jpg" /> &quot;
-                        <a href="https://flic.kr/p/m2RXX">Faded Glory</a>&quot; by <a href="https://www.flickr.com/photos/bfurnace/">Bryan Furnace</a> is licensed under
-                        <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>.
+
+                    <div class="flex">
+                        <div class="image-reference">
+                            <a href="http://projectcartoon.com/">
+                                <img src="project-cartoon-13.jpg" />
+                            </a>
+                            <a href="http://projectcartoon.com/">&quot;The Project Cartoon&quot;</a> is licensed under
+                            <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+                        </div>
+                        <div class="image-reference">
+                            <a href="https://flic.kr/p/9nrSJH">
+                                <img src="weltmaschine.jpg" />
+                            </a>
+                            <a href="https://flic.kr/p/9nrSJH">&quot;Die Weltmaschine&quot;</a> by Gery Wolf (<a href="https://www.flickr.com/photos/arselectronica/">Ars Electronica</a>)
+                            is licensed under
+                            <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-NC-ND 2.0</a>.
+                        </div>
+                        <div class="image-reference">
+                            <a href="https://flic.kr/p/m2RXX">
+                                <img src="boxing-gloves.jpg" />
+                            </a>
+                            <a href="https://flic.kr/p/m2RXX">&quot;Faded Glory&quot;</a> by <a href="https://www.flickr.com/photos/bfurnace/">Bryan Furnace</a>                            is licensed under
+                            <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>.
+                        </div>
+                        <div class="image-reference">
+                            <a href="https://flic.kr/p/dmFQB4">
+                                <img src="usecase.jpg" />
+                            </a>
+                            <a href="https://flic.kr/p/dmFQB4">&quot;Carpenters and Masons, Frankford EL Construction, 1913&quot;</a>                            by <a href="https://www.flickr.com/photos/rich701/">Richard</a> is licensed under
+                            <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>.
+                        </div>
+                        <div class="image-reference">
+                            <a href="https://flic.kr/p/9UnRWS">
+                                <img src="acceptance.jpg" />
+                            </a>
+                            <a href="https://flic.kr/p/9UnRWS">&quot;Exam&quot;</a> by <a href="https://www.flickr.com/photos/albertogp123/">Alberto G.</a>                            is licensed under
+                            <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a> (slightly modified: desaturated,
+                            darkened).
+                        </div>
+                        <div class="image-reference">
+                            <a href="https://flic.kr/p/fqofd6">
+                                <img src="hacking.jpg" />
+                            </a>
+                            <a href="https://flic.kr/p/fqofd6">&quot;Show me the way of hacking&quot;</a> by <a href="https://www.flickr.com/photos/adulau/">Alexandre Dulaunoy</a>                            is licensed under
+                            <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.
+                        </div>
                     </div>
                 </section>
             </section>

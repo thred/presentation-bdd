@@ -8,9 +8,15 @@
 .reveal .flex {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-hr {
+.reveal .readable {
+    text-transform: none;
+}
+
+.reveal hr {
     border: none;
     height: 2px;
     background-color: black;
@@ -22,20 +28,18 @@ hr {
     /*box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.75), 0px 1px 2px rgba(255, 255, 255, 0.5);*/
 }
 
-.constrast-bright {
+.reveal .contrast-bright {
     color: white;
     text-shadow: 0 2px 2px black, 0 -2px 2px black, 2px 0 2px black, -2px 0 2px black, 0 4px 8px black;
 }
 
-.constrast-bright h1, .constrast-bright h2, .constrast-bright h3 {
+.reveal .contrast-bright h1, .contrast-bright h2, .contrast-bright h3 {
     color: white;
     text-shadow: 0 2px 2px black, 0 -2px 2px black, 2px 0 2px black, -2px 0 2px black, 0 4px 8px black;
 }
 
-
-
-.reveal .readable {
-    text-transform: none;
+.reveal .slidebackground .darker-background {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
 
 img[src="me.jpg"] {
@@ -44,7 +48,22 @@ img[src="me.jpg"] {
     float: right;
 }
 
-.reveal .customer, .reveal .development, .reveal .qa {
+.reveal .project-cartoon {
+    width: 128px;
+    height: 192px;
+}
+
+.reveal .project-cartoon img {
+    font-size: 14px;
+    margin: 0;
+}
+
+.reveal .project-cartoon p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.reveal .customer, .reveal .development, .reveal .development-male, .reveal .development-female, .reveal .qa {
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: contain;
@@ -63,8 +82,25 @@ img[src="me.jpg"] {
     background-image: url('developers.png');
 }
 
+.reveal .development-male {
+    background-image: url('male-developer.png');
+}
+
+.reveal .development-female {
+    background-image: url('female-developer.png');
+}
+
 .reveal .qa {
     background-image: url('qa.png');
+}
+
+.reveal .references {}
+
+.reveal .image-reference {
+    font-size: 10px;
+    float: left;
+    width: 320px;
+    text-align: center;
 }
 
 .reveal .image-reference img {
@@ -73,5 +109,5 @@ img[src="me.jpg"] {
     max-height: 95px;
     width: auto;
     height: auto;
-    float: left;
+    margin: 0 auto;
 }
