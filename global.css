@@ -63,7 +63,8 @@ img[src="me.jpg"] {
     margin: 0;
 }
 
-.reveal .customer, .reveal .development, .reveal .development-male, .reveal .development-female, .reveal .qa {
+.reveal .customer, .reveal .customer-idea, .reveal .customer-talking, .reveal .development, .reveal .development-talking,
+.reveal .development-male, .reveal .development-female, .reveal .qa, .reveal .qa-talking {
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: contain;
@@ -78,8 +79,20 @@ img[src="me.jpg"] {
     background-image: url('customer.png');
 }
 
+.reveal .customer-idea {
+    background-image: url('customer-idea.png');
+}
+
+.reveal .customer-talking {
+    background-image: url('customer-talking.png');
+}
+
 .reveal .development {
     background-image: url('developers.png');
+}
+
+.reveal .development-talking {
+    background-image: url('developers-talking.png');
 }
 
 .reveal .development-male {
@@ -92,6 +105,10 @@ img[src="me.jpg"] {
 
 .reveal .qa {
     background-image: url('qa.png');
+}
+
+.reveal .qa-talking {
+    background-image: url('qa-talking.png');
 }
 
 .reveal .references {}

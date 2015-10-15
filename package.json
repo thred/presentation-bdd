@@ -1,17 +1,19 @@
 {
-  "name": "bdd-presentation",
-  "description": "A presentation about Behavior Driven Development",
-  "homepage": "https://github.com/thred/presentation-bdd",
-  "bugs": "https://github.com/thred/presentation-bdd/issues",
-  "license": "CC-BY-SA-4.0",
-  "author": {
-    "name": "Manfred Hantschel"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/thred/presentation-bdd.git"
-  },
-  "dependencies" : {
-      "reveal.js": "3.1.0"
-  }
+    "name": "bdd-presentation",
+    "description": "A presentation about Behavior Driven Development",
+    "homepage": "https://github.com/thred/presentation-bdd",
+    "bugs": "https://github.com/thred/presentation-bdd/issues",
+    "license": "CC-BY-SA-4.0",
+    "author": {
+        "name": "Manfred Hantschel"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/thred/presentation-bdd.git"
+    },
+    "dependencies": {
+        /*"requirejs": "2.1.20",*/
+        "reveal.js": "3.1.0",
+        /*"highlight.js": "8.8.0"*/
+    }
 }

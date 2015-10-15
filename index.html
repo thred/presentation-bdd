@@ -19,7 +19,8 @@
         var link = document.createElement('link');
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'node_modules/reveal.js/css/print/pdf.css' :
+            'node_modules/reveal.js/css/print/paper.css';
         document.getElementsByTagName('head')[0].appendChild(link);
     </script>
 </head>
@@ -194,7 +195,7 @@ in order to &lt;BENEFIT&gt;
 
                         <div style="width: 50%">
                             <div>
-                                <pre><code class="Gherkin">
+                                <pre><code class="gherkin">
 Feature
 
 Given &lt;PRECONDITION&gt;
@@ -499,6 +500,98 @@ But with a count of 2.
                         </div>
                     </div>
                 </section>
+
+                <section>
+                    <div class="customer-idea" style="left: 100%;"></div>
+
+                    <h2>Typischer Entwicklungsprozess</h2>
+                    <hr />
+                    <p>Product-Owner formuliert die Idee</p>
+                    <p>Anforderung wird in Datenbank erfasst</p>
+
+                    <aside class="notes">
+                        <p>Am Anfang war die Idee. Diese wird meist vom Kunden bzw. dem Product-Owner ausgebrütet und formuliert.
+                            Die Idee kann aber auch von anderen Beteiligten kommen, z.B. von der Entwicklung. Die Idee wird
+                            bei uns in einer Anforderungsdatenbank, noch in Prosa, erfasst. Die Anforderung enthält eine
+                            grobe Vorstellung wie das Feature aussehen soll und beschreibt Hintergrundinformationen.</p>
+                        <p>In der Porsche Informatik wird die Anforderungsdatenbank auch für die offizielle Statusverfolgung
+                            genutzt, da sich unsere Kunden mit dem agilen Vorgehen oft noch nicht richtig anfreunden können.
+                            Teilweise dient die Anforderungsdatenbank auch als Quelle für Aufwandsschätzungen, besonders
+                            wenn die Umsetzung für das nächste Wirtschaftsjahr geplant ist. Auch das deckt sich noch nicht
+                            mit dem agilen Vorgehen.</p>
+                        <p>Für große Anforderungen, die nicht in einem Sprint umgesetzt werden können, werden jetzt User Epics
+                            verfasst. User Epics sind Sammlungen von User Stories, es müssen aber zu Beginn nicht alle User
+                            Stories ausformuliert sein.</p>
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Konkretisierung</h2>
+                    <hr />
+                    <p>Alle Beteiligten arbeiten mit</p>
+                    <p>Einfache Fragen stellen</p>
+                    <div class="development-talking" style="height: 256px; left: 512px;"></div>
+                    <div class="qa-talking" style="height: 256px; left: 256px;"></div>
+                    <div class="customer-talking" style="height: 256px; left: 768px;"></div>
+                    <p style="margin-top: 256px">Es Entstehen:
+                        <br />Behaviors, Story Files, UI-Mockups, Aufwände, Schnittstellen, ...</p>
+
+                    <aside class="notes">
+                        <p>Bevor das Feature umgesetzt wird, wird es noch konkretisiert. Dies geschieht durch Kunde, QA und
+                            Entwicklung gemeinsam.</p>
+                        <p>Grundsätzlich werden dem Kunden „einfache Fragen“ gestellt. Die Ergebnisse aus diesen Abstimmungen
+                            werden einem Story File festgehalten, in Behaviors aufgeteilt und im Versionskontrollsystem (SVN)
+                            eingepflegt. Behaviors entsprechen den Szenarien, müssen jedoch noch nicht so formuliert sein,
+                            dass sie maschinell verarbeitet werden können.</p>
+                        <p>Je nach Umfang des Features entstehen auch noch zusätzliche Dokumentation: UIMockups, eine Aufwandsschätzungen,
+                            Schnittstellendokumentationen, usw. Wir achten darauf, dass jede einzelne zusätzliche Dokumentation
+                            auch in der Story referenziert ist.</p>
+                    </aside>
+                </section>
+
+                <section>
+                    <div class="development-male" style="top: 320px;"></div>
+                    <div class="qa" style="top: 320px; left: 100%;"></div>
+
+                    <h2>Formalisierung</h2>
+                    <p>Bewertung: Wichtigkeit, Aufwand, Automatisierung</p>
+                    <p>Formulierung der Szenarien</p>
+
+                    <pre><code class="Gherkin">
+User Story: Add Article to Cart
+
+As a customer
+I want to select an article
+in order to put it into my shopping cart.
+
+[...]
+
+Scenario: Duplicate Article
+
+Given the shopping cart already contains an article.
+When the user selects the same article
+And clicks the "Add to Cart" button
+Then the cart should contain the article only once
+But with a count of 2.
+
+[...]
+                    </code></pre>
+
+                    <aside class="notes">
+                        <p>Kurz vor der Sprintplanung wird zwischen Entwickler und Tester abgestimmt, welche Verhaltensweisen
+                            man formalisieren und automatisieren will.</p>
+                        <p>Entscheidungskriterien dabei sind:</p>
+                        <ul>
+                            <li>Wie wichtig ist das Behavior?</li>
+                            <li>Wie oft müsste es getestet werden?</li>
+                            <li>Wie aufwendig ist die Automatisierung?</li>
+                        </ul>
+                        <p>Auf Basis dieser Entscheidungen werden dann die Szenarien formalisiert (was rausfällt landet in einem
+                            Testkatalog).
+                        </p>
+                    </aside>
+                </section>
+
             </section>
 
             <section>
