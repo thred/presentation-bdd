@@ -16,6 +16,11 @@
     text-transform: none;
 }
 
+.reveal .no-border {
+    border: none;
+    box-shadow: none;
+}
+
 .reveal hr {
     border: none;
     height: 2px;

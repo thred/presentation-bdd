@@ -592,6 +592,32 @@ But with a count of 2.
                     </aside>
                 </section>
 
+                <section>
+                    <h2>Stationen eines Story Files</h2>
+
+                    <div class="flex">
+                        <img class="no-border" src="wip.svg" />
+                        <img class="fragment no-border" src="feature-tree.svg" />
+                    </div>
+                    <!-- <img src="source-tree.svg" /> -->
+
+                    <aside class="notes">
+                        <p>Im Entwicklungszyklus durchwandert ein Story File dann mehrere Stationen. Diese sind als Verzeichnisse
+                            im Repository abgebildet. Grundsätzlich wird zwischen Stories unterschieden, die sich in Entwicklung
+                            befinden und jenen, die fertig umgesetzt wurden und Teil der Systemspezifikation werden.</p>
+                        <p>Zunächst befindet sich ein Story File in „preparation“. Soll die Story im Sprint umgesetzt werden,
+                            wird das File in „current“ verschoben. Wenn die Umsetzung erledigt wurde, wird das File in „finished“
+                            verschoben.</p>
+                        <p>Nach dem Sprint wird das Story File in den „Feature Tree“ eingepflegt. Der „Feature Tree“ ist nach
+                            den Modulen im System aufgebaut. Die Übernahme erfolgt entweder durch kopieren der Datei oder
+                            durch händisches Anpassen von bestehen Story Files.</p>
+                        <p>In einem Projekt der Porsche Informatik wird der „Feature Tree“ sogar dazu verwendet, automatisch
+                            eine Systemspezifikation zu generieren. Dazu werden die Story Files und zusätzliche Dateien im
+                            „Feature Tree“ zu einem Dokument zusammengefasst. Dieser Prozess ist leider sehr aufwendig, das
+                            Ergebnis ist jedoch beachtlich: Jede Version enthält eine getestete und exakte Systemspezifikation
+                            als PDF Dokument.</p>
+                    </aside>
+                </section>
             </section>
 
             <section>
