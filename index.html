@@ -594,12 +594,11 @@ But with a count of 2.
 
                 <section>
                     <h2>Stationen eines Story Files</h2>
-
+                    <hr />
                     <div class="flex">
                         <img class="no-border" src="wip.svg" />
                         <img class="fragment no-border" src="feature-tree.svg" />
                     </div>
-                    <!-- <img src="source-tree.svg" /> -->
 
                     <aside class="notes">
                         <p>Im Entwicklungszyklus durchwandert ein Story File dann mehrere Stationen. Diese sind als Verzeichnisse
@@ -607,7 +606,8 @@ But with a count of 2.
                             befinden und jenen, die fertig umgesetzt wurden und Teil der Systemspezifikation werden.</p>
                         <p>Zunächst befindet sich ein Story File in „preparation“. Soll die Story im Sprint umgesetzt werden,
                             wird das File in „current“ verschoben. Wenn die Umsetzung erledigt wurde, wird das File in „finished“
-                            verschoben.</p>
+                            verschoben.
+                        </p>
                         <p>Nach dem Sprint wird das Story File in den „Feature Tree“ eingepflegt. Der „Feature Tree“ ist nach
                             den Modulen im System aufgebaut. Die Übernahme erfolgt entweder durch kopieren der Datei oder
                             durch händisches Anpassen von bestehen Story Files.</p>
@@ -616,6 +616,94 @@ But with a count of 2.
                             „Feature Tree“ zu einem Dokument zusammengefasst. Dieser Prozess ist leider sehr aufwendig, das
                             Ergebnis ist jedoch beachtlich: Jede Version enthält eine getestete und exakte Systemspezifikation
                             als PDF Dokument.</p>
+                    </aside>
+                </section>
+
+                <section data-transition="none">
+                    <h2>Umsetzung</h2>
+
+                    <div class="flex-left">
+                        <img class="no-border" src="simple-impl.svg" />
+
+                        <pre style="width: 50%"><code class="Java">
+@Given("the user $name is logged in")
+public void ensureUserLoggedIn(String name)
+{
+    User user = userSrevice.getCurrentUser();
+
+    if (!name.equals(user.getName()))
+    {
+        userService.logout();
+        userService.login(name);
+
+        user = userService.getCurrentUser();
+    }
+
+    assert name.equals(user.getName());
+}
+                        </code></pre>
+                    </div>
+
+                    <aside class="notes">
+                        <p>Wie erfolgt nun die Anbindung der Szenarios an die Applikation?</p>
+                        <p>Grundlegend ganz einfach: in Steps-Klassen werden die Texte aus den Szenarien implementiert. Das
+                            Beispiel zeigt wie das grundsätzlich funktionieren könnte. Doch in dieser Art und Weise läuft
+                            man schnell Gefahr, dass die Wartungsaufwände für die BDD-Tests zu hoch werden.</p>
+                        <p>Daher haben wir in diesem Bereich viel Energie investiert um die Tests robust zu gestalten.</p>
+                    </aside>
+                </section>
+
+                <section data-transition="none">
+                    <h2>Umsetzung</h2>
+
+                    <div class="flex-left">
+                        <img class="no-border" src="enhanced-impl.svg" />
+
+                        <pre style="width: 50%"><code class="Java">
+@Given("the user $name is logged in")
+public void ensureUserLoggedIn(String name)
+{
+    User user = userWorkflow.login(name);
+
+    assert name.equals(user.getName());
+}
+                        </code></pre>
+                    </div>
+
+                    <aside class="notes">
+                        <p>Grundsätzlich agieren die Steps nun auf Workflows. Erst die Workflows führen die Aktionen in der
+                            Applikation durch. Workflows agieren modulübergreifend, können daher auf die Schnittstellen der
+                            gesamten Applikation zugreifen. Die Logik wandert dadurch aus den Steps heraus und die BDD-Tests
+                            werden stabiler. Ähnliche Verhaltensweisen müssen auch nicht mehrfach implementiert werden.</p>
+                        <p>Mit dieser Technik werden auch Testdaten aufgebaut. Die Tests müssen nicht auf einer vorbereiteten
+                            Datenbank laufen, die Tests erstellen die nötigen Testdaten selbst. Robustheit ist der Schlüssel.</p>
+                        <p>Das Testinterface ermöglicht uns auch Aktionen auszuführen, die in der Applikation eigentlich nicht
+                            möglich wären, z.B. einen Benutzer zu löschen anstatt nur das LöschFlag zu setzen.</p>
+                        <p>Bleibt aber immer noch das Problem die GUI zu steuern.</p>
+                    </aside>
+                </section>
+
+                <section data-transition="none">
+                    <h2>Umsetzung</h2>
+
+                    <div class="flex-left">
+                        <img class="no-border" src="complete-impl.svg" />
+                    </div>
+
+                    <aside class="notes">
+                        <p>Um die GUI zu Steuern erzeugen wir für die Ansichten und Wartungen in der Applikation, Pages und
+                            Komponenten. Die Klassen beschreiben beispielsweise die Felder einer Login-Seite, also z.B. „Benutzername“,
+                            „Passwort“ und den „Anmelden“Button. Zentrale Komponenten, wie z.B. einen Suchdialog, werden
+                            in ComponentKlassen definiert, damit diese in mehreren Pages zur Verfügung stehen.</p>
+                        <p>Die Pages interagieren über eine eigene Driver-API mit der GUI. In der API stehen die gängigsten
+                            Kommandos für die Automatisierung zur Verfügung, als z.B. „Klicke auf ein Element“, „Fülle Feld
+                            X mit Y“. Diese API soll uns ermöglichen auf Versionsupdates und Änderungen im Automatisierungstool
+                            zu reagieren.</p>
+                        <p>Der Driver ist nun die spezielle Implementierung eines Automatisierungstools, in unserem Fall Selenium
+                            2.x (Webdriver). In den Driver ist auch eine Application Map integriert. Sollte das Mapping von
+                            z.B. Feld-Name auf Feld-Id nicht automatisch möglich sein, kann dieser Definition ein Mapping
+                            hinterlegt werden.</p>
+                        <p>Die API und der Driver werden applikationsübergreifed eingesetzt.</p>
                     </aside>
                 </section>
             </section>

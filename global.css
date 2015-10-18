@@ -5,11 +5,18 @@
     margin-bottom: 1em;
 }
 
-.reveal .flex {
+.reveal .flex, .reveal .flex-left {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.reveal .flex {
     justify-content: center;
+}
+
+.reveal .flex-left {
+    justify-content: flex-start;
 }
 
 .reveal .readable {
