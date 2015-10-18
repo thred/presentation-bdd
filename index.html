@@ -706,6 +706,29 @@ public void ensureUserLoggedIn(String name)
                         <p>Die API und der Driver werden applikationsübergreifed eingesetzt.</p>
                     </aside>
                 </section>
+
+                <section>
+                    <h2>Was haben wir erriecht?</h2>
+                    <hr/>
+                    <p>Anpassungen nur an einer Stelle</p>
+                    <p>Wiederverwendung der Workflows, Componenten und Pages</p>
+                    <p>Mapping unterstützt Test-Driven-Development</p>
+                    <p>Automatisierungstool is austauschbar</p>
+
+                    <div class="development" style="height: 480px; left: 512px;">
+
+                        <aside class="notes">
+                            <p>Mit diesem scheinbar sehr komplexen Framework versuchen wir dem Wartungsproblem bei der Testautomatisierung
+                                in den Griff zu bekommen. Wenn man das Framework nochmal genau betrachtet, stellt man schnell
+                                fest, dass der Aufwand ein neues Scenario zu automatisieren darin besteht, die betroffenen
+                                Pages und deren Verbindung untereinander zu beschreiben.</p>
+                            <p>Zudem haben viele Scenarios dieselben oder zumindest sehr ähnliche Vorbedingungen – es stellt
+                                sich also sehr schnell der Vorteil der Wiederverwendung ein.</p>
+                            <p>Durch die Abstraktionsebenen und das automatische Mapping von abstrakten Feldbezeichnungen auf
+                                ID’s ist es nun auch problemlos möglich, GUI-Tests vorab zu automatisieren. Im Idealfall
+                                werden die Steps nun während der Entwicklung “grün”.</p>
+                        </aside>
+                </section>
             </section>
 
             <section>
@@ -773,54 +796,54 @@ public void ensureUserLoggedIn(String name)
                     </div>
                 </section>
             </section>
+            </div>
         </div>
-    </div>
 
-    <script src="node_modules/reveal.js/lib/js/head.min.js"></script>
-    <script src="node_modules/reveal.js/js/reveal.js"></script>
+        <script src="node_modules/reveal.js/lib/js/head.min.js"></script>
+        <script src="node_modules/reveal.js/js/reveal.js"></script>
 
-    <script>
-        Reveal.initialize({
-            width: 1024,
-            height: 640,
-            rollingLinks: true,
-            history: true,
-            showNotes: true,
+        <script>
+            Reveal.initialize({
+                width: 1024,
+                height: 640,
+                rollingLinks: true,
+                history: true,
+                showNotes: true,
 
-            dependencies: [{
-                src: 'node_modules/reveal.js/lib/js/classList.js',
-                condition: function() {
-                    return !document.body.classList;
-                }
-            }, {
-                src: 'node_modules/reveal.js/plugin/markdown/marked.js',
-                condition: function() {
-                    return !!document.querySelector('[data-markdown]');
-                }
-            }, {
-                src: 'node_modules/reveal.js/plugin/markdown/markdown.js',
-                condition: function() {
-                    return !!document.querySelector('[data-markdown]');
-                }
-            }, {
-                src: 'node_modules/reveal.js/plugin/highlight/highlight.js',
-                async: true,
-                condition: function() {
-                    return !!document.querySelector('pre code');
-                },
-                callback: function() {
-                    hljs.initHighlightingOnLoad();
-                }
-            }, {
-                src: 'node_modules/reveal.js/plugin/zoom-js/zoom.js',
-                async: true
-            }, {
-                src: 'node_modules/reveal.js/plugin/notes/notes.js',
-                async: true
-            }]
+                dependencies: [{
+                    src: 'node_modules/reveal.js/lib/js/classList.js',
+                    condition: function() {
+                        return !document.body.classList;
+                    }
+                }, {
+                    src: 'node_modules/reveal.js/plugin/markdown/marked.js',
+                    condition: function() {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                }, {
+                    src: 'node_modules/reveal.js/plugin/markdown/markdown.js',
+                    condition: function() {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                }, {
+                    src: 'node_modules/reveal.js/plugin/highlight/highlight.js',
+                    async: true,
+                    condition: function() {
+                        return !!document.querySelector('pre code');
+                    },
+                    callback: function() {
+                        hljs.initHighlightingOnLoad();
+                    }
+                }, {
+                    src: 'node_modules/reveal.js/plugin/zoom-js/zoom.js',
+                    async: true
+                }, {
+                    src: 'node_modules/reveal.js/plugin/notes/notes.js',
+                    async: true
+                }]
 
-        });
-    </script>
+            });
+        </script>
 </body>
 
 </html>
