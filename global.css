@@ -28,6 +28,10 @@
     box-shadow: none;
 }
 
+.reveal .minor {
+    font-size: 80%;
+}
+
 .reveal hr {
     border: none;
     height: 2px;

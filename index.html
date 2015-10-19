@@ -729,6 +729,116 @@ public void ensureUserLoggedIn(String name)
                                 werden die Steps nun während der Entwicklung “grün”.</p>
                         </aside>
                 </section>
+
+                <section>
+                    <div class="development-female" style="top: -64px; left: 90%;"></div>
+                    <div class="development-male" style="top: -64px; left: 10%;"></div>
+                    <h1>Do's &amp; Dont's</h1>
+                    <hr/>
+                    <p>Nicht alles automatisieren</p>
+                    <p>Szenarien müssen lesbar bleiben</p>
+                    <p>Keep it simple</p>
+                    <p>Auf die Wartbarkeit achten</p>
+                    <p>Robustheit, Robustheit, Robustheit</p>
+                    <p>Nicht aufgeben!</p>
+
+                    <aside class="notes">
+                        <p>
+                            <strong>Nicht alles automatisieren</strong>
+                            <br/> Je mehr man automatisiert, umso mehr muss man auch pflegen. Selbst wenn man ein ausgeklügeltes
+                            Framework verwendet, Anpassungen wird es immer geben.</p>
+                        <p>
+                            <strong>Szenarien müssen lesbar bleiben Verketten</strong>
+                            <br/>Sie nicht unzählige Vorbedingungen in einem Scenario nur weil es die Steps schon gibt. Verstecken
+                            Sie die Komplexität lieber in der Implementierung der Steps und formulieren Sie aussagekräftige
+                            Steps.
+                        </p>
+                        <p>
+                            <strong>Machen Sie sich das Leben so leicht wie es geht</strong>
+                            <br/>Je komplizierter der Weg vom Scenario bis zur fertigen Automatisierung ist, umso schwieriger
+                            wird es sein, ihre Entwickler zum Mitmachen zu bewegen.</p>
+                        <p>
+                            <strong>Vergessen Sie nicht auf die Wartbarkeit zu achten</strong>
+                            <br/>Steht etwas im Widerspruch zur obigen Aussage. Wenn man aber Steps mit Record&amp;Replay Scripten
+                            automatisiert, ist man schnell in der Wartungsfalle und kommt nur unglaublich schwer wieder heraus.</p>
+                        <p>
+                            <strong>Robustheit, Robustheit, Robustheit</strong>
+                            <br/> Achten Sie bei Tests auf ihre Robustheit. Kein Test geht von Vorbedingungen aus, die nicht spezifiziert
+                            sind. Will ich einen Artikel verkaufen, muss einer verkaufbarer Arktikel verfügbar sein. Das
+                            „Given“ überprüft ob ein solcher Artikel vorhanden ist, legt wenn nötig einen an und merkt sich
+                            die Id, damit der Artikel im „When“ verkauft werden kann. Stories sollten ihre Testdaten aufräumen,
+                            und wenn die eigenen Testdaten zu Beginn schon in der Datenbank sind, trotzdem laufen.</p>
+                        <p>
+                            <strong>Geben Sie nicht auf</strong>
+                            <br/>Unsere Entwickler waren durch die Bank zumindest reserviert dem Vorhaben BDD gegenüber. Mittlerweile
+                            gibt es aber unzählige Befürworter des Vorgehens. Veränderung braucht Zeit und somit Ihre Geduld.
+                            Testen ist auch aufwendig. Wir haben das Glück, dass die Geschäftsleitung hinten uns steht und
+                            auf längere Sicht rentiert es sich.</p>
+                    </aside>
+                </section>
+            </section>
+
+            <section>
+                <section data-background="zen.jpg" class="contrast-bright">
+                    <h2>Behavior Driven Development</h2>
+                    <hr />
+                    <h1>Dings</h1>
+                </section>
+
+                <section>
+                    <div class="flex">
+                        <div style="width: 70%">
+                            <h2>Was tun wir damit?</h2>
+                            <hr />
+
+                            <h3>Automatisierte Builds</h3>
+                            <p>Build &rarr; Test &rarr; Deployment &rarr; Acceptance Tests &rarr; Documentation</p>
+
+                            <h3>Lokale Tests</h3>
+                            <p>Gegen Entwicklungsumgebung</p>
+                            <p>Gegen Ad-Hoc Server</p>
+                        </div>
+
+                        <div style="width: 30%">
+                            <img src="jenkins.png" class="no-border" />
+                        </div>
+                    </div>
+
+                    <aside class="notes">
+                        <p>Wir verwenden Jenkins als CI-Umgebung. Dieser führ mehrmals am Tag einen vollständigen Build durch
+                            und deployt die Applikation automatisch auf ein Testsystem. Sobald der Applikationsserver gestartet
+                            worden ist, beginnt der Akzeptanztest. Bei Fehlern werden sowohl der Product-Owner als auch der
+                            zuständige technische Architekt per Email verständigt.</p>
+                        <p>Anschließend wird noch die aktuelle Systemspezifikation generiert.</p>
+                        <p>Dieses Vorgehen ist durch das Buch [Continous Delivery] inspiriert.</p>
+                        <p>Natürlich können Entwickler Tests auch lokal durchführen. Dabei spielt die Robustheit der Tests wieder
+                            eine Rolle. Die Tests können selbst die Applikation starten, inkl. InMemory-Datenbank, und die
+                            Tests dagegen ausführen.</p>
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Laufzeit</h2>
+
+                    <hr />
+                    <p>Parallelisierung</p>
+                    <p>Mehrere Testumgebungen</p>
+                    <p>@VIP Tag</p>
+
+                    <aside class="notes">
+                        <p>Sobald man mehrere Akzeptanztests hat kann die Laufzeit der Tests zu einem Problem werden. Jenkins
+                            kann Jobs parallelisieren und die Ergebnisse wieder vereinen. Die Akzeptanztests werden in mehrere
+                            Gruppen geteilt und parallel ausgeführt.</p>
+                        <p>Zur Zeit haben wir noch in keinem Projekt große Probleme mit der Laufzeit. Die Parallelisierung haben
+                            wir daher erst bei einem Projekt umgesetzt. Da die Tests gegen Oracle laufen sollen, können wir
+                            keine echte Ad-hoc Umgebung verwenden, wir brauchen daher vier Testumgebungen, gegen die die
+                            Tests laufen (sonst könnte es vorkommen, dass sich die Test beeinflussen).</p>
+                        <p>Auf Seiten der Testautomatisierungslösung verwenden wir dazu da Webdriver Grid2.</p>
+                        <p>Sollte es wider Erwarten noch mehr Probleme mit der Laufzeit geben, haben wir für Szenarien von Tags
+                            vorbereitet. Im Buildzyklus kann dann definiert werden, dass nur Szenarien ausgeführt werden
+                            die mit @VIP gekennzeichnet sind.</p>
+                    </aside>
+                </section>
             </section>
 
             <section>
