@@ -1,4 +1,6 @@
 .reveal .header {
+    font-family: Georgia, serif;
+    text-transform: none;
     opacity: 0.5;
     border-bottom: 1px solid black;
     padding: 0;
@@ -20,6 +22,7 @@
 }
 
 .reveal .readable {
+    font-family: Georgia, serif;
     text-transform: none;
 }
 
@@ -79,8 +82,7 @@ img[src="me.jpg"] {
     margin: 0;
 }
 
-.reveal .customer, .reveal .customer-idea, .reveal .customer-talking, .reveal .development, .reveal .development-talking,
-.reveal .development-male, .reveal .development-female, .reveal .qa, .reveal .qa-talking {
+.reveal .customer, .reveal .customer-idea, .reveal .customer-talking, .reveal .development, .reveal .development-talking, .reveal .development-male, .reveal .development-female, .reveal .qa, .reveal .qa-talking {
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: contain;
