@@ -25,7 +25,14 @@
     </script>
 </head>
 
-<body>
+<body class="with-notes">
+    <div class="notes-side">
+        <div class="notes-body">
+            <div id="notes-content">
+            </div>
+        </div>
+    </div>
+
     <div class="reveal">
         <div class="slides">
             <section>
@@ -990,9 +997,11 @@ public void ensureUserLoggedIn(String name)
                 height: 640,
                 rollingLinks: true,
                 history: true,
-                showNotes: true,
 
                 dependencies: [{
+                    src: 'global.js',
+                    async: false
+                }, {
                     src: 'node_modules/reveal.js/lib/js/classList.js',
                     condition: function() {
                         return !document.body.classList;

@@ -1,3 +1,48 @@
+body {
+    background-color: #ede2be;
+}
+
+.reveal {
+    background-color: rgb(247, 243, 222);
+}
+
+.with-notes .reveal {
+    left: 5%;
+    width: 50%;
+    box-shadow: 0 0 16px black;
+}
+
+.with-notes .notes-side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ede2be;
+    color: #3F3F3F;
+    padding-left: 55%;
+    font-size: 22px;
+    line-height: 1.5em;
+}
+
+.with-notes .notes-side * {
+    position: static;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+}
+
+.with-notes .notes-side .nodes-body {
+    width: 35%;
+    overflow: auto;
+}
+
+.with-notes .notes-side .nodes-body #notes-content {
+    padding: 1em 2em;
+    width: 35%;
+    background-color: orange;
+    width: auto;
+    height: inherit;
+}
+
 .reveal .header {
     font-family: Georgia, serif;
     text-transform: none;
