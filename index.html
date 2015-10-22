@@ -73,12 +73,12 @@
                     <h1>Behavior Driven Develoment</h1>
                     <p><i>Vom Use Case zum Test Case</i></p>
                     <p>Behavior Driven Develoment hat das Ziel die Zusammenarbeit der Beteiligten am Softwareentwicklungsprozess
-                        zu stärken.</p>
+                        zu stärken. Außerdem sollen aus dieser Zusammenarbeit automatisierte Tests als Benefit entstehen.</p>
                     <hr />
                     <p>
-                        <strong>Hinweis:</strong>
+                        <strong>Hinweis zu dieser Präsentation:</strong>
                     </p>
-                    <p><a href="javascript:Reveal.toggleInfoText()">T</a> drücken um den Text zu verstecken bzw. zu zeigen.</p>
+                    <p><a href="javascript:Reveal.toggleInfoText()">T</a> drücken um diesen Text zu verstecken bzw. zu zeigen.</p>
                     <p><a href="javascript:Reveal.toggleControls()">C</a> drücken um die Navigationshilfen zu verstecken bzw.
                         zu zeigen.</p>
                     <p>Mit <a href="javascript:Reveal.next()">SPACE</a> zur nächsten Folie wechseln.</p>
@@ -94,19 +94,14 @@
                 <p class="readable">Software Entwickler, Porsche Informatik GmbH</p>
 
                 <aside class="notes">
-                    <p>Manfred Hantschel hat auf der Johannes Kepler Universität in Linz Informatik studiert. Die berufliche
-                        Laufbahn führte ihn schon vorzeitig, weg vom Studium, in die Entwicklung von Unternehmenssoftware
-                        in Java und C#, zunächst bei IBM Linz und seit 2004 bei der Porsche Informatik GmbH in Salzburg.</p>
-                    <p>Die Aufgaben von Herrn Hantschel reichen von der technischen Umsetzung und Leitung bis hin zur Produktverantwortung
-                        für mehrere Projekte. Dabei ist Hr. Hantschel unter Anderem entscheidend an der Einführung und Umsetzung
-                        von Qualitätssicherungsmaßnahmen beteiligt. Die Palette der Applikationen reicht dabei von internationalen
-                        webbasierten Unternehmensportalen, über PDA- und Smartphone-basierten Applikationen für die Unterstützung
-                        von Händlern, bis hin zu Verwertungsplattformen für Neu- und Gebrauchtfahrzeuge.</p>
-                    <p>Seit Mitte 2010 konzentriert sich sein berufliches Wirken auf die technische Verantwortung einer internationalen
-                        Neuwagenverwertungsplattform für über 50 Länder, die gerade im Entstehen begriffen ist. Dabei setzt
-                        er sich zurzeit intensiv mit dem Thema Testautomatisierung und mit der Einführung von Behavior Driven
-                        Development auseinander. Die Methodik wird in der Porsche Informatik bei mehreren Projekten – teilweise
-                        Webapplikationen, teilweise Client-Server-Applikationen auf Java-Basis – eingesetzt.</p>
+                    <p>Mein name ist Manfred Hantschel und ich bin Softwareentwickler bei der Porsche Informatik GmbH in Salzburg.</p>
+                    <p>Meine Aufgaben reichen von der technischen Umsetzung und Leitung bis hin zur Produktverantwortung für
+                        mehrere Projekte. Die Palette der Applikationen reicht dabei von internationalen webbasierten Unternehmensportalen,
+                        über PDA- und Smartphone-basierten Applikationen für die Unterstützung von Händlern, bis hin zu Verwertungsplattformen
+                        für Neu- und Gebrauchtfahrzeuge.</p>
+                    <p>Seit 2011 setze ich mich unter Anderem mit dem Thema Testautomatisierung und mit der Einführung von Behavior
+                        Driven Development auseinander. Die Methodik wird in der Porsche Informatik bei mehreren Projekten
+                        – teilweise Webapplikationen, teilweise Client-Server-Applikationen auf Java-Basis – eingesetzt.</p>
                     <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                 </aside>
 
@@ -163,8 +158,8 @@
                         </ul>
 
                         <p>
-                            Entstanden ist BDD aus ursprünglich aus dem Test-Driven Development. Es wurde zum ersten Mal 2006 von Dan North beschrieben
-                            (siehe <a href="http://dannorth.net/introducing-bdd/" target="_blank">"Introduction BDD" von Dan North</a>                            und <a href="http://behaviourdriven.org/" target="_blank">http://behaviourdriven.org/</a>)
+                            Entstanden ist BDD ursprünglich aus dem Test-Driven Development. Es wurde zum ersten Mal 2006 von Dan North beschrieben (siehe
+                            <a href="http://dannorth.net/introducing-bdd/" target="_blank">"Introduction BDD" von Dan North</a>                            und <a href="http://behaviourdriven.org/" target="_blank">http://behaviourdriven.org/</a>)
                         </p>
                         <p>
                             Er bemerkte, dass TDD oft nicht erfolgreich war. TDD wurde zwar umgesetzt, aber eher als Last empfunden, da TDD nicht in
@@ -194,8 +189,8 @@
                         <ul>
                             <li><a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a> der Entwicklungsabteilung</li>
                             <li><a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a> der Qualitätssicherung</li>
-                            <li><a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a> und dem Kunden, bzw. Product
-                                Owner
+                            <li><a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a> und dem Kunden, bzw. dem
+                                Product Owner
                             </li>
                         </ul>
                         <p>verbessert werden. Aus dieser Zusammenarbeit soll dann TDD als Benefit entstehen.</p>
@@ -216,19 +211,21 @@
                                 <ul>
                                     <li>Konzentration auf Fachlogik</li>
                                     <li>vereinfachte Problemlösung</li>
-                                    <li>Am Ziel vorbei</li>
+                                    <li>Am Ziel vorbei entwickeln</li>
                                 </ul>
                             </li>
                             <li>Test-Driven-Development <a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a>
                                 <ul>
                                     <li>Konzentration auf das Problem</li>
-                                    <li>Schwierige Entwicklung</li>
+                                    <li>Frühe Designentscheidungen</li>
+                                    <li>Abstrakte Serviceschichten</li>
                                 </ul>
                             </li>
                         </ul>
 
-                        <p>Behavior-Driven Development versucht die Prinzipien von Domain-Driven Design mit denen von Test-Driven
-                            Development zu vereinen.</p>
+                        <p>Behavior-Driven Development versucht die Prinzipien von <a href="http://domaindrivendesign.org/"
+                            target="_blank">Domain-Driven Design</a> mit denen von <a href="https://en.wikipedia.org/wiki/Test-driven_development"
+                            target="_blank">Test-Driven Development</a> zu vereinen.</p>
                         <p><a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a> Domain-Driven Design legt den
                             Schwerpunkt der Softwareentwicklung auf die Fachlogik der Anwendung anstatt auf die technische
                             Umsetzung. Die komplexen fachlichen Zusammenhänge werden zunächst in einer Geschäftslogikschicht
@@ -384,8 +381,8 @@ Then the detail page of the emplyee should open.
                             <li>Unterstützt das Team / Kritisiert das Produkt</li>
                         </ul>
 
-                        <p>Die [Testquadranten von Brian Marick] und in erweiterter Form von Lisa Crispin geben eine gute Orientierungshilfe
-                            in Bezug auf verschiedene Testarten.</p>
+                        <p>Die <a target="_blank" href="http://www.exampler.com/old-blog/2003/08/21/">Testquadranten von Brian Marick</a>                            und in erweiterter Form von Lisa Crispin geben eine gute Orientierungshilfe in Bezug auf verschiedene
+                            Testarten.</p>
                         <p>Im Wesentlichen werden Tests nach 2 Ebenen kategorisiert:</p>
                         <p>
                             <strong>Fachlich vs. Technisch geprägt</strong>

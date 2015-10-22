@@ -44,6 +44,10 @@
         });
 
         document.addEventListener('keydown', function(event) {
+            if ((event.ctrlKey) || (event.altKey) || (event.metaKey)) {
+                return;
+            }
+
             if (event.keyCode === 84) {
                 event.preventDefault();
                 Reveal.toggleInfoText();
