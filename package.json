@@ -3,7 +3,7 @@
     "description": "A presentation about Behavior Driven Development",
     "homepage": "https://github.com/thred/presentation-bdd",
     "bugs": "https://github.com/thred/presentation-bdd/issues",
-    "license": "CC-BY-SA-4.0",
+    "license": "CC-BY-SA-3.0",
     "author": {
         "name": "Manfred Hantschel"
     },
