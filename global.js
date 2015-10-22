@@ -1,5 +1,7 @@
 (function() {
 
+    var controlsVisible = true;
+
     Reveal.addEventListener('ready', function(event) {
         Reveal.toggleInfoText = function() {
             var classList = document.body.classList;
@@ -31,15 +33,27 @@
             }
         };
 
+        Reveal.toggleControls = function() {
+            controlsVisible = !controlsVisible;
+
+            document.getElementById('controls').style.visibility = (controlsVisible) ? 'visible' : 'hidden';
+        };
+
         Reveal.addEventListener('slidechanged', function(event) {
             Reveal.updateInfoText();
         });
 
         document.addEventListener('keydown', function(event) {
-            if (event.keyCode === 73) {
+            if (event.keyCode === 84) {
                 event.preventDefault();
                 Reveal.toggleInfoText();
             }
+
+            if (event.keyCode === 67) {
+                event.preventDefault();
+                Reveal.toggleControls();
+            }
+
         }, false);
 
         Reveal.updateInfoText();

@@ -26,10 +26,16 @@
 </head>
 
 <body class="text-shown">
-    <div class="controls">
-        <a class="infoText" href="javascript:Reveal.prev()">prev</a>
-        <a class="infoText" href="javascript:Reveal.next()">next</a>
-        <a class="infoText" href="javascript:Reveal.toggleInfoText()">info</a>
+    <div id="controls">
+        <div class="left">
+            <a href="javascript:Reveal.slide(0, 0);">first</a>
+            <a href="javascript:Reveal.toggleOverview()">overview</a>
+        </div>
+        <div class="right">
+            <a href="javascript:Reveal.toggleInfoText()">text</a>
+            <a href="javascript:Reveal.prev()">prev</a>
+            <a href="javascript:Reveal.next()">next</a>
+        </div>
     </div>
 
     <div class="reveal">
@@ -62,13 +68,20 @@
                 <aside class="notes">
                     <ul class="keywords">
                         <li>Behavior Driven Development</li>
-                        <li>gleiche Sicht</li>
+                        <li>Zusammenarbeit stärken</li>
                     </ul>
                     <h1>Behavior Driven Develoment</h1>
                     <p><i>Vom Use Case zum Test Case</i></p>
-                    <p>Behavior Driven Develoment hat das Ziel den Softwareentwicklungsprozess für alle Beteiligten so zu gestalten, dass jeder die gleiche Sicht auf das Ergebnis bekommt.</p>
+                    <p>Behavior Driven Develoment hat das Ziel die Zusammenarbeit der Beteiligten am Softwareentwicklungsprozess
+                        zu stärken.</p>
                     <hr />
-                    <p>Hinweis: <a href="javascript:Reveal.toggleInfoText()">I</a> drücken um den Infotext zu zeigen bzw. zu verstecken.</p>
+                    <p>
+                        <strong>Hinweis:</strong>
+                    </p>
+                    <p><a href="javascript:Reveal.toggleInfoText()">T</a> drücken um den Text zu verstecken bzw. zu zeigen.</p>
+                    <p><a href="javascript:Reveal.toggleControls()">C</a> drücken um die Navigationshilfen zu verstecken bzw.
+                        zu zeigen.</p>
+                    <p>Mit <a href="javascript:Reveal.next()">SPACE</a> zur nächsten Folie wechseln.</p>
                     <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                 </aside>
 
@@ -81,14 +94,19 @@
                 <p class="readable">Software Entwickler, Porsche Informatik GmbH</p>
 
                 <aside class="notes">
-                    <p>Manfred Hantschel hat auf der Johannes Kepler Universität in Linz Informatik studiert. Die berufliche Laufbahn führte ihn schon vorzeitig, weg vom Studium, in die Entwicklung von Unternehmenssoftware in Java und C#, zunächst bei IBM
-                        Linz und seit 2004 bei der Porsche Informatik GmbH in Salzburg.</p>
-                    <p>Die Aufgaben von Herrn Hantschel reichen von der technischen Umsetzung und Leitung bis hin zur Produktverantwortung für mehrere Projekte. Dabei ist Hr. Hantschel unter Anderem entscheidend an der Einführung und Umsetzung von Qualitätssicherungsmaßnahmen
-                        beteiligt. Die Palette der Applikationen reicht dabei von internationalen webbasierten Unternehmensportalen, über PDA- und Smartphone-basierten Applikationen für die Unterstützung von Händlern, bis hin zu Verwertungsplattformen
-                        für Neu- und Gebrauchtfahrzeuge.</p>
-                    <p>Seit Mitte 2010 konzentriert sich sein berufliches Wirken auf die technische Verantwortung einer internationalen Neuwagenverwertungsplattform für über 50 Länder, die gerade im Entstehen begriffen ist. Dabei setzt er sich zurzeit intensiv
-                        mit dem Thema Testautomatisierung und mit der Einführung von Behavior Driven Development auseinander. Die Methodik wird in der Porsche Informatik bei mehreren Projekten – teilweise Webapplikationen, teilweise Client-Server-Applikationen
-                        auf Java-Basis – eingesetzt.</p>
+                    <p>Manfred Hantschel hat auf der Johannes Kepler Universität in Linz Informatik studiert. Die berufliche
+                        Laufbahn führte ihn schon vorzeitig, weg vom Studium, in die Entwicklung von Unternehmenssoftware
+                        in Java und C#, zunächst bei IBM Linz und seit 2004 bei der Porsche Informatik GmbH in Salzburg.</p>
+                    <p>Die Aufgaben von Herrn Hantschel reichen von der technischen Umsetzung und Leitung bis hin zur Produktverantwortung
+                        für mehrere Projekte. Dabei ist Hr. Hantschel unter Anderem entscheidend an der Einführung und Umsetzung
+                        von Qualitätssicherungsmaßnahmen beteiligt. Die Palette der Applikationen reicht dabei von internationalen
+                        webbasierten Unternehmensportalen, über PDA- und Smartphone-basierten Applikationen für die Unterstützung
+                        von Händlern, bis hin zu Verwertungsplattformen für Neu- und Gebrauchtfahrzeuge.</p>
+                    <p>Seit Mitte 2010 konzentriert sich sein berufliches Wirken auf die technische Verantwortung einer internationalen
+                        Neuwagenverwertungsplattform für über 50 Länder, die gerade im Entstehen begriffen ist. Dabei setzt
+                        er sich zurzeit intensiv mit dem Thema Testautomatisierung und mit der Einführung von Behavior Driven
+                        Development auseinander. Die Methodik wird in der Porsche Informatik bei mehreren Projekten – teilweise
+                        Webapplikationen, teilweise Client-Server-Applikationen auf Java-Basis – eingesetzt.</p>
                     <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                 </aside>
 
@@ -145,10 +163,12 @@
                         </ul>
 
                         <p>
-                            Entstanden ist BDD aus ursprünglich aus dem Test-Driven Development. Es wurde zum ersten Mal 2006 von Dan North beschrieben (siehe <a href="http://dannorth.net/introducing-bdd/" target="_blank">"Introduction BDD" von Dan North</a>                            und <a href="http://behaviourdriven.org/" target="_blank">http://behaviourdriven.org/</a>)
+                            Entstanden ist BDD aus ursprünglich aus dem Test-Driven Development. Es wurde zum ersten Mal 2006 von Dan North beschrieben
+                            (siehe <a href="http://dannorth.net/introducing-bdd/" target="_blank">"Introduction BDD" von Dan North</a>                            und <a href="http://behaviourdriven.org/" target="_blank">http://behaviourdriven.org/</a>)
                         </p>
                         <p>
-                            Er bemerkte, dass TDD oft nicht erfolgreich war. TDD wurde zwar umgesetzt, aber eher als Last empfunden, da TDD nicht in den Designprozess integriert wurde.
+                            Er bemerkte, dass TDD oft nicht erfolgreich war. TDD wurde zwar umgesetzt, aber eher als Last empfunden, da TDD nicht in
+                            den Designprozess integriert wurde.
                         </p>
                         <p>
                             BDD versucht nun die Probleme zu lösen und geht dabei einen guten Schritt weiter.
@@ -174,7 +194,9 @@
                         <ul>
                             <li><a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a> der Entwicklungsabteilung</li>
                             <li><a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a> der Qualitätssicherung</li>
-                            <li><a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a> und dem Kunden, bzw. Product Owner</li>
+                            <li><a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a> und dem Kunden, bzw. Product
+                                Owner
+                            </li>
                         </ul>
                         <p>verbessert werden. Aus dieser Zusammenarbeit soll dann TDD als Benefit entstehen.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
@@ -205,17 +227,29 @@
                             </li>
                         </ul>
 
-                        <p>Behavior-Driven Development versucht die Prinzipien von Domain-Driven Design mit denen von Test-Driven Development zu vereinen.</p>
-                        <p><a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a> Domain-Driven Design legt den Schwerpunkt der Softwareentwicklung auf die Fachlogik der Anwendung anstatt auf die technische Umsetzung. Die komplexen fachlichen
-                            Zusammenhänge werden zunächst in einer Geschäftslogikschicht abgebildet und erst dann werden die Teilbereiche umgesetzt.</p>
-                        <p>In der Praxis bewährt sich der DDD Ansatz im höchsten Maße. Durch die Schichtenarchitektur generell wird die Problemlösung vereinfacht und die Arbeitsteilung erleichtert. Leider laufen Entwickler aber auch Gefahr die eigentliche
-                            Aufgabe aus den Augen zu verlieren. Die Umsetzung ist toll, nur hilft sie dem Benutzer nicht.</p>
-                        <p><a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a> Test-Driven Development soll ja den Entwickler dazu anhalten einen evolutionären Prozess in der Entwicklung einzuhalten. Es soll den Entwickler dazu bringen, sich
-                            in erster Linie um das Problem selbst zu kümmern, und nicht nur um die Umsetzung einer Lösung. Dazu soll der Entwickler vor der Umsetzung zuerst Tests dazu schreiben.</p>
-                        <p>In der Praxis ist das leider nicht so einfach. Unit-Tests fokussieren den Entwickler schon sehr stark auf die Umsetzung der Lösung. Konzentriert sich der Entwickler zuerst auf Unit-Tests wird er schon frühzeitig mit Problemen konfrontiert,
-                            die technische Entscheidungen fordern. Mit Integrations-Tests verhält es sich etwas besser, jedoch decken diese meist nur die Serviceschicht ab ohne auf Details der eigentlichen Aufgabenstellung einzugehen.
+                        <p>Behavior-Driven Development versucht die Prinzipien von Domain-Driven Design mit denen von Test-Driven
+                            Development zu vereinen.</p>
+                        <p><a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a> Domain-Driven Design legt den
+                            Schwerpunkt der Softwareentwicklung auf die Fachlogik der Anwendung anstatt auf die technische
+                            Umsetzung. Die komplexen fachlichen Zusammenhänge werden zunächst in einer Geschäftslogikschicht
+                            abgebildet und erst dann werden die Teilbereiche umgesetzt.</p>
+                        <p>In der Praxis bewährt sich der DDD Ansatz im höchsten Maße. Durch die Schichtenarchitektur generell
+                            wird die Problemlösung vereinfacht und die Arbeitsteilung erleichtert. Leider laufen Entwickler
+                            aber auch Gefahr die eigentliche Aufgabe aus den Augen zu verlieren. Die Umsetzung ist toll,
+                            nur hilft sie dem Benutzer nicht.</p>
+                        <p><a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a> Test-Driven Development soll
+                            ja den Entwickler dazu anhalten einen evolutionären Prozess in der Entwicklung einzuhalten. Es
+                            soll den Entwickler dazu bringen, sich in erster Linie um das Problem selbst zu kümmern, und
+                            nicht nur um die Umsetzung einer Lösung. Dazu soll der Entwickler vor der Umsetzung zuerst Tests
+                            dazu schreiben.</p>
+                        <p>In der Praxis ist das leider nicht so einfach. Unit-Tests fokussieren den Entwickler schon sehr stark
+                            auf die Umsetzung der Lösung. Konzentriert sich der Entwickler zuerst auf Unit-Tests wird er
+                            schon frühzeitig mit Problemen konfrontiert, die technische Entscheidungen fordern. Mit Integrations-Tests
+                            verhält es sich etwas besser, jedoch decken diese meist nur die Serviceschicht ab ohne auf Details
+                            der eigentlichen Aufgabenstellung einzugehen.
                         </p>
-                        <p>Und wie auch für Domain-Driven Design, gilt auf für Behavior-Driven Development: BDD ist nicht nur eine Technik, BDD ist eine Methode der Softwareentwicklung.</p>
+                        <p>Und wie auch für Domain-Driven Design, gilt auf für Behavior-Driven Development: BDD ist nicht nur
+                            eine Technik, BDD ist eine Methode der Softwareentwicklung.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
 
@@ -272,14 +306,19 @@ Then &lt;POSTCONDITION&gt;
                             <li>logisch ausgereift</li>
                         </ul>
 
-                        <p>Für das Domain-Driven Design stellt BDD eine Sprache zur Verfügung, mit der es möglich ist die fachlichen Abläufe detailliert und standardisiert zu formulieren. Mit Hilfe der Sprache lassen sich User Stories verfassen und Akzeptanzkriterien
-                            definieren.
+                        <p>Für das Domain-Driven Design stellt BDD eine Sprache zur Verfügung, mit der es möglich ist die fachlichen
+                            Abläufe detailliert und standardisiert zu formulieren. Mit Hilfe der Sprache lassen sich User
+                            Stories verfassen und Akzeptanzkriterien definieren.
                         </p>
-                        <p>Die Sprache orientiert sich dabei am Benutzer selbst und ist für alle Beteiligten verständlich. Bei der Beschreibung wird gänzlich auf technische Feinheiten verzichtet, lediglich dem fachlichen Ablauf wird ein logischer Prozess
-                            zugrunde gelegt.
+                        <p>Die Sprache orientiert sich dabei am Benutzer selbst und ist für alle Beteiligten verständlich. Bei
+                            der Beschreibung wird gänzlich auf technische Feinheiten verzichtet, lediglich dem fachlichen
+                            Ablauf wird ein logischer Prozess zugrunde gelegt.
                         </p>
-                        <p>Und bereits da werden viele Probleme gelöst. Aus meiner Erfahrung tauchen hier oft schon die großen Probleme der Umsetzung auf – nämlich dann wenn der fachliche Prozess schon nicht logisch ausgereift ist. Die Entwicklung kann fast
-                            alles umsetzen, einzige Vorbedingung: die Aufgabe muss deterministisch sein. Für die Formulierung des Akzeptanztests muss das Problem auf einem Level beleuchtet werden, das logische Probleme frühzeitig zu Tage fördert.</p>
+                        <p>Und bereits da werden viele Probleme gelöst. Aus meiner Erfahrung tauchen hier oft schon die großen
+                            Probleme der Umsetzung auf – nämlich dann wenn der fachliche Prozess schon nicht logisch ausgereift
+                            ist. Die Entwicklung kann fast alles umsetzen, einzige Vorbedingung: die Aufgabe muss deterministisch
+                            sein. Für die Formulierung des Akzeptanztests muss das Problem auf einem Level beleuchtet werden,
+                            das logische Probleme frühzeitig zu Tage fördert.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
 
@@ -323,9 +362,11 @@ Then the detail page of the emplyee should open.
                         </ul>
 
                         <p>Für das Test-Driven Development stellt BDD ein Werkzeug zur Verfügung - nämlich Akzeptanztests.</p>
-                        <p>Akzeptanztests konzentrieren sich, wie von TDD gefordert, auf das Problem selbst. Die Umsetzung der Lösung kann zunächst vollkommen ignoriert werden. Die Tests bewegen sich auf einer rein fachlichen Ebene, anders als Unit-Tests.
-                            Trotzdem ist es möglich, ja gefordert, auf fachliche Details einzugehen.</p>
-                        <p>Durch die Schlüsselwörter ist es möglich die Akzeptanztests automatisch zu verarbeiten und programmtechnisch Tests auf Grundlage der Kriterien verfassen.</p>
+                        <p>Akzeptanztests konzentrieren sich, wie von TDD gefordert, auf das Problem selbst. Die Umsetzung der
+                            Lösung kann zunächst vollkommen ignoriert werden. Die Tests bewegen sich auf einer rein fachlichen
+                            Ebene, anders als Unit-Tests. Trotzdem ist es möglich, ja gefordert, auf fachliche Details einzugehen.</p>
+                        <p>Durch die Schlüsselwörter ist es möglich die Akzeptanztests automatisch zu verarbeiten und programmtechnisch
+                            Tests auf Grundlage der Kriterien verfassen.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
 
@@ -343,22 +384,29 @@ Then the detail page of the emplyee should open.
                             <li>Unterstützt das Team / Kritisiert das Produkt</li>
                         </ul>
 
-                        <p>Die [Testquadranten von Brian Marick] und in erweiterter Form von Lisa Crispin geben eine gute Orientierungshilfe in Bezug auf verschiedene Testarten.</p>
+                        <p>Die [Testquadranten von Brian Marick] und in erweiterter Form von Lisa Crispin geben eine gute Orientierungshilfe
+                            in Bezug auf verschiedene Testarten.</p>
                         <p>Im Wesentlichen werden Tests nach 2 Ebenen kategorisiert:</p>
                         <p>
                             <strong>Fachlich vs. Technisch geprägt</strong>
                         </p>
-                        <p>Die Unterscheidung zwischen technisch und fachlich geprägt kann man am leichtesten treffen, wenn man sich das Zielpublikum vor Augen hält mit dem man über einen Test spricht bzw. sich Gedanken macht, wer denn einen Test durchführen
-                            könnte. In einem technisch geprägten Test werden die Durchführenden wohl eher Entwickler oder zumindest Testautomatisierer sein wogegen bei fachlich geprägten Tests ein Tester oder vielleicht in Product-Owner bzw. sogar ein
-                            Kunde der Durchführende sein kann.</p>
+                        <p>Die Unterscheidung zwischen technisch und fachlich geprägt kann man am leichtesten treffen, wenn
+                            man sich das Zielpublikum vor Augen hält mit dem man über einen Test spricht bzw. sich Gedanken
+                            macht, wer denn einen Test durchführen könnte. In einem technisch geprägten Test werden die Durchführenden
+                            wohl eher Entwickler oder zumindest Testautomatisierer sein wogegen bei fachlich geprägten Tests
+                            ein Tester oder vielleicht in Product-Owner bzw. sogar ein Kunde der Durchführende sein kann.</p>
                         <p>
                             <strong>Unterstützt das Team / Kritisiert das Produkt</strong>
                         </p>
                         <p>Man könnte auch sagen „vor der Entwicklung“ und „nach der Entwicklung“.</p>
-                        <p>Entwickler die Erfahrungen mit Test-Driven-Development (TDD) gemacht haben, berichten oft, dass sie ihre Systeme/Klassen anders (einfacher) gestalten wenn die Tests vorher geschrieben werden – somit unterstützen diese Tests das
-                            Team während der Entwicklung. Außerdem werden durch die ständige Durchführung der Tests Seiteneffekte sofort entdeckt – eine weitere, nicht unwesentliche, Unterstützung.</p>
-                        <p>Tester haben an und für sich einen destruktiven Job – sie versuchen das System zu brechen bzw. Fehler zu finden. Wenn ihnen das nicht gelingt, kann man mit hoher Wahrscheinlichkeit davon ausgehen, dass das System robust ist und
-                            die getesteten Funktionalitäten gewährleistet sind. Somit versuchen sie, das Produkt zu kritisieren und Schwachstellen aufzudecken.</p>
+                        <p>Entwickler die Erfahrungen mit Test-Driven-Development (TDD) gemacht haben, berichten oft, dass sie
+                            ihre Systeme/Klassen anders (einfacher) gestalten wenn die Tests vorher geschrieben werden –
+                            somit unterstützen diese Tests das Team während der Entwicklung. Außerdem werden durch die ständige
+                            Durchführung der Tests Seiteneffekte sofort entdeckt – eine weitere, nicht unwesentliche, Unterstützung.</p>
+                        <p>Tester haben an und für sich einen destruktiven Job – sie versuchen das System zu brechen bzw. Fehler
+                            zu finden. Wenn ihnen das nicht gelingt, kann man mit hoher Wahrscheinlichkeit davon ausgehen,
+                            dass das System robust ist und die getesteten Funktionalitäten gewährleistet sind. Somit versuchen
+                            sie, das Produkt zu kritisieren und Schwachstellen aufzudecken.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
 
@@ -381,22 +429,29 @@ Then the detail page of the emplyee should open.
                         <p>
                             <strong>Exoploratives Testen, Usability Tests, Kundenabnahme</strong>
                         </p>
-                        <p>Diese Arten von Tests – meist manuell durchgeführt – versuchen Fehler im System zu finden, kritisieren also das Produkt. Auf der zweiten Ebene betrachtet sind diese Tests aber ausschließlich durch fachliche Anforderungen geprägt
-                            – man testet also gegen die fachliche Spezifikation.</p>
+                        <p>Diese Arten von Tests – meist manuell durchgeführt – versuchen Fehler im System zu finden, kritisieren
+                            also das Produkt. Auf der zweiten Ebene betrachtet sind diese Tests aber ausschließlich durch
+                            fachliche Anforderungen geprägt – man testet also gegen die fachliche Spezifikation.</p>
                         <p>
                             <strong>Unit-Tests, Komponenten-Tests, ...</strong>
                         </p>
-                        <p>Wenn man Unittests &amp; Co nach TDD schreibt (und nicht nachgelagert um irgendwelche Kennzahlen zu befriedigen ☺), unterstützen sie das Team bei der Arbeit indem sie Einfluss auf die Systemarchitektur haben und Seiteneffekte sehr
-                            schnell erkannt werden. Allerdings sind sie technisch geprägt, werden also durch Entwickler entworfen und geschrieben.</p>
+                        <p>Wenn man Unittests &amp; Co nach TDD schreibt (und nicht nachgelagert um irgendwelche Kennzahlen
+                            zu befriedigen ☺), unterstützen sie das Team bei der Arbeit indem sie Einfluss auf die Systemarchitektur
+                            haben und Seiteneffekte sehr schnell erkannt werden. Allerdings sind sie technisch geprägt, werden
+                            also durch Entwickler entworfen und geschrieben.</p>
                         <p>
                             <strong>Performance- und Last-Tests, Skalierbarkeitstests, ...</strong>
                         </p>
-                        <p>Auch diese Tests versuchen das Produkt zu kritisieren indem sie die nicht-funktionalen Anforderungen in Frage stellen. Sie sind technisch geprägt da ein Product-Owner wohl kaum in der Lage sein würde solche Tests zu entwickeln.</p>
+                        <p>Auch diese Tests versuchen das Produkt zu kritisieren indem sie die nicht-funktionalen Anforderungen
+                            in Frage stellen. Sie sind technisch geprägt da ein Product-Owner wohl kaum in der Lage sein
+                            würde solche Tests zu entwickeln.</p>
                         <p>
                             <strong>Prototypen, Simulation, Akzeptanz Tests</strong>
                         </p>
-                        <p>Last but not least sind Vorgehensweisen wie Prototyping, Storyboards &amp; Co sowohl fachlich geprägt als auch unterstützend für das Team. Eine (oft viel zu wenig beachtete) Grundregel in der Softwareentwicklung besagt: Je besser
-                            eine Anforderung vorbereitet und durchdacht ist, umso einfacher wird die Entwicklung. Hier ist auch das Behaviour-Driven-Development anzusiedeln!</p>
+                        <p>Last but not least sind Vorgehensweisen wie Prototyping, Storyboards &amp; Co sowohl fachlich geprägt
+                            als auch unterstützend für das Team. Eine (oft viel zu wenig beachtete) Grundregel in der Softwareentwicklung
+                            besagt: Je besser eine Anforderung vorbereitet und durchdacht ist, umso einfacher wird die Entwicklung.
+                            Hier ist auch das Behaviour-Driven-Development anzusiedeln!</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
 
@@ -442,10 +497,13 @@ in order to put it into my shopping cart.
                             <li>Sprache die alle verstehen</li>
                         </ul>
 
-                        <p>Fallbeispiele haben einen anderen Fokus als Use Cases, Konzepte, Protokolle, Lasten- oder Pflichtenhefte: Fallbeispiele beschreiben genau einen Anwendungsfall aus der Sicht eines Benutzers. Wir schreiben Applikationen für Benutzer
-                            und darauf liegt der Fokus.</p>
-                        <p>Klar, wir können auch Lasten- und Pflichtenhefte scheiben, aber die sind für Kunden. Wir können auch UseCases scheiben, aber die sind für Tester. Wir können auch Konzepte schreiben, aber die sind für Entwickler. Unser Ziel ist
-                            eine Sprache zu sprechen, die alle verstehen, und daher schreiben wir User Stories.</p>
+                        <p>Fallbeispiele haben einen anderen Fokus als Use Cases, Konzepte, Protokolle, Lasten- oder Pflichtenhefte:
+                            Fallbeispiele beschreiben genau einen Anwendungsfall aus der Sicht eines Benutzers. Wir schreiben
+                            Applikationen für Benutzer und darauf liegt der Fokus.</p>
+                        <p>Klar, wir können auch Lasten- und Pflichtenhefte scheiben, aber die sind für Kunden. Wir können auch
+                            UseCases scheiben, aber die sind für Tester. Wir können auch Konzepte schreiben, aber die sind
+                            für Entwickler. Unser Ziel ist eine Sprache zu sprechen, die alle verstehen, und daher schreiben
+                            wir User Stories.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
 
@@ -459,7 +517,9 @@ in order to put it into my shopping cart.
                             <li>Sprintziele</li>
                         </ul>
 
-                        <p>Und weil wir agil entwickeln, brauchen wir die User Stories sowieso, nämlich als Sprintziele. Aber erst durch BDD finden sie User Stories wirklich Einzug in unser Projekt, da sie maschinell verarbeitet werden müssen.</p>
+                        <p>Und weil wir agil entwickeln, brauchen wir die User Stories sowieso, nämlich als Sprintziele. Aber
+                            erst durch BDD finden sie User Stories wirklich Einzug in unser Projekt, da sie maschinell verarbeitet
+                            werden müssen.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
 
@@ -506,11 +566,14 @@ But with a count of 2.
                         </ul>
 
                         <p>Als nächster Schritt werden die Fallbeispiele um Akzeptanzkriterien erweitert und automatisiert.</p>
-                        <p>Die User Stories werden um Akzeptanzkriterien erweitert. Zu jeder User Story können natürlich mehrere Akzeptanzkriterien verfasst werden. Diese Scenarios detaillieren die Story, beschreiben Sonder- und Problemfälle und listen mögliche
-                            Aktionen des Benutzers auf.</p>
+                        <p>Die User Stories werden um Akzeptanzkriterien erweitert. Zu jeder User Story können natürlich mehrere
+                            Akzeptanzkriterien verfasst werden. Diese Scenarios detaillieren die Story, beschreiben Sonder-
+                            und Problemfälle und listen mögliche Aktionen des Benutzers auf.</p>
                         <p>Aus diese User Stories sind in einer Sprache verfasst, die alle Beteiligten lesen und verstehen können.</p>
-                        <p>Die Texte basieren auf Schlüsselwörtern, im Normalfall „Given“, „When“ und „Then“. Um den Text besser lesbar zu gestalten bieten machen Frameworks auch andere Schlüsselwörter wie z.B. „And“ und „But“ an. Ebenso bieten die Frameworks
-                            das Parsen von Variablen und Tabellen aus den Texten selbst an. Der restliche Text wird 1:1 an das Testframework übergeben.</p>
+                        <p>Die Texte basieren auf Schlüsselwörtern, im Normalfall „Given“, „When“ und „Then“. Um den Text besser
+                            lesbar zu gestalten bieten machen Frameworks auch andere Schlüsselwörter wie z.B. „And“ und „But“
+                            an. Ebenso bieten die Frameworks das Parsen von Variablen und Tabellen aus den Texten selbst
+                            an. Der restliche Text wird 1:1 an das Testframework übergeben.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
 
@@ -531,9 +594,13 @@ But with a count of 2.
                             <li>Ersetzt teilweise Lasten- und Pflichtenheft</li>
                         </ul>
 
-                        <p>Die fertigen User Stories und Akzeptanzkriterien werden mit dem Kunden gemeinsam entwickelt, oder zumindest mit ihm abgestimmt. Der Kunde wird somit in den Entwicklungsprozess mit eingebunden. Hier zeigt sich schon ein erster Vorteil.
-                            Früher sind fachliche Fehler erst im fertigen Produkt aufgetaucht. Die Stories geben dem Entwicklungsteam ein Werkzeug in die Hand, mit dem der fachliche Ablauf vollständig definiert werden kann.</p>
-                        <p>Wenn man wirklich agil arbeitet, können die Akzeptanzkriterien ein Lasten- und Pflichtenheft zumindest teilweise ersetzen.</p>
+                        <p>Die fertigen User Stories und Akzeptanzkriterien werden mit dem Kunden gemeinsam entwickelt, oder
+                            zumindest mit ihm abgestimmt. Der Kunde wird somit in den Entwicklungsprozess mit eingebunden.
+                            Hier zeigt sich schon ein erster Vorteil. Früher sind fachliche Fehler erst im fertigen Produkt
+                            aufgetaucht. Die Stories geben dem Entwicklungsteam ein Werkzeug in die Hand, mit dem der fachliche
+                            Ablauf vollständig definiert werden kann.</p>
+                        <p>Wenn man wirklich agil arbeitet, können die Akzeptanzkriterien ein Lasten- und Pflichtenheft zumindest
+                            teilweise ersetzen.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
 
@@ -556,9 +623,12 @@ But with a count of 2.
                             <li>Testkatalog ergänzen</li>
                         </ul>
 
-                        <p>Auch die Qualitätssicherung wird frühzeitig in den Prozess eingebunden. Schon das ist ein enormer Vorteil. Oft wird die Qualitätssicherung in Projekten stiefmütterlich behandelt. Die fertige Applikation wird übergeben und die Qualitätssicherung
-                            soll schauen wie sie damit zurecht kommt.</p>
-                        <p>Da die Akzeptanzkriterien den Testkatalog ergänzen wird der Qualitätssicherung auch viel Arbeit abgenommen. GUI-Tests werden mit dem Produkt mitgeliefert und muss nicht nachträglich und umständlich definiert werden.
+                        <p>Auch die Qualitätssicherung wird frühzeitig in den Prozess eingebunden. Schon das ist ein enormer
+                            Vorteil. Oft wird die Qualitätssicherung in Projekten stiefmütterlich behandelt. Die fertige
+                            Applikation wird übergeben und die Qualitätssicherung soll schauen wie sie damit zurecht kommt.</p>
+                        <p>Da die Akzeptanzkriterien den Testkatalog ergänzen wird der Qualitätssicherung auch viel Arbeit abgenommen.
+                            GUI-Tests werden mit dem Produkt mitgeliefert und muss nicht nachträglich und umständlich definiert
+                            werden.
                         </p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
@@ -580,8 +650,9 @@ But with a count of 2.
                             <li>Umsetzung der Tests</li>
                         </ul>
 
-                        <p>Die Entwickler kümmern sich zunächst um die Umsetzung der Tests. Bevor die Applikation fertig ist, könnte sie theoretisch schon getestet werden. Auch hier zeigt sich der Vorteil, dass Entwickler schon frühzeitig in den Spezifikationsprozess
-                            eingebunden werden.</p>
+                        <p>Die Entwickler kümmern sich zunächst um die Umsetzung der Tests. Bevor die Applikation fertig ist,
+                            könnte sie theoretisch schon getestet werden. Auch hier zeigt sich der Vorteil, dass Entwickler
+                            schon frühzeitig in den Spezifikationsprozess eingebunden werden.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
 
@@ -620,10 +691,13 @@ But with a count of 2.
                             <li>Testkatalog ergänzen</li>
                         </ul>
 
-                        <p>Erst im dritten Schritt wird die Anforderung umgesetzt. Das Entwicklungsteam hat bereits automatische Tests an der Hand.</p>
-                        <p>Die Qualitätssicherung für die Test zunächst manuell durch, bis klar ist, dass die Szenarien den nötigen Testumfang abdecken. Danach können diese Tests jederzeit automatisch durchgeführt werden.
+                        <p>Erst im dritten Schritt wird die Anforderung umgesetzt. Das Entwicklungsteam hat bereits automatische
+                            Tests an der Hand.</p>
+                        <p>Die Qualitätssicherung für die Test zunächst manuell durch, bis klar ist, dass die Szenarien den
+                            nötigen Testumfang abdecken. Danach können diese Tests jederzeit automatisch durchgeführt werden.
                         </p>
-                        <p>Als zusätzlicher Benefit kann aus den User Stories auch automatisch eine Spezifikation der Applikation abgeleitet werden.</p>
+                        <p>Als zusätzlicher Benefit kann aus den User Stories auch automatisch eine Spezifikation der Applikation
+                            abgeleitet werden.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
 
@@ -706,11 +780,18 @@ But with a count of 2.
                             <li>Epics</li>
                         </ul>
 
-                        <p>Am Anfang war die Idee. Diese wird meist vom Kunden bzw. dem Product-Owner ausgebrütet und formuliert. Die Idee kann aber auch von anderen Beteiligten kommen, z.B. von der Entwicklung. Die Idee wird bei uns in einer Anforderungsdatenbank,
-                            noch in Prosa, erfasst. Die Anforderung enthält eine grobe Vorstellung wie das Feature aussehen soll und beschreibt Hintergrundinformationen.</p>
-                        <p>In der Porsche Informatik wird die Anforderungsdatenbank auch für die offizielle Statusverfolgung genutzt, da sich unsere Kunden mit dem agilen Vorgehen oft noch nicht richtig anfreunden können. Teilweise dient die Anforderungsdatenbank
-                            auch als Quelle für Aufwandsschätzungen, besonders wenn die Umsetzung für das nächste Wirtschaftsjahr geplant ist. Auch das deckt sich noch nicht mit dem agilen Vorgehen.</p>
-                        <p>Für große Anforderungen, die nicht in einem Sprint umgesetzt werden können, werden jetzt User Epics verfasst. User Epics sind Sammlungen von User Stories, es müssen aber zu Beginn nicht alle User Stories ausformuliert sein.
+                        <p>Am Anfang war die Idee. Diese wird meist vom Kunden bzw. dem Product-Owner ausgebrütet und formuliert.
+                            Die Idee kann aber auch von anderen Beteiligten kommen, z.B. von der Entwicklung. Die Idee wird
+                            bei uns in einer Anforderungsdatenbank, noch in Prosa, erfasst. Die Anforderung enthält eine
+                            grobe Vorstellung wie das Feature aussehen soll und beschreibt Hintergrundinformationen.</p>
+                        <p>In der Porsche Informatik wird die Anforderungsdatenbank auch für die offizielle Statusverfolgung
+                            genutzt, da sich unsere Kunden mit dem agilen Vorgehen oft noch nicht richtig anfreunden können.
+                            Teilweise dient die Anforderungsdatenbank auch als Quelle für Aufwandsschätzungen, besonders
+                            wenn die Umsetzung für das nächste Wirtschaftsjahr geplant ist. Auch das deckt sich noch nicht
+                            mit dem agilen Vorgehen.</p>
+                        <p>Für große Anforderungen, die nicht in einem Sprint umgesetzt werden können, werden jetzt User Epics
+                            verfasst. User Epics sind Sammlungen von User Stories, es müssen aber zu Beginn nicht alle User
+                            Stories ausformuliert sein.
                         </p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
@@ -735,11 +816,15 @@ But with a count of 2.
                             <li>Sonstige Dokumente</li>
                         </ul>
 
-                        <p>Bevor das Feature umgesetzt wird, wird es noch konkretisiert. Dies geschieht durch Kunde, QA und Entwicklung gemeinsam.</p>
-                        <p>Grundsätzlich werden dem Kunden „einfache Fragen“ gestellt. Die Ergebnisse aus diesen Abstimmungen werden einem Story File festgehalten, in Behaviors aufgeteilt und im Versionskontrollsystem (SVN) eingepflegt. Behaviors entsprechen
-                            den Szenarien, müssen jedoch noch nicht so formuliert sein, dass sie maschinell verarbeitet werden können.</p>
-                        <p>Je nach Umfang des Features entstehen auch noch zusätzliche Dokumentation: UIMockups, eine Aufwandsschätzungen, Schnittstellendokumentationen, usw. Wir achten darauf, dass jede einzelne zusätzliche Dokumentation auch in der Story
-                            referenziert ist.
+                        <p>Bevor das Feature umgesetzt wird, wird es noch konkretisiert. Dies geschieht durch Kunde, QA und
+                            Entwicklung gemeinsam.</p>
+                        <p>Grundsätzlich werden dem Kunden „einfache Fragen“ gestellt. Die Ergebnisse aus diesen Abstimmungen
+                            werden einem Story File festgehalten, in Behaviors aufgeteilt und im Versionskontrollsystem (SVN)
+                            eingepflegt. Behaviors entsprechen den Szenarien, müssen jedoch noch nicht so formuliert sein,
+                            dass sie maschinell verarbeitet werden können.</p>
+                        <p>Je nach Umfang des Features entstehen auch noch zusätzliche Dokumentation: UIMockups, eine Aufwandsschätzungen,
+                            Schnittstellendokumentationen, usw. Wir achten darauf, dass jede einzelne zusätzliche Dokumentation
+                            auch in der Story referenziert ist.
                         </p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
@@ -782,14 +867,16 @@ But with a count of 2.
                             <li>Testkatalog</li>
                         </ul>
 
-                        <p>Kurz vor der Sprintplanung wird zwischen Entwickler und Tester abgestimmt, welche Verhaltensweisen man formalisieren und automatisieren will.</p>
+                        <p>Kurz vor der Sprintplanung wird zwischen Entwickler und Tester abgestimmt, welche Verhaltensweisen
+                            man formalisieren und automatisieren will.</p>
                         <p>Entscheidungskriterien dabei sind:</p>
                         <ul>
                             <li>Wie wichtig ist das Behavior?</li>
                             <li>Wie oft müsste es getestet werden?</li>
                             <li>Wie aufwendig ist die Automatisierung?</li>
                         </ul>
-                        <p>Auf Basis dieser Entscheidungen werden dann die Szenarien formalisiert (was rausfällt landet in einem Testkatalog).
+                        <p>Auf Basis dieser Entscheidungen werden dann die Szenarien formalisiert (was rausfällt landet in einem
+                            Testkatalog).
                         </p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
@@ -812,14 +899,22 @@ But with a count of 2.
                             <li>Dokumentation automatisieren</li>
                         </ul>
 
-                        <p>Im Entwicklungszyklus durchwandert ein Story File dann mehrere Stationen. Diese sind als Verzeichnisse im Repository abgebildet. Grundsätzlich wird zwischen Stories unterschieden, die sich in Entwicklung befinden und jenen, die
-                            fertig umgesetzt wurden und Teil der Systemspezifikation werden.</p>
-                        <p>Zunächst befindet sich ein Story File in „preparation“. Soll die Story im Sprint umgesetzt werden, wird das File in „current“ verschoben. Wenn die Umsetzung erledigt wurde, wird das File in „finished“ verschoben.
+                        <p>Im Entwicklungszyklus durchwandert ein Story File dann mehrere Stationen. Diese sind als Verzeichnisse
+                            im Repository abgebildet. Grundsätzlich wird zwischen Stories unterschieden, die sich in Entwicklung
+                            befinden und jenen, die fertig umgesetzt wurden und Teil der Systemspezifikation werden.</p>
+                        <p>Zunächst befindet sich ein Story File in „preparation“. Soll die Story im Sprint umgesetzt werden,
+                            wird das File in „current“ verschoben. Wenn die Umsetzung erledigt wurde, wird das File in „finished“
+                            verschoben.
                         </p>
-                        <p><a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a> Nach dem Sprint wird das Story File in den „Feature Tree“ eingepflegt. Der „Feature Tree“ ist nach den Modulen im System aufgebaut. Die Übernahme erfolgt entweder
-                            durch kopieren der Datei oder durch händisches Anpassen von bestehen Story Files.</p>
-                        <p>In einem Projekt der Porsche Informatik wird der „Feature Tree“ sogar dazu verwendet, automatisch eine Systemspezifikation zu generieren. Dazu werden die Story Files und zusätzliche Dateien im „Feature Tree“ zu einem Dokument zusammengefasst.
-                            Dieser Prozess ist leider sehr aufwendig, das Ergebnis ist jedoch beachtlich: Jede Version enthält eine getestete und exakte Systemspezifikation als PDF Dokument.</p>
+                        <p><a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a> Nach dem Sprint wird das Story
+                            File in den „Feature Tree“ eingepflegt. Der „Feature Tree“ ist nach den Modulen im System aufgebaut.
+                            Die Übernahme erfolgt entweder durch kopieren der Datei oder durch händisches Anpassen von bestehen
+                            Story Files.</p>
+                        <p>In einem Projekt der Porsche Informatik wird der „Feature Tree“ sogar dazu verwendet, automatisch
+                            eine Systemspezifikation zu generieren. Dazu werden die Story Files und zusätzliche Dateien im
+                            „Feature Tree“ zu einem Dokument zusammengefasst. Dieser Prozess ist leider sehr aufwendig, das
+                            Ergebnis ist jedoch beachtlich: Jede Version enthält eine getestete und exakte Systemspezifikation
+                            als PDF Dokument.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
 
@@ -855,8 +950,9 @@ public void ensureUserLoggedIn(String name)
                         </ul>
 
                         <p>Wie erfolgt nun die Anbindung der Szenarios an die Applikation?</p>
-                        <p>Grundlegend ganz einfach: in Steps-Klassen werden die Texte aus den Szenarien implementiert. Das Beispiel zeigt wie das grundsätzlich funktionieren könnte. Doch in dieser Art und Weise läuft man schnell Gefahr, dass die Wartungsaufwände
-                            für die BDD-Tests zu hoch werden.</p>
+                        <p>Grundlegend ganz einfach: in Steps-Klassen werden die Texte aus den Szenarien implementiert. Das
+                            Beispiel zeigt wie das grundsätzlich funktionieren könnte. Doch in dieser Art und Weise läuft
+                            man schnell Gefahr, dass die Wartungsaufwände für die BDD-Tests zu hoch werden.</p>
                         <p>Daher haben wir in diesem Bereich viel Energie investiert um die Tests robust zu gestalten.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
@@ -888,10 +984,14 @@ public void ensureUserLoggedIn(String name)
                             <li>Testinterface</li>
                         </ul>
 
-                        <p>Grundsätzlich agieren die Steps nun auf Workflows. Erst die Workflows führen die Aktionen in der Applikation durch. Workflows agieren modulübergreifend, können daher auf die Schnittstellen der gesamten Applikation zugreifen. Die
-                            Logik wandert dadurch aus den Steps heraus und die BDD-Tests werden stabiler. Ähnliche Verhaltensweisen müssen auch nicht mehrfach implementiert werden.</p>
-                        <p>Mit dieser Technik werden auch Testdaten aufgebaut. Die Tests müssen nicht auf einer vorbereiteten Datenbank laufen, die Tests erstellen die nötigen Testdaten selbst. Robustheit ist der Schlüssel.</p>
-                        <p>Das Testinterface ermöglicht uns auch Aktionen auszuführen, die in der Applikation eigentlich nicht möglich wären, z.B. einen Benutzer zu löschen anstatt nur das LöschFlag zu setzen.</p>
+                        <p>Grundsätzlich agieren die Steps nun auf Workflows. Erst die Workflows führen die Aktionen in der
+                            Applikation durch. Workflows agieren modulübergreifend, können daher auf die Schnittstellen der
+                            gesamten Applikation zugreifen. Die Logik wandert dadurch aus den Steps heraus und die BDD-Tests
+                            werden stabiler. Ähnliche Verhaltensweisen müssen auch nicht mehrfach implementiert werden.</p>
+                        <p>Mit dieser Technik werden auch Testdaten aufgebaut. Die Tests müssen nicht auf einer vorbereiteten
+                            Datenbank laufen, die Tests erstellen die nötigen Testdaten selbst. Robustheit ist der Schlüssel.</p>
+                        <p>Das Testinterface ermöglicht uns auch Aktionen auszuführen, die in der Applikation eigentlich nicht
+                            möglich wären, z.B. einen Benutzer zu löschen anstatt nur das LöschFlag zu setzen.</p>
                         <p>Bleibt aber immer noch das Problem die GUI zu steuern.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
@@ -912,12 +1012,18 @@ public void ensureUserLoggedIn(String name)
                             <li>Selenium</li>
                         </ul>
 
-                        <p>Um die GUI zu Steuern erzeugen wir für die Ansichten und Wartungen in der Applikation, Pages und Komponenten. Die Klassen beschreiben beispielsweise die Felder einer Login-Seite, also z.B. „Benutzername“, „Passwort“ und den „Anmelden“
-                            Button. Zentrale Komponenten, wie z.B. einen Suchdialog, werden in Component Klassen definiert, damit diese in mehreren Pages zur Verfügung stehen.</p>
-                        <p>Die Pages interagieren über eine eigene Driver-API mit der GUI. In der API stehen die gängigsten Kommandos für die Automatisierung zur Verfügung, als z.B. „Klicke auf ein Element“, „Fülle Feld X mit Y“. Diese API soll uns ermöglichen
-                            auf Versionsupdates und Änderungen im Automatisierungstool zu reagieren.</p>
-                        <p>Der Driver ist nun die spezielle Implementierung eines Automatisierungstools, in unserem Fall Selenium 2.x (Webdriver). In den Driver ist auch eine Application Map integriert. Sollte das Mapping von z.B. Feld-Name auf Feld-Id nicht
-                            automatisch möglich sein, kann dieser Definition ein Mapping hinterlegt werden.</p>
+                        <p>Um die GUI zu Steuern erzeugen wir für die Ansichten und Wartungen in der Applikation, Pages und
+                            Komponenten. Die Klassen beschreiben beispielsweise die Felder einer Login-Seite, also z.B. „Benutzername“,
+                            „Passwort“ und den „Anmelden“ Button. Zentrale Komponenten, wie z.B. einen Suchdialog, werden
+                            in Component Klassen definiert, damit diese in mehreren Pages zur Verfügung stehen.</p>
+                        <p>Die Pages interagieren über eine eigene Driver-API mit der GUI. In der API stehen die gängigsten
+                            Kommandos für die Automatisierung zur Verfügung, als z.B. „Klicke auf ein Element“, „Fülle Feld
+                            X mit Y“. Diese API soll uns ermöglichen auf Versionsupdates und Änderungen im Automatisierungstool
+                            zu reagieren.</p>
+                        <p>Der Driver ist nun die spezielle Implementierung eines Automatisierungstools, in unserem Fall Selenium
+                            2.x (Webdriver). In den Driver ist auch eine Application Map integriert. Sollte das Mapping von
+                            z.B. Feld-Name auf Feld-Id nicht automatisch möglich sein, kann dieser Definition ein Mapping
+                            hinterlegt werden.</p>
                         <p>Die API und der Driver werden applikationsübergreifed eingesetzt.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
@@ -941,11 +1047,15 @@ public void ensureUserLoggedIn(String name)
                             <li>vorab automatisieren</li>
                         </ul>
 
-                        <p>Mit diesem scheinbar sehr komplexen Framework versuchen wir dem Wartungsproblem bei der Testautomatisierung in den Griff zu bekommen. Wenn man das Framework nochmal genau betrachtet, stellt man schnell fest, dass der Aufwand ein
-                            neues Scenario zu automatisieren darin besteht, die betroffenen Pages und deren Verbindung untereinander zu beschreiben.</p>
-                        <p>Zudem haben viele Scenarios dieselben oder zumindest sehr ähnliche Vorbedingungen – es stellt sich also sehr schnell der Vorteil der Wiederverwendung ein.</p>
-                        <p>Durch die Abstraktionsebenen und das automatische Mapping von abstrakten Feldbezeichnungen auf ID’s ist es nun auch problemlos möglich, GUI-Tests vorab zu automatisieren. Im Idealfall werden die Steps nun während der Entwicklung
-                            “grün”.
+                        <p>Mit diesem scheinbar sehr komplexen Framework versuchen wir dem Wartungsproblem bei der Testautomatisierung
+                            in den Griff zu bekommen. Wenn man das Framework nochmal genau betrachtet, stellt man schnell
+                            fest, dass der Aufwand ein neues Scenario zu automatisieren darin besteht, die betroffenen Pages
+                            und deren Verbindung untereinander zu beschreiben.</p>
+                        <p>Zudem haben viele Scenarios dieselben oder zumindest sehr ähnliche Vorbedingungen – es stellt sich
+                            also sehr schnell der Vorteil der Wiederverwendung ein.</p>
+                        <p>Durch die Abstraktionsebenen und das automatische Mapping von abstrakten Feldbezeichnungen auf ID’s
+                            ist es nun auch problemlos möglich, GUI-Tests vorab zu automatisieren. Im Idealfall werden die
+                            Steps nun während der Entwicklung “grün”.
                         </p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
@@ -976,26 +1086,35 @@ public void ensureUserLoggedIn(String name)
 
                         <p>
                             <strong>Nicht alles automatisieren</strong>
-                            <br/> Je mehr man automatisiert, umso mehr muss man auch pflegen. Selbst wenn man ein ausgeklügeltes Framework verwendet, Anpassungen wird es immer geben.</p>
+                            <br/> Je mehr man automatisiert, umso mehr muss man auch pflegen. Selbst wenn man ein ausgeklügeltes
+                            Framework verwendet, Anpassungen wird es immer geben.</p>
                         <p>
                             <strong>Szenarien müssen lesbar bleiben Verketten</strong>
-                            <br/>Sie nicht unzählige Vorbedingungen in einem Scenario nur weil es die Steps schon gibt. Verstecken Sie die Komplexität lieber in der Implementierung der Steps und formulieren Sie aussagekräftige Steps.
+                            <br/>Sie nicht unzählige Vorbedingungen in einem Scenario nur weil es die Steps schon gibt. Verstecken
+                            Sie die Komplexität lieber in der Implementierung der Steps und formulieren Sie aussagekräftige
+                            Steps.
                         </p>
                         <p>
                             <strong>Machen Sie sich das Leben so leicht wie es geht</strong>
-                            <br/>Je komplizierter der Weg vom Scenario bis zur fertigen Automatisierung ist, umso schwieriger wird es sein, ihre Entwickler zum Mitmachen zu bewegen.</p>
+                            <br/>Je komplizierter der Weg vom Scenario bis zur fertigen Automatisierung ist, umso schwieriger
+                            wird es sein, ihre Entwickler zum Mitmachen zu bewegen.</p>
                         <p>
                             <strong>Vergessen Sie nicht auf die Wartbarkeit zu achten</strong>
-                            <br/>Steht etwas im Widerspruch zur obigen Aussage. Wenn man aber Steps mit Record&amp;Replay Scripten automatisiert, ist man schnell in der Wartungsfalle und kommt nur unglaublich schwer wieder heraus.</p>
+                            <br/>Steht etwas im Widerspruch zur obigen Aussage. Wenn man aber Steps mit Record&amp;Replay Scripten
+                            automatisiert, ist man schnell in der Wartungsfalle und kommt nur unglaublich schwer wieder heraus.</p>
                         <p>
                             <strong>Robustheit, Robustheit, Robustheit</strong>
-                            <br/> Achten Sie bei Tests auf ihre Robustheit. Kein Test geht von Vorbedingungen aus, die nicht spezifiziert sind. Will ich einen Artikel verkaufen, muss einer verkaufbarer Arktikel verfügbar sein. Das „Given“ überprüft ob ein
-                            solcher Artikel vorhanden ist, legt wenn nötig einen an und merkt sich die Id, damit der Artikel im „When“ verkauft werden kann. Stories sollten ihre Testdaten aufräumen, und wenn die eigenen Testdaten zu Beginn schon in der
-                            Datenbank sind, trotzdem laufen.</p>
+                            <br/> Achten Sie bei Tests auf ihre Robustheit. Kein Test geht von Vorbedingungen aus, die nicht spezifiziert
+                            sind. Will ich einen Artikel verkaufen, muss einer verkaufbarer Arktikel verfügbar sein. Das
+                            „Given“ überprüft ob ein solcher Artikel vorhanden ist, legt wenn nötig einen an und merkt sich
+                            die Id, damit der Artikel im „When“ verkauft werden kann. Stories sollten ihre Testdaten aufräumen,
+                            und wenn die eigenen Testdaten zu Beginn schon in der Datenbank sind, trotzdem laufen.</p>
                         <p>
                             <strong>Geben Sie nicht auf</strong>
-                            <br/>Unsere Entwickler waren durch die Bank zumindest reserviert dem Vorhaben BDD gegenüber. Mittlerweile gibt es aber unzählige Befürworter des Vorgehens. Veränderung braucht Zeit und somit Ihre Geduld. Testen ist auch aufwendig.
-                            Wir haben das Glück, dass die Geschäftsleitung hinten uns steht und auf längere Sicht rentiert es sich.</p>
+                            <br/>Unsere Entwickler waren durch die Bank zumindest reserviert dem Vorhaben BDD gegenüber. Mittlerweile
+                            gibt es aber unzählige Befürworter des Vorgehens. Veränderung braucht Zeit und somit Ihre Geduld.
+                            Testen ist auch aufwendig. Wir haben das Glück, dass die Geschäftsleitung hinten uns steht und
+                            auf längere Sicht rentiert es sich.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
 
@@ -1015,7 +1134,8 @@ public void ensureUserLoggedIn(String name)
                             <li>Testdaten</li>
                         </ul>
 
-                        <p>Wie fügt sich das Ganze jetzt in technische Infrastruktur ein? Wie sieht es mit der Laufzeit aus? Woher bekommen wir Testdaten?</p>
+                        <p>Wie fügt sich das Ganze jetzt in technische Infrastruktur ein? Wie sieht es mit der Laufzeit aus?
+                            Woher bekommen wir Testdaten?</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
 
@@ -1046,11 +1166,15 @@ public void ensureUserLoggedIn(String name)
                             <li>Manuell</li>
                         </ul>
 
-                        <p>Wir verwenden Jenkins als CI-Umgebung. Dieser führ mehrmals am Tag einen vollständigen Build durch und deployt die Applikation automatisch auf ein Testsystem. Sobald der Applikationsserver gestartet worden ist, beginnt der Akzeptanztest.
-                            Bei Fehlern werden sowohl der Product-Owner als auch der zuständige technische Architekt per Email verständigt.</p>
+                        <p>Wir verwenden Jenkins als CI-Umgebung. Dieser führ mehrmals am Tag einen vollständigen Build durch
+                            und deployt die Applikation automatisch auf ein Testsystem. Sobald der Applikationsserver gestartet
+                            worden ist, beginnt der Akzeptanztest. Bei Fehlern werden sowohl der Product-Owner als auch der
+                            zuständige technische Architekt per Email verständigt.</p>
                         <p>Anschließend wird noch die aktuelle Systemspezifikation generiert.</p>
                         <p>Dieses Vorgehen ist durch das Buch [Continous Delivery] inspiriert.</p>
-                        <p>Natürlich können Entwickler Tests auch lokal durchführen. Dabei spielt die Robustheit der Tests wieder eine Rolle. Die Tests können selbst die Applikation starten, inkl. InMemory-Datenbank, und die Tests dagegen ausführen.</p>
+                        <p>Natürlich können Entwickler Tests auch lokal durchführen. Dabei spielt die Robustheit der Tests wieder
+                            eine Rolle. Die Tests können selbst die Applikation starten, inkl. InMemory-Datenbank, und die
+                            Tests dagegen ausführen.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
 
@@ -1069,13 +1193,18 @@ public void ensureUserLoggedIn(String name)
                             <li>Parallelisierung</li>
                         </ul>
 
-                        <p>Sobald man mehrere Akzeptanztests hat kann die Laufzeit der Tests zu einem Problem werden. Jenkins kann Jobs parallelisieren und die Ergebnisse wieder vereinen. Die Akzeptanztests werden in mehrere Gruppen geteilt und parallel
-                            ausgeführt.
+                        <p>Sobald man mehrere Akzeptanztests hat kann die Laufzeit der Tests zu einem Problem werden. Jenkins
+                            kann Jobs parallelisieren und die Ergebnisse wieder vereinen. Die Akzeptanztests werden in mehrere
+                            Gruppen geteilt und parallel ausgeführt.
                         </p>
-                        <p>Zur Zeit haben wir noch in keinem Projekt große Probleme mit der Laufzeit. Die Parallelisierung haben wir daher erst bei einem Projekt umgesetzt. Da die Tests gegen Oracle laufen sollen, können wir keine echte Ad-hoc Umgebung verwenden,
-                            wir brauchen daher vier Testumgebungen, gegen die die Tests laufen (sonst könnte es vorkommen, dass sich die Test beeinflussen).</p>
+                        <p>Zur Zeit haben wir noch in keinem Projekt große Probleme mit der Laufzeit. Die Parallelisierung haben
+                            wir daher erst bei einem Projekt umgesetzt. Da die Tests gegen Oracle laufen sollen, können wir
+                            keine echte Ad-hoc Umgebung verwenden, wir brauchen daher vier Testumgebungen, gegen die die
+                            Tests laufen (sonst könnte es vorkommen, dass sich die Test beeinflussen).</p>
                         <p>Auf Seiten der Testautomatisierungslösung verwenden wir dazu da Webdriver Grid2.</p>
-                        <p>Sollte es wider Erwarten noch mehr Probleme mit der Laufzeit geben, haben wir für Szenarien von Tags vorbereitet. Im Buildzyklus kann dann definiert werden, dass nur Szenarien ausgeführt werden die mit @VIP gekennzeichnet sind.
+                        <p>Sollte es wider Erwarten noch mehr Probleme mit der Laufzeit geben, haben wir für Szenarien von Tags
+                            vorbereitet. Im Buildzyklus kann dann definiert werden, dass nur Szenarien ausgeführt werden
+                            die mit @VIP gekennzeichnet sind.
                         </p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
@@ -1098,11 +1227,14 @@ public void ensureUserLoggedIn(String name)
                             <li>Migrationsmechanismus</li>
                         </ul>
 
-                        <p>Grundsätzlich ist es so, dass alle Tests ihre Daten selbst vorbereiten. Dies geschieht mit Hilfe der „Given“ Anweisungen. Hier ist wieder die Robustheit der Tests ein Thema.</p>
-                        <p>Trotzdem ist es aber nötig, dass die Applikation beim Starten die Datenbank vorbereitet. Die Initialisierung bzw. die Aktualisierung erfolgt dabei durch Liquibase. Dann ist es noch notwendig eine Grundkonfiguration zu erstellen,
-                            also z.B. einen Mandanten für die Tests zu erzeugen.</p>
-                        <p>Schließlich werden noch über einen Migrationsmechanismus, der in der Applikation sowieso existiert, Testdaten eingespielt. Diese Testdaten sind jedoch für die BDDTests nicht nötig. Sie dienen lediglich dazu die Umgebungen der Entwickler
-                            mit sinnvollen Daten zu befüllen.</p>
+                        <p>Grundsätzlich ist es so, dass alle Tests ihre Daten selbst vorbereiten. Dies geschieht mit Hilfe
+                            der „Given“ Anweisungen. Hier ist wieder die Robustheit der Tests ein Thema.</p>
+                        <p>Trotzdem ist es aber nötig, dass die Applikation beim Starten die Datenbank vorbereitet. Die Initialisierung
+                            bzw. die Aktualisierung erfolgt dabei durch Liquibase. Dann ist es noch notwendig eine Grundkonfiguration
+                            zu erstellen, also z.B. einen Mandanten für die Tests zu erzeugen.</p>
+                        <p>Schließlich werden noch über einen Migrationsmechanismus, der in der Applikation sowieso existiert,
+                            Testdaten eingespielt. Diese Testdaten sind jedoch für die BDDTests nicht nötig. Sie dienen lediglich
+                            dazu die Umgebungen der Entwickler mit sinnvollen Daten zu befüllen.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
 
@@ -1138,12 +1270,16 @@ public void ensureUserLoggedIn(String name)
                             <li>Cucumber</li>
                         </ul>
 
-                        <p>Cucumber ist das Framework, welches die Feature-Files verwaltet, liest und als Test ablaufen lässt. Cucumber steht dabei in mehreren Varianten zur Verfügung. Die Basisversion wurde für Ruby erstellt. Sehr bald gesellte sich aber
-                            Cucumber-JVM dazu, das rein in Java entwickelt wurde und die Hürden der Verwendung das Ruby-Frameworks beseitigte.</p>
-                        <p>Cucumber liest die Feature-Files und erstellt daraus JUnit bzw. TestNG Testfälle. Dadurch ist die Integration zu allen wichtigen Tools wie IDEs und Buildtools vorhanden. In Eclipse oder IntelliJ z.B. lassen sich Feature-Files einfach
-                            als Unit-Tests starten.
+                        <p>Cucumber ist das Framework, welches die Feature-Files verwaltet, liest und als Test ablaufen lässt.
+                            Cucumber steht dabei in mehreren Varianten zur Verfügung. Die Basisversion wurde für Ruby erstellt.
+                            Sehr bald gesellte sich aber Cucumber-JVM dazu, das rein in Java entwickelt wurde und die Hürden
+                            der Verwendung das Ruby-Frameworks beseitigte.</p>
+                        <p>Cucumber liest die Feature-Files und erstellt daraus JUnit bzw. TestNG Testfälle. Dadurch ist die
+                            Integration zu allen wichtigen Tools wie IDEs und Buildtools vorhanden. In Eclipse oder IntelliJ
+                            z.B. lassen sich Feature-Files einfach als Unit-Tests starten.
                         </p>
-                        <p>Weiters stellt Cucumber noch eine Menge weiterer Module und Plugins zur Verfügung: Spring-Integration, HTML-Reports, Android Unterstützung, OSGI Unterstützung, u.v.m.</p>
+                        <p>Weiters stellt Cucumber noch eine Menge weiterer Module und Plugins zur Verfügung: Spring-Integration,
+                            HTML-Reports, Android Unterstützung, OSGI Unterstützung, u.v.m.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
                 </section>
@@ -1154,7 +1290,9 @@ public void ensureUserLoggedIn(String name)
                     <p class="readable"><a href="http://jbehave.org/">JBehave</a>: Ähnlich zu Cucumber-JVM</p>
                     <p class="readable"><a href="http://jdave.org/">JDave</a>: Java-Files als Feature-File</p>
                     <p class="readable"><a href="http://easyb.org/">easyb</a>: Groovy-basiert</p>
-                    <p class="readable"><a href="https://github.com/cucumber/cucumber/wiki/Gherkin">Gherkin</a>: Sprachdefinition/-parser für Feature-Files</p>
+                    <p class="readable"><a href="https://github.com/cucumber/cucumber/wiki/Gherkin">Gherkin</a>: Sprachdefinition/-parser für
+                        Feature-Files
+                    </p>
 
                     <aside class="notes">
                         <ul class="keywords">
@@ -1164,10 +1302,12 @@ public void ensureUserLoggedIn(String name)
                             <li>Gherkin</li>
                         </ul>
 
-                        <p>JBehave ist sehr ähnlich zu Cucumber-JVM. Es ist etwas älter, die aktivere Community scheint aber Cucumber zu haben.</p>
+                        <p>JBehave ist sehr ähnlich zu Cucumber-JVM. Es ist etwas älter, die aktivere Community scheint aber
+                            Cucumber zu haben.</p>
                         <p>JDave ist neuer und bietet die Möglichkeit die Feature-Files als Java-Klasse zu definieren. </p>
                         <p>easyb basiert auf Groovy. Feature-Files können direkt in Groovy definiert werden.</p>
-                        <p>Gherkin ist kein eigentliches BDD Framework, aber es bietet den Syntax-Parser für Feature-Files und ist daher hier aufgeführt.</p>
+                        <p>Gherkin ist kein eigentliches BDD Framework, aber es bietet den Syntax-Parser für Feature-Files und
+                            ist daher hier aufgeführt.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
                 </section>
@@ -1192,9 +1332,12 @@ public void ensureUserLoggedIn(String name)
                             <li>Automatisiert Browser Tests</li>
                         </ul>
 
-                        <p>Cucumber bietet ja keine Anbindung an einen Client. Die oft referenzierten automatisierten GUI-Tests sind kein eigentliches Feature der BDD-Frameworks.</p>
-                        <p>Für web-basierte Applikation kann Selenium als Steuerung des Clients verwendet werden. Es startet eine neue Instanz eines Browsers und Instrumentiert die Applikation mit einer Fernsteuerung. Weiter bietet es eine API auf diese
-                            Fernsteuer von Javacode aus zugreifen zu können. Damit bietet es die Grundvoraussetzung GUI-Tests zu implementieren.
+                        <p>Cucumber bietet ja keine Anbindung an einen Client. Die oft referenzierten automatisierten GUI-Tests
+                            sind kein eigentliches Feature der BDD-Frameworks.</p>
+                        <p>Für web-basierte Applikation kann Selenium als Steuerung des Clients verwendet werden. Es startet
+                            eine neue Instanz eines Browsers und Instrumentiert die Applikation mit einer Fernsteuerung.
+                            Weiter bietet es eine API auf diese Fernsteuer von Javacode aus zugreifen zu können. Damit bietet
+                            es die Grundvoraussetzung GUI-Tests zu implementieren.
                             <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
                 </section>
@@ -1213,10 +1356,14 @@ public void ensureUserLoggedIn(String name)
                             <li>DDL Änderungen</li>
                         </ul>
 
-                        <p>Liquibase führt DDL-Changes anhand von XML-basierten Beschreibungsdateuen (sog. ChangeSets) durch. In der DB selbst wird vermerkt welche ChangeSets schon eingespielt wurden und welche noch nicht.</p>
-                        <p>Der Vorteil von Liquibase ist, dass, egal welchen Stand die Datenbank hat, diese auf die aktuelle Version gebracht werden kann. Das macht Liquibase dermaßen gut, dass in vielen Applikation keine direkten DDL Änderungen auf der
-                            Datenbank nötig sind, weder während der Entwicklung noch beim Einspielen von Updates. Die Zieldatenbank ist dabei egal. Die ChangeSets funktionieren sowohl gegen lokale Inmemory-DBs (z.B. HSQLDB) als auch gegen die großen Konzern-DBs
-                            wie Oracle oder DB2.
+                        <p>Liquibase führt DDL-Changes anhand von XML-basierten Beschreibungsdateuen (sog. ChangeSets) durch.
+                            In der DB selbst wird vermerkt welche ChangeSets schon eingespielt wurden und welche noch nicht.</p>
+                        <p>Der Vorteil von Liquibase ist, dass, egal welchen Stand die Datenbank hat, diese auf die aktuelle
+                            Version gebracht werden kann. Das macht Liquibase dermaßen gut, dass in vielen Applikation keine
+                            direkten DDL Änderungen auf der Datenbank nötig sind, weder während der Entwicklung noch beim
+                            Einspielen von Updates. Die Zieldatenbank ist dabei egal. Die ChangeSets funktionieren sowohl
+                            gegen lokale Inmemory-DBs (z.B. HSQLDB) als auch gegen die großen Konzern-DBs wie Oracle oder
+                            DB2.
                         </p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
@@ -1236,7 +1383,9 @@ public void ensureUserLoggedIn(String name)
                             <li>Hausintern (POI)</li>
                         </ul>
 
-                        <p>Hausintern werden alle Läufe von Akzeptanztests zentral getrackt. Dadurch ist es möglich die Tests historisch zu vergleichen. Dies ist hilfreich um z.B. Tests mit langer Laufzeit oder geringer Robustheit zu finden.</p>
+                        <p>Hausintern werden alle Läufe von Akzeptanztests zentral getrackt. Dadurch ist es möglich die Tests
+                            historisch zu vergleichen. Dies ist hilfreich um z.B. Tests mit langer Laufzeit oder geringer
+                            Robustheit zu finden.</p>
                         <p>Das Tool wurde von der Porsche Informatik entwickelt und ist Open Source.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
@@ -1268,10 +1417,13 @@ public void ensureUserLoggedIn(String name)
                     <h2>Referenzen</h2>
                     <hr/>
                     <h3>Behavior Driven Development</h3>
-                    <p><a href="http://dannorth.net/introducing-bdd/" target="_blank">"Introduction BDD" von Dan North</a>: ein Einführung ins Behavior Driven Development</p>
-                    <p><a href="http://behaviourdriven.org/" target="_blank">http://behaviourdriven.org/</a>: Webpräsenz speziell zum Thema Behavior Driven Development</p>
-                    <p><a target="_blank" rel="nofollow" href="http://www.amazon.de/gp/product/B00RKQDB4E/ref=as_li_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=B00RKQDB4E&linkCode=as2&tag=deveinsi-21">BDD in Action</a>: Behavior-driven development for
-                        the whole software lifecycle by Smart, John Ferguson (2014) Paperback (ASIN: B00RKQDB4E)</p>
+                    <p><a href="http://dannorth.net/introducing-bdd/" target="_blank">"Introduction BDD" von Dan North</a>:
+                        ein Einführung ins Behavior Driven Development</p>
+                    <p><a href="http://behaviourdriven.org/" target="_blank">http://behaviourdriven.org/</a>: Webpräsenz speziell
+                        zum Thema Behavior Driven Development</p>
+                    <p><a target="_blank" rel="nofollow" href="http://www.amazon.de/gp/product/B00RKQDB4E/ref=as_li_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=B00RKQDB4E&linkCode=as2&tag=deveinsi-21">BDD in Action</a>:
+                        Behavior-driven development for the whole software lifecycle by Smart, John Ferguson (2014) Paperback
+                        (ASIN: B00RKQDB4E)</p>
                 </section>
 
                 <section>
@@ -1279,10 +1431,9 @@ public void ensureUserLoggedIn(String name)
                     <hr/>
                     <h3>Cucumber</h3>
                     <p><a href="https://cucumber.io/" target="_blank">https://cucumber.io/</a>: Das Cucumber Framework</p>
-                    <p><a target="_blank" rel="nofollow" href="http://www.amazon.de/gp/product/1934356808/ref=as_li_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=1934356808&linkCode=as2&tag=deveinsi-21">The Cucumber Book</a>: Behaviour-Driven Development
-                        for Testers and Developers (Pragmatic Programmers) (ISBN-13: 978-1934356807)</p>
-                    <p><a target="_blank" rel="nofollow" href="http://www.amazon.de/gp/product/0321772636/ref=as_li_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=0321772636&linkCode=as2&tag=deveinsi-21">Behavior-Driven Development with Cucumber</a> (ISBN-13:
-                        978-0321772633)
+                    <p><a target="_blank" rel="nofollow" href="http://www.amazon.de/gp/product/1934356808/ref=as_li_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=1934356808&linkCode=as2&tag=deveinsi-21">The Cucumber Book</a>:
+                        Behaviour-Driven Development for Testers and Developers (Pragmatic Programmers) (ISBN-13: 978-1934356807)</p>
+                    <p><a target="_blank" rel="nofollow" href="http://www.amazon.de/gp/product/0321772636/ref=as_li_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=0321772636&linkCode=as2&tag=deveinsi-21">Behavior-Driven Development with Cucumber</a>                        (ISBN-13: 978-0321772633)
                     </p>
                 </section>
 
@@ -1290,9 +1441,10 @@ public void ensureUserLoggedIn(String name)
                     <h2>Referenzen</h2>
                     <hr/>
                     <h3>Domain-Driven Design</h3>
-                    <p><a href="http://domaindrivendesign.org/" target="_blank">http://domaindrivendesign.org/</a>: Domain Driven Design Comunity</p>
-                    <p><a target="_blank" rel="nofollow" href="http://www.amazon.de/gp/product/0321125215/ref=as_li_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=0321125215&linkCode=as2&tag=deveinsi-21">Domain-Driven Design</a>: Tackling Complexity in
-                        the Heart of Software (ISBN-13: 978-0321125217)</p>
+                    <p><a href="http://domaindrivendesign.org/" target="_blank">http://domaindrivendesign.org/</a>: Domain Driven
+                        Design Comunity</p>
+                    <p><a target="_blank" rel="nofollow" href="http://www.amazon.de/gp/product/0321125215/ref=as_li_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=0321125215&linkCode=as2&tag=deveinsi-21">Domain-Driven Design</a>:
+                        Tackling Complexity in the Heart of Software (ISBN-13: 978-0321125217)</p>
                 </section>
 
                 <section>
@@ -1300,8 +1452,9 @@ public void ensureUserLoggedIn(String name)
                     <hr/>
                     <h3>Continuous Delivery</h3>
                     <p><a target="_blank" href="http://continuousdelivery.com/">Continuous Delivery</a>: Web-Präsenz</p>
-                    <p><a target="_blank" rel="nofollow" href="http://www.amazon.de/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=0321601912&linkCode=as2&tag=deveinsi-21">Continuous Delivery</a>: Reliable Software Releases
-                        Through Build, Test, and Deployment Automation (Addison-Wesley Signature) (ISBN-13: 978-0321601919)</p>
+                    <p><a target="_blank" rel="nofollow" href="http://www.amazon.de/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=0321601912&linkCode=as2&tag=deveinsi-21">Continuous Delivery</a>:
+                        Reliable Software Releases Through Build, Test, and Deployment Automation (Addison-Wesley Signature)
+                        (ISBN-13: 978-0321601919)</p>
                 </section>
 
                 <section>
@@ -1309,7 +1462,8 @@ public void ensureUserLoggedIn(String name)
                     <hr/>
                     <p><a target="_blank" href="http://www.seleniumhq.org/">Selenium HQ</a>: Browser Automation</p>
                     <p><a target="_blank" href="http://www.liquibase.org/">Liquibase</a>: Source Control for your database</p>
-                    <p><a target="_blank" href="http://www.exampler.com/old-blog/2003/08/21/">Test Quadranten</a>: Homepage von Brian Marick</p>
+                    <p><a target="_blank" href="http://www.exampler.com/old-blog/2003/08/21/">Test Quadranten</a>: Homepage
+                        von Brian Marick</p>
                 </section>
 
                 <section class="references">
@@ -1327,29 +1481,31 @@ public void ensureUserLoggedIn(String name)
                             <a href="https://flic.kr/p/9nrSJH">
                                 <img src="weltmaschine.jpg" />
                             </a>
-                            <a href="https://flic.kr/p/9nrSJH">&quot;Die Weltmaschine&quot;</a> by Gery Wolf (<a href="https://www.flickr.com/photos/arselectronica/">Ars Electronica</a>) is licensed under
+                            <a href="https://flic.kr/p/9nrSJH">&quot;Die Weltmaschine&quot;</a> by Gery Wolf (<a href="https://www.flickr.com/photos/arselectronica/">Ars Electronica</a>)
+                            is licensed under
                             <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-NC-ND 2.0</a>.
                         </div>
                         <div class="image-reference">
                             <a href="https://flic.kr/p/m2RXX">
                                 <img src="boxing-gloves.jpg" />
                             </a>
-                            <a href="https://flic.kr/p/m2RXX">&quot;Faded Glory&quot;</a> by <a href="https://www.flickr.com/photos/bfurnace/">Bryan Furnace</a> is licensed under
+                            <a href="https://flic.kr/p/m2RXX">&quot;Faded Glory&quot;</a> by <a href="https://www.flickr.com/photos/bfurnace/">Bryan Furnace</a>                            is licensed under
                             <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>.
                         </div>
                         <div class="image-reference">
                             <a href="https://flic.kr/p/dmFQB4">
                                 <img src="usecase.jpg" />
                             </a>
-                            <a href="https://flic.kr/p/dmFQB4">&quot;Carpenters and Masons, Frankford EL Construction, 1913&quot;</a> by <a href="https://www.flickr.com/photos/rich701/">Richard</a> is licensed under
+                            <a href="https://flic.kr/p/dmFQB4">&quot;Carpenters and Masons, Frankford EL Construction, 1913&quot;</a>                            by <a href="https://www.flickr.com/photos/rich701/">Richard</a> is licensed under
                             <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>.
                         </div>
                         <div class="image-reference">
                             <a href="https://flic.kr/p/9UnRWS">
                                 <img src="acceptance.jpg" />
                             </a>
-                            <a href="https://flic.kr/p/9UnRWS">&quot;Exam&quot;</a> by <a href="https://www.flickr.com/photos/albertogp123/">Alberto G.</a> is licensed under
-                            <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a> (slightly modified: desaturated, darkened).
+                            <a href="https://flic.kr/p/9UnRWS">&quot;Exam&quot;</a> by <a href="https://www.flickr.com/photos/albertogp123/">Alberto G.</a>                            is licensed under
+                            <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a> (slightly modified: desaturated,
+                            darkened).
                         </div>
                         <div class="image-reference">
                             <a href="https://flic.kr/p/fqofd6">
@@ -1365,20 +1521,21 @@ public void ensureUserLoggedIn(String name)
                             </a>
                             <a href="https://flic.kr/p/7Ja2ZL">&quot;disassembled_keyboard_keys_MG_8586_sm&quot;</a> by
                             <a href="https://www.flickr.com/photos/willc2/">Will Culpepper</a> is licensed under
-                            <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a> (slightly modified: darkened).
+                            <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a> (slightly modified:
+                            darkened).
                         </div>
                         <div class="image-reference">
                             <a href="https://flic.kr/p/s2DZ3">
                                 <img src="zen.jpg" />
                             </a>
-                            <a href="https://flic.kr/p/s2DZ3">&quot;Wallpaper Zen Spirit 1280x800 edition 2006&quot;</a> by <a href="https://www.flickr.com/photos/adulau/">Roberto Zingales</a> is licensed under
+                            <a href="https://flic.kr/p/s2DZ3">&quot;Wallpaper Zen Spirit 1280x800 edition 2006&quot;</a>                            by <a href="https://www.flickr.com/photos/adulau/">Roberto Zingales</a> is licensed under
                             <a href="https://creativecommons.org/licenses/by-nd/2.0/">CC BY-ND 2.0</a>.
                         </div>
                         <div class="image-reference">
                             <a href="https://flic.kr/p/81m4L5">
                                 <img src="stopwatch.jpg" />
                             </a>
-                            <a href="https://flic.kr/p/81m4L5">&quot;stopwatch&quot;</a> by <a href="https://www.flickr.com/photos/julianlim/">Julian Lim</a> is licensed under
+                            <a href="https://flic.kr/p/81m4L5">&quot;stopwatch&quot;</a> by <a href="https://www.flickr.com/photos/julianlim/">Julian Lim</a>                            is licensed under
                             <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>.
                         </div>
                         <div class="image-reference">
@@ -1394,7 +1551,8 @@ public void ensureUserLoggedIn(String name)
 
                 <section>
                     <p>
-                        <a href="http://thred.github.io/presentation-bdd/">Behavior Driven Development</a>: Vom Use-Case zum Test-Case</p>
+                        <a href="http://thred.github.io/presentation-bdd/">Behavior Driven Development</a>: Vom Use-Case
+                        zum Test-Case</p>
                     </p>
                     <p><a href="http://thred.github.io/presentation-bdd/">http://thred.github.io/presentation-bdd/</a></p>
                     <hr/>
@@ -1402,7 +1560,7 @@ public void ensureUserLoggedIn(String name)
                         <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
                             <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" />
                         </a>
-                        <br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a> by Manfred Hantschel.
+                        <br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>                        by Manfred Hantschel.
                     </p>
                 </section>
             </section>
@@ -1422,9 +1580,10 @@ public void ensureUserLoggedIn(String name)
             width: 1024,
             height: 640,
             history: true,
-            touch: true,
+            touch: false,
+            hideAddressBar: true,
             slideNumber: true,
-            mouseWheel: true,
+            mouseWheel: false,
             controls: false,
 
             dependencies: [{

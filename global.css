@@ -1,26 +1,45 @@
-.controls {
-    position: absolute;
-    margin: 1em;
+#controls {
+    position: fixed;
     z-index: 2048;
     bottom: 0;
+    width: 100%;
+    /*background-color: rgba(0, 0, 0, 0.25);*/
+    opacity: 0.15;
+    transition: opacity 1s;
 }
 
-.controls a {
+#controls:hover {
+    opacity: 1;
+    transition: opacity 0.25s;
+}
+
+#controls .left {
+    display: inline-block;
+    margin: 1em;
+}
+
+#controls .right {
+    display: inline-block;
+    float: right;
+    margin: 1em;
+}
+
+#controls a {
     display: inline-block;
     background: black;
     font-family: Impact, Charcoal, sans-serif;
-    font-size: 20px;
+    font-size: 10mm;
     text-align: center;
     color: white;
     padding: 0.25em 0.5em;
     text-decoration: none;
     border-radius: 1em;
     opacity: 0.15;
-    transition: opacity 2s;
+    transition: opacity 1s;
     margin: 0.1em;
 }
 
-.controls a:hover {
+#controls a:hover {
     opacity: 0.5;
     transition: opacity 0.15s;
 }
@@ -46,6 +65,10 @@
     left: 60%;
     color: #3F3F3F;
     line-height: 1.5em;
+}
+
+#text-body {
+    padding: 1em 0 5em 0;
 }
 
 .text-hidden .text {
@@ -75,11 +98,10 @@
     content: "]";
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (orientation: portrait) {
     .text-shown .controls {
         right: 0;
     }
-
     .text-shown {
         overflow: hidden;
     }
