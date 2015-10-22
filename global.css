@@ -1,3 +1,30 @@
+.controls {
+    position: absolute;
+    margin: 1em;
+    z-index: 2048;
+    bottom: 0;
+}
+
+.controls a {
+    display: block;
+    background: black;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    border-radius: 1em;
+    opacity: 0.15;
+    transition: opacity 2s;
+    margin: 0.1em;
+}
+
+.controls a:hover {
+    opacity: 0.5;
+    transition: opacity 0.15s;
+}
+
 .text-shown {
     overflow: auto;
     background: #f7f2d3;
@@ -33,6 +60,21 @@
     padding: 1em 2em;
 }
 
+.text-shown .text a {
+    text-decoration: none;
+    color: #15106f;
+    font-style: bold;
+    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.25);
+}
+
+.text-shown .text a:before {
+    content: "[";
+}
+
+.text-shown .text a:after {
+    content: "]";
+}
+
 @media screen and (max-width: 800px) {
     .text-shown {
         overflow: hidden;
@@ -56,6 +98,7 @@
         padding: 1em 2em;
     }
 }
+
 
 /* fixing some stuff */
 

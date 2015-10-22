@@ -1,23 +1,26 @@
 (function() {
 
-    document.addEventListener('keydown', function(event) {
-        if (event.keyCode === 73) {
-            event.preventDefault();
-            toggleText();
-        }
-    }, false);
-
-    function toggleText() {
-        var classList = document.body.classList;
-
-        classList.toggle('text-shown');
-        classList.toggle('text-hidden');
-    }
-
     Reveal.addEventListener('ready', function(event) {
-        Reveal.addEventListener('slidechanged', function(event) {
-            var notesNode = event.currentSlide.querySelector('aside.notes');
-            var bodyNode = document.getElementById('notes-content');
+        Reveal.toggleInfoText = function() {
+            var classList = document.body.classList;
+
+            Reveal.updateInfoText();
+
+            if ((!classList.contains('text-shown')) && (!classList.contains('text-hidden'))) {
+                classList.add('text-shown');
+            } else {
+                classList.toggle('text-shown');
+                classList.toggle('text-hidden');
+            }
+
+            Reveal.updateInfoText();
+            Reveal.sync();
+        };
+
+        Reveal.updateInfoText = function() {
+            var currentSlide = Reveal.getCurrentSlide();
+            var notesNode = currentSlide.querySelector('aside.notes');
+            var bodyNode = document.getElementById('text-body');
 
             while (bodyNode.firstChild) {
                 bodyNode.removeChild(bodyNode.firstChild);
@@ -26,6 +29,19 @@
             if (notesNode) {
                 bodyNode.innerHTML = notesNode.innerHTML;
             }
+        };
+
+        Reveal.addEventListener('slidechanged', function(event) {
+            Reveal.updateInfoText();
         });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.keyCode === 73) {
+                event.preventDefault();
+                Reveal.toggleInfoText();
+            }
+        }, false);
+
+        Reveal.updateInfoText();
     });
 })();
