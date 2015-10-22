@@ -31,6 +31,29 @@
     padding: 1em 2em;
 }
 
+@media screen and (max-width: 800px) {
+    .text-shown {
+        overflow: hidden;
+    }
+    .text-shown .reveal {
+        z-index: 1024;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        box-shadow: 0 0 16px black;
+    }
+    .text-shown .text {
+        font-size: 14px;
+        width: 100%;
+        height: 50%;
+        left: 0;
+        top: 50%;
+        overflow: auto;
+    }
+    .text-shown .text div {
+        padding: 1em 2em;
+    }
+}
 
 /* fixing some stuff */
 

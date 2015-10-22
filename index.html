@@ -26,13 +26,6 @@
 </head>
 
 <body class="text-shown">
-    <div class="text">
-        <div class="notes-body">
-            <div id="notes-content">
-            </div>
-        </div>
-    </div>
-
     <div class="reveal">
         <div class="slides">
             <section>
@@ -80,6 +73,17 @@
                 <h2>Manfred Hantschel</h2>
                 <hr />
                 <p class="readable">Software Entwickler, Porsche Informatik GmbH</p>
+
+                <aside class="notes">
+                    <p>Manfred Hantschel hat auf der Johannes Kepler Universität in Linz Informatik studiert. Die berufliche Laufbahn führte ihn schon vorzeitig, weg vom Studium, in die Entwicklung von Unternehmenssoftware in Java und C#, zunächst bei IBM
+                        Linz und seit 2004 bei der Porsche Informatik GmbH in Salzburg.</p>
+                    <p>Die Aufgaben von Herrn Hantschel reichen von der technischen Umsetzung und Leitung bis hin zur Produktverantwortung für mehrere Projekte. Dabei ist Hr. Hantschel unter Anderem entscheidend an der Einführung und Umsetzung von Qualitätssicherungsmaßnahmen
+                        beteiligt. Die Palette der Applikationen reicht dabei von internationalen webbasierten Unternehmensportalen, über PDA- und Smartphone-basierten Applikationen für die Unterstützung von Händlern, bis hin zu Verwertungsplattformen
+                        für Neu- und Gebrauchtfahrzeuge.</p>
+                    <p>Seit Mitte 2010 konzentriert sich sein berufliches Wirken auf die technische Verantwortung einer internationalen Neuwagenverwertungsplattform für über 50 Länder, die gerade im Entstehen begriffen ist. Dabei setzt er sich zurzeit intensiv
+                        mit dem Thema Testautomatisierung und mit der Einführung von Behavior Driven Development auseinander. Die Methodik wird in der Porsche Informatik bei mehreren Projekten – teilweise Webapplikationen, teilweise Client-Server-Applikationen
+                        auf Java-Basis – eingesetzt.</p>
+                </aside>
             </section>
 
             <section class="contrast-bright" data-background="weltmaschine.jpg">
@@ -88,6 +92,10 @@
                 <h2 class="readable">Theorie &amp; Praxis</h2>
 
                 <aside class="notes">
+                    <ul class="keywords">
+                        <li>Was ist BDD?</li>
+                        <li>Wie funktioniert BDD?</li>
+                    </ul>
                     <p>
                         Dieser Vortrag konzentriert sich auf folgende zwei Punkte:
                     </p>
@@ -120,6 +128,10 @@
                     <h1 class="readable" style="font-size: 250%">Methode der agilen Softwareentwicklung</h1>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>Dan North, 2006</li>
+                            <li>TDD verbessern</li>
+                        </ul>
                         <p>
                             Entstanden ist BDD aus ursprünglich aus dem Test-Driven Development. Es wurde zum ersten Mal 2006 von Dan North beschrieben.
                         </p>
@@ -902,6 +914,13 @@ public void ensureUserLoggedIn(String name)
         </div>
     </div>
 
+    <div class="text">
+        <div class="notes-body">
+            <div id="notes-content">
+            </div>
+        </div>
+    </div>
+
     <script src="node_modules/reveal.js/lib/js/head.min.js"></script>
     <script src="node_modules/reveal.js/js/reveal.js"></script>
 
@@ -946,7 +965,6 @@ public void ensureUserLoggedIn(String name)
                 src: 'node_modules/reveal.js/plugin/notes/notes.js',
                 async: true
             }]
-
         });
     </script>
 </body>
