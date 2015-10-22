@@ -96,6 +96,7 @@
                         <li>Was ist BDD?</li>
                         <li>Wie funktioniert BDD?</li>
                     </ul>
+
                     <p>
                         Dieser Vortrag konzentriert sich auf folgende zwei Punkte:
                     </p>
@@ -132,6 +133,7 @@
                             <li>Dan North, 2006</li>
                             <li>TDD verbessern</li>
                         </ul>
+
                         <p>
                             Entstanden ist BDD aus ursprünglich aus dem Test-Driven Development. Es wurde zum ersten Mal 2006 von Dan North beschrieben.
                         </p>
@@ -151,6 +153,11 @@
                     <div class="fragment customer readable" style="height: 480px; left: 896px;">Kunde</div>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>Entwickler</li>
+                            <li>QA</li>
+                            <li>Product Owner</li>
+                        </ul>
                         <p>In erster Linie soll die Zusammenarbeit zwischen</p>
                         <ul>
                             <li>der Entwicklungsabteilung</li>
@@ -168,6 +175,22 @@
                     <h3 class="readable">Vereinigung zweier Prinzipien</h3>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>Domain-Driven-Design
+                                <ul>
+                                    <li>Konzentration auf Fachlogik</li>
+                                    <li>vereinfachte Problemlösung</li>
+                                    <li>Am Ziel vorbei</li>
+                                </ul>
+                            </li>
+                            <li>Test-Driven-Development
+                                <ul>
+                                    <li>Konzentration auf das Problem</li>
+                                    <li>Schwierige Entwicklung</li>
+                                </ul>
+                            </li>
+                        </ul>
+
                         <p>Behavior-Driven Development versucht die Prinzipien von Domain-Driven Design mit denen von Test-Driven Development zu vereinen.</p>
                         <p>Domain-Driven Design legt den Schwerpunkt der Softwareentwicklung auf die Fachlogik der Anwendung anstatt auf die technische Umsetzung. Die komplexen fachlichen Zusammenhänge werden zunächst in einer Geschäftslogikschicht abgebildet
                             und erst dann werden die Teilbereiche umgesetzt.</p>
@@ -226,7 +249,14 @@ Then &lt;POSTCONDITION&gt;
                     </div>
 
                     <aside class="notes">
-                        <p>Für das Domain-Driven Design stellt BDD eine Sprache zur Verfügung, mit der es möglich ist die fachlichen Abläufe detailliert und standardisiert zu formulieren. Mit Hilfe der Sprache lassen sich UserStories verfassen und Akzeptanzkriterien
+                        <ul class="keywords">
+                            <li>Sprache</li>
+                            <li>User Stories</li>
+                            <li>Akzeptanzkriterien</li>
+                            <li>logisch ausgereift</li>
+                        </ul>
+
+                        <p>Für das Domain-Driven Design stellt BDD eine Sprache zur Verfügung, mit der es möglich ist die fachlichen Abläufe detailliert und standardisiert zu formulieren. Mit Hilfe der Sprache lassen sich User Stories verfassen und Akzeptanzkriterien
                             definieren.
                         </p>
                         <p>Die Sprache orientiert sich dabei am Benutzer selbst und ist für alle Beteiligten verständlich. Bei der Beschreibung wird gänzlich auf technische Feinheiten verzichtet, lediglich dem fachlichen Ablauf wird ein logischer Prozess
@@ -241,7 +271,7 @@ Then &lt;POSTCONDITION&gt;
                     <div class="header">
                         Test-Driven Development
                     </div>
-
+                    <br/>
                     <div class=flex>
                         <div style="width: 60%">
                             <div>
@@ -269,14 +299,15 @@ Then the detail page of the emplyee should open.
                     </div>
 
                     <aside class="notes">
-                        <p>Für das Domain-Driven Design stellt BDD eine Sprache zur Verfügung, mit der es möglich ist die fachlichen Abläufe detailliert und standardisiert zu formulieren. Mit Hilfe der Sprache lassen sich UserStories verfassen und Akzeptanzkriterien
-                            definieren.
-                        </p>
-                        <p>Die Sprache orientiert sich dabei am Benutzer selbst und ist für alle Beteiligten verständlich. Bei der Beschreibung wird gänzlich auf technische Feinheiten verzichtet, lediglich dem fachlichen Ablauf wird ein logischer Prozess
-                            zugrunde gelegt.
-                        </p>
-                        <p>Und bereits da werden viele Probleme gelöst. Aus meiner Erfahrung tauchen hier oft schon die großen Probleme der Umsetzung auf – nämlich dann wenn der fachliche Prozess schon nicht logisch ausgereift ist. Die Entwicklung kann fast
-                            alles umsetzen, einzige Vorbedingung: die Aufgabe muss deterministisch sein. Für die Formulierung des Akzeptanztests muss das Problem auf einem Level beleuchtet werden, das logische Probleme frühzeitig zu Tage fördert.</p>
+                        <ul class="keywords">
+                            <li>Akzeptanztests</li>
+                            <li>fachliche Ebene</li>
+                        </ul>
+
+                        <p>Für das Test-Driven Development stellt BDD ein Werkzeug zur Verfügung - nämlich Akzeptanztests.</p>
+                        <p>Akzeptanztests konzentrieren sich, wie von TDD gefordert, auf das Problem selbst. Die Umsetzung der Lösung kann zunächst vollkommen ignoriert werden. Die Tests bewegen sich auf einer rein fachlichen Ebene, anders als Unit-Tests.
+                            Trotzdem ist es möglich, ja gefordert, auf fachliche Details einzugehen.</p>
+                        <p>Durch die Schlüsselwörter ist es möglich die Akzeptanztests automatisch zu verarbeiten und programmtechnisch Tests auf Grundlage der Kriterien verfassen.</p>
                     </aside>
                 </section>
             </section>
@@ -288,6 +319,11 @@ Then the detail page of the emplyee should open.
                     <h2 class="readable">Leitfaden für die Umsetzung</h2>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>Entwicklungsprozess?</li>
+                            <li>Fallbeispiele</li>
+                        </ul>
+
                         <p>Wie kann man sich nun vorstellen, dass BDD im Entwicklungsprozess umgesetzt werden kann?</p>
                         <p>Zunächst werden die Anforderungen textuell durch Fallbeispiele beschrieben.</p>
                     </aside>
@@ -308,6 +344,11 @@ in order to put it into my shopping cart.
                     </code></pre>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>Anwendungsfall aus Sicht des Benutzers</li>
+                            <li>Sprache die alle verstehen</li>
+                        </ul>
+
                         <p>Fallbeispiele haben einen anderen Fokus als Use Cases, Konzepte, Protokolle, Lasten- oder Pflichtenhefte: Fallbeispiele beschreiben genau einen Anwendungsfall aus der Sicht eines Benutzers. Wir schreiben Applikationen für Benutzer
                             und darauf liegt der Fokus.</p>
                         <p>Klar, wir können auch Lasten- und Pflichtenhefte scheiben, aber die sind für Kunden. Wir können auch UseCases scheiben, aber die sind für Tester. Wir können auch Konzepte schreiben, aber die sind für Entwickler. Unser Ziel ist
@@ -316,9 +357,13 @@ in order to put it into my shopping cart.
                 </section>
 
                 <section class="contrast-bright" data-background="scrum.jpg">
-                    <h1>Agil</h1>
+                    <p class="readable">Unterstützt agiles Vorgehen</p>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>Sprintziele</li>
+                        </ul>
+
                         <p>Und weil wir agil entwickeln, brauchen wir die User Stories sowieso, nämlich als Sprintziele. Aber erst durch BDD finden sie User Stories wirklich Einzug in unser Projekt, da sie maschinell verarbeitet werden müssen.</p>
                     </aside>
                 </section>
@@ -329,6 +374,10 @@ in order to put it into my shopping cart.
                     <h2 class="readable">Leitfaden für die Umsetzung</h2>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>Akzeptanzkriterien</li>
+                        </ul>
+
                         <p>Als nächster Schritt werden die Fallbeispiele um Akzeptanzkriterien erweitert und automatisiert.</p>
                     </aside>
                 </section>
@@ -352,6 +401,11 @@ But with a count of 2.
                     </code></pre>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>Automatisierung</li>
+                            <li>Given, When, Then</li>
+                        </ul>
+
                         <p>Als nächster Schritt werden die Fallbeispiele um Akzeptanzkriterien erweitert und automatisiert.</p>
                         <p>Die User Stories werden um Akzeptanzkriterien erweitert. Zu jeder User Story können natürlich mehrere Akzeptanzkriterien verfasst werden. Diese Scenarios detaillieren die Story, beschreiben Sonder- und Problemfälle und listen mögliche
                             Aktionen des Benutzers auf.</p>
@@ -370,8 +424,12 @@ But with a count of 2.
                     <p class="readable">Einbindung in Entwicklungsprozess</p>
                     <p class="readable">Ersatz für Lasten- und Pflichtenheft</p>
 
-
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>Abstimmung Kunde</li>
+                            <li>Ersetzt teilweise Lasten- und Pflichtenheft</li>
+                        </ul>
+
                         <p>Die fertigen User Stories und Akzeptanzkriterien werden mit dem Kunden gemeinsam entwickelt, oder zumindest mit ihm abgestimmt. Der Kunde wird somit in den Entwicklungsprozess mit eingebunden. Hier zeigt sich schon ein erster Vorteil.
                             Früher sind fachliche Fehler erst im fertigen Produkt aufgetaucht. Die Stories geben dem Entwicklungsteam ein Werkzeug in die Hand, mit dem der fachliche Ablauf vollständig definiert werden kann.</p>
                         <p>Wenn man wirklich agil arbeitet, können die Akzeptanzkriterien ein Lasten- und Pflichtenheft zumindest teilweise ersetzen.</p>
@@ -390,6 +448,11 @@ But with a count of 2.
                     <p class="readable">Bessere Kommunikation</p>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>QA einbinden</li>
+                            <li>Testkatalog ergänzen</li>
+                        </ul>
+
                         <p>Auch die Qualitätssicherung wird frühzeitig in den Prozess eingebunden. Schon das ist ein enormer Vorteil. Oft wird die Qualitätssicherung in Projekten stiefmütterlich behandelt. Die fertige Applikation wird übergeben und die Qualitätssicherung
                             soll schauen wie sie damit zurecht kommt.</p>
                         <p>Da die Akzeptanzkriterien den Testkatalog ergänzen wird der Qualitätssicherung auch viel Arbeit abgenommen. GUI-Tests werden mit dem Produkt mitgeliefert und muss nicht nachträglich und umständlich definiert werden.
@@ -408,6 +471,10 @@ But with a count of 2.
                     <p class="readable">Eingebunden in Spezifikations- und Testprozess</p>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>Umsetzung der Tests</li>
+                        </ul>
+
                         <p>Die Entwickler kümmern sich zunächst um die Umsetzung der Tests. Bevor die Applikation fertig ist, könnte sie theoretisch schon getestet werden. Auch hier zeigt sich der Vorteil, dass Entwickler schon frühzeitig in den Spezifikationsprozess
                             eingebunden werden.</p>
                     </aside>
@@ -419,6 +486,10 @@ But with a count of 2.
                     <h2 class="readable">Leitfaden für die Umsetzung</h2>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>Umsetzung</li>
+                        </ul>
+
                         <p>Erst jetzt folgt die Umsetzung der Anforderung. </p>
                     </aside>
                 </section>
@@ -435,6 +506,11 @@ But with a count of 2.
                     <div class="customer" style="height: 480px; left: 768px;"></div>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>QA einbinden</li>
+                            <li>Testkatalog ergänzen</li>
+                        </ul>
+
                         <p>Erst im dritten Schritt wird die Anforderung umgesetzt. Das Entwicklungsteam hat bereits automatische Tests an der Hand.</p>
                         <p>Die Qualitätssicherung für die Test zunächst manuell durch, bis klar ist, dass die Szenarien den nötigen Testumfang abdecken. Danach können diese Tests jederzeit automatisch durchgeführt werden.
                         </p>
@@ -450,6 +526,12 @@ But with a count of 2.
                     <h2 class="readable">Behavior Driven Develoment</h2>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>typischer Entwicklungsprozess</li>
+                            <li>Stories / Tests</li>
+                            <li>Vorteile</li>
+                        </ul>
+
                         <p>
                             Dieser Vortrag konzentriert sich auf folgende zwei Punkte:
                         </p>
@@ -505,6 +587,12 @@ But with a count of 2.
                     <p class="readable">Anforderung wird in Datenbank erfasst</p>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>Idee steht am Anfang</li>
+                            <li>Statusverfolgung</li>
+                            <li>Epics</li>
+                        </ul>
+
                         <p>Am Anfang war die Idee. Diese wird meist vom Kunden bzw. dem Product-Owner ausgebrütet und formuliert. Die Idee kann aber auch von anderen Beteiligten kommen, z.B. von der Entwicklung. Die Idee wird bei uns in einer Anforderungsdatenbank,
                             noch in Prosa, erfasst. Die Anforderung enthält eine grobe Vorstellung wie das Feature aussehen soll und beschreibt Hintergrundinformationen.</p>
                         <p>In der Porsche Informatik wird die Anforderungsdatenbank auch für die offizielle Statusverfolgung genutzt, da sich unsere Kunden mit dem agilen Vorgehen oft noch nicht richtig anfreunden können. Teilweise dient die Anforderungsdatenbank
@@ -526,6 +614,12 @@ But with a count of 2.
                         <br />Behaviors, Story Files, UI-Mockups, Aufwände, Schnittstellen, ...</p>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>Konkretisierung</li>
+                            <li>Fragen</li>
+                            <li>Sonstige Dokumente</li>
+                        </ul>
+
                         <p>Bevor das Feature umgesetzt wird, wird es noch konkretisiert. Dies geschieht durch Kunde, QA und Entwicklung gemeinsam.</p>
                         <p>Grundsätzlich werden dem Kunden „einfache Fragen“ gestellt. Die Ergebnisse aus diesen Abstimmungen werden einem Story File festgehalten, in Behaviors aufgeteilt und im Versionskontrollsystem (SVN) eingepflegt. Behaviors entsprechen
                             den Szenarien, müssen jedoch noch nicht so formuliert sein, dass sie maschinell verarbeitet werden können.</p>
@@ -565,6 +659,12 @@ But with a count of 2.
                     </code></pre>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>Je Sprint abstimmen</li>
+                            <li>Wichtigkeit, Aufwand, Automatisierung</li>
+                            <li>Testkatalog</li>
+                        </ul>
+
                         <p>Kurz vor der Sprintplanung wird zwischen Entwickler und Tester abgestimmt, welche Verhaltensweisen man formalisieren und automatisieren will.</p>
                         <p>Entscheidungskriterien dabei sind:</p>
                         <ul>
@@ -586,6 +686,13 @@ But with a count of 2.
                     </div>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>Verzeichnisse</li>
+                            <li>Work In Progress</li>
+                            <li>Feature Tree</li>
+                            <li>Dokumentation automatisieren</li>
+                        </ul>
+
                         <p>Im Entwicklungszyklus durchwandert ein Story File dann mehrere Stationen. Diese sind als Verzeichnisse im Repository abgebildet. Grundsätzlich wird zwischen Stories unterschieden, die sich in Entwicklung befinden und jenen, die
                             fertig umgesetzt wurden und Teil der Systemspezifikation werden.</p>
                         <p>Zunächst befindet sich ein Story File in „preparation“. Soll die Story im Sprint umgesetzt werden, wird das File in „current“ verschoben. Wenn die Umsetzung erledigt wurde, wird das File in „finished“ verschoben.
@@ -621,6 +728,11 @@ public void ensureUserLoggedIn(String name)
                     </div>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>Steps-Klassen</li>
+                            <li>Robustheit und Aufwand</li>
+                        </ul>
+
                         <p>Wie erfolgt nun die Anbindung der Szenarios an die Applikation?</p>
                         <p>Grundlegend ganz einfach: in Steps-Klassen werden die Texte aus den Szenarien implementiert. Das Beispiel zeigt wie das grundsätzlich funktionieren könnte. Doch in dieser Art und Weise läuft man schnell Gefahr, dass die Wartungsaufwände
                             für die BDD-Tests zu hoch werden.</p>
@@ -645,6 +757,14 @@ public void ensureUserLoggedIn(String name)
                     </div>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>Workflows</li>
+                            <li>Modulübergreifend</li>
+                            <li>Wiederverwendung</li>
+                            <li>Aufbau von Testdaten</li>
+                            <li>Testinterface</li>
+                        </ul>
+
                         <p>Grundsätzlich agieren die Steps nun auf Workflows. Erst die Workflows führen die Aktionen in der Applikation durch. Workflows agieren modulübergreifend, können daher auf die Schnittstellen der gesamten Applikation zugreifen. Die
                             Logik wandert dadurch aus den Steps heraus und die BDD-Tests werden stabiler. Ähnliche Verhaltensweisen müssen auch nicht mehrfach implementiert werden.</p>
                         <p>Mit dieser Technik werden auch Testdaten aufgebaut. Die Tests müssen nicht auf einer vorbereiteten Datenbank laufen, die Tests erstellen die nötigen Testdaten selbst. Robustheit ist der Schlüssel.</p>
@@ -661,8 +781,14 @@ public void ensureUserLoggedIn(String name)
                     </div>
 
                     <aside class="notes">
-                        <p>Um die GUI zu Steuern erzeugen wir für die Ansichten und Wartungen in der Applikation, Pages und Komponenten. Die Klassen beschreiben beispielsweise die Felder einer Login-Seite, also z.B. „Benutzername“, „Passwort“ und den „Anmelden“Button.
-                            Zentrale Komponenten, wie z.B. einen Suchdialog, werden in ComponentKlassen definiert, damit diese in mehreren Pages zur Verfügung stehen.</p>
+                        <ul class="keywords">
+                            <li>Pages und Components</li>
+                            <li>Kommandos via API</li>
+                            <li>Selenium</li>
+                        </ul>
+
+                        <p>Um die GUI zu Steuern erzeugen wir für die Ansichten und Wartungen in der Applikation, Pages und Komponenten. Die Klassen beschreiben beispielsweise die Felder einer Login-Seite, also z.B. „Benutzername“, „Passwort“ und den „Anmelden“
+                            Button. Zentrale Komponenten, wie z.B. einen Suchdialog, werden in Component Klassen definiert, damit diese in mehreren Pages zur Verfügung stehen.</p>
                         <p>Die Pages interagieren über eine eigene Driver-API mit der GUI. In der API stehen die gängigsten Kommandos für die Automatisierung zur Verfügung, als z.B. „Klicke auf ein Element“, „Fülle Feld X mit Y“. Diese API soll uns ermöglichen
                             auf Versionsupdates und Änderungen im Automatisierungstool zu reagieren.</p>
                         <p>Der Driver ist nun die spezielle Implementierung eines Automatisierungstools, in unserem Fall Selenium 2.x (Webdriver). In den Driver ist auch eine Application Map integriert. Sollte das Mapping von z.B. Feld-Name auf Feld-Id nicht
@@ -682,6 +808,12 @@ public void ensureUserLoggedIn(String name)
                     <div class="development" style="height: 480px; left: 512px;"></div>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>Wartungsproblem im Griff</li>
+                            <li>Wiederverwendung</li>
+                            <li>vorab automatisieren</li>
+                        </ul>
+
                         <p>Mit diesem scheinbar sehr komplexen Framework versuchen wir dem Wartungsproblem bei der Testautomatisierung in den Griff zu bekommen. Wenn man das Framework nochmal genau betrachtet, stellt man schnell fest, dass der Aufwand ein
                             neues Scenario zu automatisieren darin besteht, die betroffenen Pages und deren Verbindung untereinander zu beschreiben.</p>
                         <p>Zudem haben viele Scenarios dieselben oder zumindest sehr ähnliche Vorbedingungen – es stellt sich also sehr schnell der Vorteil der Wiederverwendung ein.</p>
@@ -704,6 +836,15 @@ public void ensureUserLoggedIn(String name)
                     <p class="readable">Nicht aufgeben!</p>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>Nicht alles automatisieren</li>
+                            <li>Szenarien müssen lesbar bleiben</li>
+                            <li>Keep it simple</li>
+                            <li>Auf die Wartbarkeit achten</li>
+                            <li>Robustheit</li>
+                            <li>Nicht aufgeben!</li>
+                        </ul>
+
                         <p>
                             <strong>Nicht alles automatisieren</strong>
                             <br/> Je mehr man automatisiert, umso mehr muss man auch pflegen. Selbst wenn man ein ausgeklügeltes Framework verwendet, Anpassungen wird es immer geben.</p>
@@ -732,9 +873,19 @@ public void ensureUserLoggedIn(String name)
 
             <section>
                 <section data-background="zen.jpg" class="contrast-bright">
-                    <h1>Umgebung</h1>
+                    <h1>Integration</h1>
                     <hr />
                     <h2 class="readable">Behavior Driven Development</h2>
+
+                    <aside class="notes">
+                        <ul class="keywords">
+                            <li>Builds</li>
+                            <li>Laufzeit</li>
+                            <li>Testdaten</li>
+                        </ul>
+
+                        <p>Wie fügt sich das Ganze jetzt in technische Infrastruktur ein? Wie sieht es mit der Laufzeit aus? Woher bekommen wir Testdaten?</p>
+                    </aside>
                 </section>
 
                 <section>
@@ -757,6 +908,11 @@ public void ensureUserLoggedIn(String name)
                     </div>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>Akzeptanztests automatisiert</li>
+                            <li>Manuell</li>
+                        </ul>
+
                         <p>Wir verwenden Jenkins als CI-Umgebung. Dieser führ mehrmals am Tag einen vollständigen Build durch und deployt die Applikation automatisch auf ein Testsystem. Sobald der Applikationsserver gestartet worden ist, beginnt der Akzeptanztest.
                             Bei Fehlern werden sowohl der Product-Owner als auch der zuständige technische Architekt per Email verständigt.</p>
                         <p>Anschließend wird noch die aktuelle Systemspezifikation generiert.</p>
@@ -774,6 +930,10 @@ public void ensureUserLoggedIn(String name)
                     <p class="readable">@VIP Tag</p>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>Parallelisierung</li>
+                        </ul>
+
                         <p>Sobald man mehrere Akzeptanztests hat kann die Laufzeit der Tests zu einem Problem werden. Jenkins kann Jobs parallelisieren und die Ergebnisse wieder vereinen. Die Akzeptanztests werden in mehrere Gruppen geteilt und parallel
                             ausgeführt.
                         </p>
@@ -795,6 +955,12 @@ public void ensureUserLoggedIn(String name)
                     <p class="readable">Migrationsmechanismus</p>
 
                     <aside class="notes">
+                        <ul class="keywords">
+                            <li>Selbst vorbereiten</li>
+                            <li>Liquibase</li>
+                            <li>Migrationsmechanismus</li>
+                        </ul>
+
                         <p>Grundsätzlich ist es so, dass alle Tests ihre Daten selbst vorbereiten. Dies geschieht mit Hilfe der „Given“ Anweisungen. Hier ist wieder die Robustheit der Tests ein Thema.</p>
                         <p>Trotzdem ist es aber nötig, dass die Applikation beim Starten die Datenbank vorbereitet. Die Initialisierung bzw. die Aktualisierung erfolgt dabei durch Liquibase. Dann ist es noch notwendig eine Grundkonfiguration zu erstellen,
                             also z.B. einen Mandanten für die Tests zu erzeugen.</p>

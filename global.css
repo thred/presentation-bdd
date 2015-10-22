@@ -1,12 +1,14 @@
 .text-shown {
     overflow: auto;
+    background: #f7f2d3;
 }
 
 .text-shown .reveal {
     position: fixed;
     left: 5%;
     width: 50%;
-    box-shadow: 0 0 16px black;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5), 0 0 64px rgba(0, 0, 0, 0.33);
+    background: #fefdf9;
 }
 
 .text-shown .text {
@@ -65,7 +67,7 @@
 /* additional stuff */
 
 .reveal .header {
-    font-family: Georgia, serif;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     text-transform: none;
     opacity: 0.5;
     border-bottom: 1px solid black;
