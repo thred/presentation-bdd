@@ -12,8 +12,6 @@
         "url": "https://github.com/thred/presentation-bdd.git"
     },
     "dependencies": {
-        /*"requirejs": "2.1.20",*/
-        "reveal.js": "3.1.0",
-        /*"highlight.js": "8.8.0"*/
+        "reveal.js": "3.1.0"
     }
 }
