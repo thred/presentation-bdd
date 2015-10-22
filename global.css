@@ -6,7 +6,7 @@
 }
 
 .controls a {
-    display: block;
+    display: inline-block;
     background: black;
     font-family: Impact, Charcoal, sans-serif;
     font-size: 20px;
@@ -75,7 +75,11 @@
     content: "]";
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
+    .text-shown .controls {
+        right: 0;
+    }
+
     .text-shown {
         overflow: hidden;
     }
