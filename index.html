@@ -382,7 +382,8 @@ Then the detail page of the emplyee should open.
                         </ul>
 
                         <p>Die <a target="_blank" href="http://www.exampler.com/old-blog/2003/08/21/">Testquadranten von Brian Marick</a>                            und in erweiterter Form von Lisa Crispin geben eine gute Orientierungshilfe in Bezug auf verschiedene
-                            Testarten.</p>
+                            Testarten.
+                        </p>
                         <p>Im Wesentlichen werden Tests nach 2 Ebenen kategorisiert:</p>
                         <p>
                             <strong>Fachlich vs. Technisch geprägt</strong>
@@ -1618,6 +1619,23 @@ public void ensureUserLoggedIn(String name)
                 async: true
             }]
         });
+    </script>
+
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-39745817-2', 'auto');
+        ga('send', 'pageview');
     </script>
 </body>
 
