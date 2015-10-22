@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="utf-8">
@@ -1111,10 +1111,152 @@ public void ensureUserLoggedIn(String name)
 
             <section>
                 <section data-background="framework.jpg" class="contrast-bright">
-                    <h1>Frameworks</h1>
+                    <h1>Frameworks &amp; Tools</h1>
                     <hr />
                     <h2 class="readable">Behavior Driven Development</h2>
+
+                    <aside class="notes">
+                        <ul class="keywords">
+                            <li>Empfehlungen</li>
+                        </ul>
+
+                        <p>Welche Frameworks und Tools werden bei der Prosche Informatik verwendet?</p>
+                        <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
+                    </aside>
                 </section>
+
+                <section>
+                    <img src="cucumber-logo.svg" class="no-border" />
+                    <hr/>
+                    <p class="readable"><a href="https://cucumber.io/">https://cucumber.io/</a></p>
+                    <p class="readable">Verwaltet Feature-Files</p>
+                    <p class="readable">Test-Framework Anbindung</p>
+                    <p class="readable">Java, Ruby, .Net, Flex, ...</p>
+
+                    <aside class="notes">
+                        <ul class="keywords">
+                            <li>Cucumber</li>
+                        </ul>
+
+                        <p>Cucumber ist das Framework, welches die Feature-Files verwaltet, liest und als Test ablaufen lässt. Cucumber steht dabei in mehreren Varianten zur Verfügung. Die Basisversion wurde für Ruby erstellt. Sehr bald gesellte sich aber
+                            Cucumber-JVM dazu, das rein in Java entwickelt wurde und die Hürden der Verwendung das Ruby-Frameworks beseitigte.</p>
+                        <p>Cucumber liest die Feature-Files und erstellt daraus JUnit bzw. TestNG Testfälle. Dadurch ist die Integration zu allen wichtigen Tools wie IDEs und Buildtools vorhanden. In Eclipse oder IntelliJ z.B. lassen sich Feature-Files einfach
+                            als Unit-Tests starten.
+                        </p>
+                        <p>Weiters stellt Cucumber noch eine Menge weiterer Module und Plugins zur Verfügung: Spring-Integration, HTML-Reports, Android Unterstützung, OSGI Unterstützung, u.v.m.</p>
+                        <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Andere BDD Frameworks</h2>
+                    <hr/>
+                    <p class="readable"><a href="http://jbehave.org/">JBehave</a>: Ähnlich zu Cucumber-JVM</p>
+                    <p class="readable"><a href="http://jdave.org/">JDave</a>: Java-Files als Feature-File</p>
+                    <p class="readable"><a href="http://easyb.org/">easyb</a>: Groovy-basiert</p>
+                    <p class="readable"><a href="https://github.com/cucumber/cucumber/wiki/Gherkin">Gherkin</a>: Sprachdefinition/-parser für Feature-Files</p>
+
+                    <aside class="notes">
+                        <ul class="keywords">
+                            <li>JBehave</li>
+                            <li>JDave</li>
+                            <li>easyb</li>
+                            <li>Gherkin</li>
+                        </ul>
+
+                        <p>JBehave ist sehr ähnlich zu Cucumber-JVM. Es ist etwas älter, die aktivere Community scheint aber Cucumber zu haben.</p>
+                        <p>JDave ist neuer und bietet die Möglichkeit die Feature-Files als Java-Klasse zu definieren. </p>
+                        <p>easyb basiert auf Groovy. Feature-Files können direkt in Groovy definiert werden.</p>
+                        <p>Gherkin ist kein eigentliches BDD Framework, aber es bietet den Syntax-Parser für Feature-Files und ist daher hier aufgeführt.</p>
+                        <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
+                    </aside>
+                </section>
+
+                <section>
+                    <div class="flex">
+                        <div style="width: 30%">
+                            <img src="selenium-logo.png" class="no-border" />
+                        </div>
+                        <div style="width: 70%">
+                            <h2>Selenium</h2>
+                            <hr />
+                            <p><a href="http://www.seleniumhq.org/">http://www.seleniumhq.org/</a></p>
+                            <p>Automatisiert Browser Tests</p>
+                            <p>Mehr-Browser fähig</p>
+                            <p>Konkurrenzlos</p>
+                        </div>
+                    </div>
+
+                    <aside class="notes">
+                        <ul class="keywords">
+                            <li>Automatisiert Browser Tests</li>
+                        </ul>
+
+                        <p>Cucumber bietet ja keine Anbindung an einen Client. Die oft referenzierten automatisierten GUI-Tests sind kein eigentliches Feature der BDD-Frameworks.</p>
+                        <p>Für web-basierte Applikation kann Selenium als Steuerung des Clients verwendet werden. Es startet eine neue Instanz eines Browsers und Instrumentiert die Applikation mit einer Fernsteuerung. Weiter bietet es eine API auf diese
+                            Fernsteuer von Javacode aus zugreifen zu können. Damit bietet es die Grundvoraussetzung GUI-Tests zu implementieren.
+                            <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Liquibase</h2>
+                    <hr />
+                    <p><a href="http://www.liquibase.org/">http://www.liquibase.org/</a></p>
+                    <img src="liquibase-tagline.png" class="no-border" />
+                    <p>Automatisiert DDL Änderungen</p>
+                    <p>Versionsverwaltung</p>
+                    <p>XML-basiert und DB-unabhängig</p>
+
+                    <aside class="notes">
+                        <ul class="keywords">
+                            <li>DDL Änderungen</li>
+                        </ul>
+
+                        <p>Liquibase führt DDL-Changes anhand von XML-basierten Beschreibungsdateuen (sog. ChangeSets) durch. In der DB selbst wird vermerkt welche ChangeSets schon eingespielt wurden und welche noch nicht.</p>
+                        <p>Der Vorteil von Liquibase ist, dass, egal welchen Stand die Datenbank hat, diese auf die aktuelle Version gebracht werden kann. Das macht Liquibase dermaßen gut, dass in vielen Applikation keine direkten DDL Änderungen auf der
+                            Datenbank nötig sind, weder während der Entwicklung noch beim Einspielen von Updates. Die Zieldatenbank ist dabei egal. Die ChangeSets funktionieren sowohl gegen lokale Inmemory-DBs (z.B. HSQLDB) als auch gegen die großen Konzern-DBs
+                            wie Oracle oder DB2.
+                        </p>
+                        <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Cucumber Report DB</h2>
+                    <hr />
+                    <p><a href="https://github.com/porscheinformatik/cucumber-report-db">https://github.com/porscheinformatik/cucumber-report-db</a></p>
+                    <img src="test-report.png" />
+                    <p>Verwaltet Testergebnisse</p>
+                    <p>Historische Vergleiche</p>
+                    <p>Highscore</p>
+
+                    <aside class="notes">
+                        <ul class="keywords">
+                            <li>Hausintern (POI)</li>
+                        </ul>
+
+                        <p>Hausintern werden alle Läufe von Akzeptanztests zentral getrackt. Dadurch ist es möglich die Tests historisch zu vergleichen. Dies ist hilfreich um z.B. Tests mit langer Laufzeit oder geringer Robustheit zu finden.</p>
+                        <p>Das Tool wurde von der Porsche Informatik entwickelt und ist Open Source.</p>
+                        <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
+                    </aside>
+                </section>
+            </section>
+
+            <section>
+                <img src="success.svg" class="no-border">
+                <hr/>
+                <h2>Behavior Driven Development</h2>
+
+                <aside class="notes">
+                    <ul class="keywords">
+                        <li>gleiche Sicht</li>
+                        <li>Fragen?</li>
+                    </ul>
+
+                    <p>Das wars nun. Mit BDD können wir schaffen, dass alle Beteiligten die geleiche Sicht auf ein Produkt haben.</p>
+                    <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
+                </aside>
             </section>
 
             <section>
@@ -1168,7 +1310,6 @@ public void ensureUserLoggedIn(String name)
                     <p><a target="_blank" href="http://www.seleniumhq.org/">Selenium HQ</a>: Browser Automation</p>
                     <p><a target="_blank" href="http://www.liquibase.org/">Liquibase</a>: Source Control for your database</p>
                     <p><a target="_blank" href="http://www.exampler.com/old-blog/2003/08/21/">Test Quadranten</a>: Homepage von Brian Marick</p>
-
                 </section>
 
                 <section class="references">
@@ -1282,6 +1423,9 @@ public void ensureUserLoggedIn(String name)
             height: 640,
             history: true,
             touch: true,
+            slideNumber: true,
+            mouseWheel: true,
+            controls: false,
 
             dependencies: [{
                 src: 'global.js',
