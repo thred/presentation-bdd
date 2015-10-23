@@ -43,7 +43,7 @@
             <section>
                 <h1 style="font-size: 250%;">Behavior Driven Development</h1>
                 <hr/>
-                <h2 class="readable" style="font-size: 100%;">Vom Use Case zum Test Case</h2>
+                <h2 class="readable" style="font-size: 100%;">Vom Use-Case zum Test Case</h2>
 
                 <div class="flex">
                     <div class="project-cartoon">
@@ -71,7 +71,7 @@
                         <li>Zusammenarbeit stärken</li>
                     </ul>
                     <h1>Behavior Driven Develoment</h1>
-                    <p><i>Vom Use Case zum Test Case</i></p>
+                    <p><i>Vom Use-Case zum Test Case</i></p>
                     <p>Behavior Driven Develoment hat das Ziel die Zusammenarbeit der Beteiligten am Softwareentwicklungsprozess
                         zu stärken. Außerdem sollen aus dieser Zusammenarbeit automatisierte Tests als Benefit entstehen.</p>
                     <hr />
@@ -278,7 +278,7 @@ in order to &lt;BENEFIT&gt;
                     <div class=flex>
                         <div style="width: 50%">
                             <h2>Beschreibung</h2>
-                            <p class="readable">User Stories</p>
+                            <p class="readable">User-Stories</p>
                             <p class="readable">Akzeptanzkriterien</p>
                         </div>
 
@@ -298,7 +298,7 @@ Then &lt;POSTCONDITION&gt;
                     <aside class="notes">
                         <ul class="keywords">
                             <li>Sprache</li>
-                            <li>User Stories</li>
+                            <li>User-Stories</li>
                             <li>Akzeptanzkriterien</li>
                             <li>logisch ausgereift</li>
                         </ul>
@@ -476,13 +476,13 @@ Then the detail page of the emplyee should open.
                 </section>
 
                 <section>
-                    <h2>Fallbeispiel = User Story</h2>
+                    <h2>Fallbeispiel = User-Story</h2>
                     <hr/>
                     <p class="readable">genau ein Anwendungsfall</p>
                     <p class="readable">Einfachheit ist Trumpf</p>
 
                     <pre><code class="gherkin">
-User Story: Add article to cart
+User-Story: Add article to cart
 
 As a customer
 I want to select an article
@@ -492,31 +492,36 @@ in order to put it into my shopping cart.
                     <aside class="notes">
                         <ul class="keywords">
                             <li>Anwendungsfall aus Sicht des Benutzers</li>
-                            <li>Sprache die alle verstehen</li>
+                            <li>Sprache die alle verstehen, denn:</li>
+                            <ul>
+                                <li>Lasten- und Pflichtenheft &rarr; Kunde</li>
+                                <li>Use-Case &rarr; QA</li>
+                                <li>Konzept &rarr; Entwickler</li>
+                            </ul>
                         </ul>
 
-                        <p>Fallbeispiele haben einen anderen Fokus als Use Cases, Konzepte, Protokolle, Lasten- oder Pflichtenhefte:
+                        <p>Fallbeispiele haben einen anderen Fokus als Use-Cases, Konzepte, Protokolle, Lasten- oder Pflichtenhefte:
                             Fallbeispiele beschreiben genau einen Anwendungsfall aus der Sicht eines Benutzers. Wir schreiben
                             Applikationen für Benutzer und darauf liegt der Fokus.</p>
                         <p>Klar, wir können auch Lasten- und Pflichtenhefte scheiben, aber die sind für Kunden. Wir können auch
-                            UseCases scheiben, aber die sind für Tester. Wir können auch Konzepte schreiben, aber die sind
+                            Use-Cases scheiben, aber die sind für Tester. Wir können auch Konzepte schreiben, aber die sind
                             für Entwickler. Unser Ziel ist eine Sprache zu sprechen, die alle verstehen, und daher schreiben
-                            wir User Stories.</p>
+                            wir User-Stories.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
 
                 </section>
 
                 <section class="contrast-bright" data-background="scrum.jpg">
-                    <p class="readable">Unterstützt agiles Vorgehen</p>
+                    <h2 class="readable">User-Stories als Sprintziele</h2>
 
                     <aside class="notes">
                         <ul class="keywords">
                             <li>Sprintziele</li>
                         </ul>
 
-                        <p>Und weil wir agil entwickeln, brauchen wir die User Stories sowieso, nämlich als Sprintziele. Aber
-                            erst durch BDD finden sie User Stories wirklich Einzug in unser Projekt, da sie maschinell verarbeitet
+                        <p>Und weil wir agil entwickeln, brauchen wir die User-Stories sowieso, nämlich als Sprintziele. Aber
+                            erst durch BDD finden sie User-Stories wirklich Einzug in unser Projekt, da sie maschinell verarbeitet
                             werden müssen.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
@@ -530,7 +535,7 @@ in order to put it into my shopping cart.
 
                     <aside class="notes">
                         <ul class="keywords">
-                            <li>Akzeptanzkriterien</li>
+                            <li>Fallbeispiele &rarr; Akzeptanzkriterien</li>
                         </ul>
 
                         <p>Als nächster Schritt werden die Fallbeispiele um Akzeptanzkriterien erweitert und automatisiert.</p>
@@ -550,11 +555,10 @@ Scenario: Add article to cart
 
 [...]
 
-Given the shopping cart already contains an article.
-When the user selects the same article
-And clicks the "Add to Cart" button
-Then the cart should contain the article only once
-But with a count of 2.
+Given the detail page of article "ART000042" is open
+When the user clicks the "Add to Cart" button
+Then the added to cart message should appear
+And the cart should contain the article "ART000042"
                     </code></pre>
 
                     <aside class="notes">
@@ -563,11 +567,10 @@ But with a count of 2.
                             <li>Given, When, Then</li>
                         </ul>
 
-                        <p>Als nächster Schritt werden die Fallbeispiele um Akzeptanzkriterien erweitert und automatisiert.</p>
-                        <p>Die User Stories werden um Akzeptanzkriterien erweitert. Zu jeder User Story können natürlich mehrere
-                            Akzeptanzkriterien verfasst werden. Diese Scenarios detaillieren die Story, beschreiben Sonder-
-                            und Problemfälle und listen mögliche Aktionen des Benutzers auf.</p>
-                        <p>Aus diese User Stories sind in einer Sprache verfasst, die alle Beteiligten lesen und verstehen können.</p>
+                        <p>Zu jeder User-Story werden mehrere Akzeptanzkriterien verfasst. Diese Scenarios detaillieren
+                            die Story, beschreiben Sonder- und Problemfälle und listen mögliche Aktionen des Benutzers auf.</p>
+                        <p>Auch diese User-Stories sind in einer Sprache verfasst, die alle Beteiligten lesen und verstehen
+                            können.</p>
                         <p>Die Texte basieren auf Schlüsselwörtern, im Normalfall „Given“, „When“ und „Then“. Um den Text besser
                             lesbar zu gestalten bieten machen Frameworks auch andere Schlüsselwörter wie z.B. „And“ und „But“
                             an. Ebenso bieten die Frameworks das Parsen von Variablen und Tabellen aus den Texten selbst
@@ -584,15 +587,16 @@ But with a count of 2.
                     <hr/>
                     <p class="readable">Gemeinsame Entwicklung</p>
                     <p class="readable">Einbindung in Entwicklungsprozess</p>
-                    <p class="readable">Ersatz für Lasten- und Pflichtenheft</p>
+                    <p class="readable">Stories &rarr; Werkzeug</p>
+                    <p class="readable">Ersatz für Lasten- und Pflichtenheft?</p>
 
                     <aside class="notes">
                         <ul class="keywords">
-                            <li>Abstimmung Kunde</li>
+                            <li>Abstimmung Kunde &rarr; eingebunden</li>
                             <li>Ersetzt teilweise Lasten- und Pflichtenheft</li>
                         </ul>
 
-                        <p>Die fertigen User Stories und Akzeptanzkriterien werden mit dem Kunden gemeinsam entwickelt, oder
+                        <p>Die fertigen User-Stories und Akzeptanzkriterien werden mit dem Kunden gemeinsam entwickelt, oder
                             zumindest mit ihm abgestimmt. Der Kunde wird somit in den Entwicklungsprozess mit eingebunden.
                             Hier zeigt sich schon ein erster Vorteil. Früher sind fachliche Fehler erst im fertigen Produkt
                             aufgetaucht. Die Stories geben dem Entwicklungsteam ein Werkzeug in die Hand, mit dem der fachliche
@@ -675,7 +679,7 @@ But with a count of 2.
                 <section>
                     <h2>Umsetzung und Abnahme</h2>
                     <hr/>
-                    <p class="readable">Umsetzung nach User Stories und Acceptance Tests</p>
+                    <p class="readable">Umsetzung nach User-Stories und Acceptance Tests</p>
                     <p class="readable">QA testet zunächst manuell, dann automatisiert</p>
                     <p class="readable">Automatische Spezifikation für Kunden</p>
 
@@ -694,7 +698,7 @@ But with a count of 2.
                         <p>Die Qualitätssicherung für die Test zunächst manuell durch, bis klar ist, dass die Szenarien den
                             nötigen Testumfang abdecken. Danach können diese Tests jederzeit automatisch durchgeführt werden.
                         </p>
-                        <p>Als zusätzlicher Benefit kann aus den User Stories auch automatisch eine Spezifikation der Applikation
+                        <p>Als zusätzlicher Benefit kann aus den User-Stories auch automatisch eine Spezifikation der Applikation
                             abgeleitet werden.</p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
@@ -788,7 +792,7 @@ But with a count of 2.
                             wenn die Umsetzung für das nächste Wirtschaftsjahr geplant ist. Auch das deckt sich noch nicht
                             mit dem agilen Vorgehen.</p>
                         <p>Für große Anforderungen, die nicht in einem Sprint umgesetzt werden können, werden jetzt User Epics
-                            verfasst. User Epics sind Sammlungen von User Stories, es müssen aber zu Beginn nicht alle User
+                            verfasst. User Epics sind Sammlungen von User-Stories, es müssen aber zu Beginn nicht alle User
                             Stories ausformuliert sein.
                         </p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
@@ -839,7 +843,7 @@ But with a count of 2.
                     <p class="readable">Formulierung der Szenarien</p>
 
                     <pre><code class="Gherkin">
-User Story: Add Article to Cart
+User-Story: Add Article to Cart
 
 As a customer
 I want to select an article
