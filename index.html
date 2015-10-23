@@ -40,10 +40,10 @@
 
     <div class="reveal">
         <div class="slides">
-            <section>
+            <section data-transition="fade-in fade-out">
                 <h1 style="font-size: 250%;">Behavior Driven Development</h1>
                 <hr/>
-                <h2 class="readable" style="font-size: 100%;">Vom Use-Case zum Test Case</h2>
+                <h2 class="readable" style="font-size: 100%;">Vom Use-Case zum Test-Case</h2>
 
                 <div class="flex">
                     <div class="project-cartoon">
@@ -71,7 +71,7 @@
                         <li>Zusammenarbeit stärken</li>
                     </ul>
                     <h1>Behavior Driven Develoment</h1>
-                    <p><i>Vom Use-Case zum Test Case</i></p>
+                    <p><i>Vom Use-Case zum Test-Case</i></p>
                     <p>Behavior Driven Develoment hat das Ziel die Zusammenarbeit der Beteiligten am Softwareentwicklungsprozess
                         zu stärken. Außerdem sollen aus dieser Zusammenarbeit automatisierte Tests als Benefit entstehen.</p>
                     <hr />
@@ -567,10 +567,11 @@ And the cart should contain the article "ART000042"
                             <li>Given, When, Then</li>
                         </ul>
 
-                        <p>Zu jeder User-Story werden mehrere Akzeptanzkriterien verfasst. Diese Scenarios detaillieren
-                            die Story, beschreiben Sonder- und Problemfälle und listen mögliche Aktionen des Benutzers auf.</p>
+                        <p>Zu jeder User-Story werden mehrere Akzeptanzkriterien verfasst. Diese Scenarios detaillieren die
+                            Story, beschreiben Sonder- und Problemfälle und listen mögliche Aktionen des Benutzers auf.</p>
                         <p>Auch diese User-Stories sind in einer Sprache verfasst, die alle Beteiligten lesen und verstehen
-                            können.</p>
+                            können.
+                        </p>
                         <p>Die Texte basieren auf Schlüsselwörtern, im Normalfall „Given“, „When“ und „Then“. Um den Text besser
                             lesbar zu gestalten bieten machen Frameworks auch andere Schlüsselwörter wie z.B. „And“ und „But“
                             an. Ebenso bieten die Frameworks das Parsen von Variablen und Tabellen aus den Texten selbst
@@ -1552,19 +1553,30 @@ public void ensureUserLoggedIn(String name)
                 </section>
 
                 <section>
-                    <p>
-                        <a href="http://thred.github.io/presentation-bdd/">Behavior Driven Development</a>: Vom Use-Case
-                        zum Test-Case</p>
-                    </p>
-                    <p><a href="http://thred.github.io/presentation-bdd/">http://thred.github.io/presentation-bdd/</a></p>
-                    <hr/>
-                    <p class="minor">
-                        <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
-                            <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" />
-                        </a>
-                        <br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>                        by Manfred Hantschel.
-                    </p>
+                    <p class="readable">Präsentiert mit</p>
+                    <a href="http://lab.hakim.se/reveal-js" target="_blank">
+                        <img src="reveal.js.png" class="no-border" />
+                    </a>
+                    <p><a href="http://lab.hakim.se/reveal-js" target="_blank">http://lab.hakim.se/reveal-js</a></p>
                 </section>
+            </section>
+
+            <section data-transition="slide-in fade-out">
+                <p>
+                    <a href="http://thred.github.io/presentation-bdd/">Behavior Driven Development</a>: Vom Use-Case
+                    zum Test-Case</p>
+                </p>
+                <p><a href="http://thred.github.io/presentation-bdd/">http://thred.github.io/presentation-bdd/</a></p>
+                <hr/>
+                <p class="minor">
+                    <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+                        <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" />
+                    </a>
+                    <br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>                        by Manfred Hantschel.
+                </p>
+            </section>
+
+            <section data-background="black" data-transition="fade-in fade-out">
             </section>
         </div>
     </div>
@@ -1587,6 +1599,7 @@ public void ensureUserLoggedIn(String name)
             slideNumber: true,
             mouseWheel: false,
             controls: false,
+            loop: true,
 
             dependencies: [{
                 src: 'global.js',
