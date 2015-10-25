@@ -3,14 +3,14 @@
     z-index: 2048;
     bottom: 0;
     width: 100%;
-    /*background-color: rgba(0, 0, 0, 0.25);*/
     opacity: 0.25;
-    transition: opacity 1s;
+    transition: opacity 1s, background 2s;
 }
 
 #controls:hover {
     opacity: 1;
-    transition: opacity 0.25s;
+    background-color: rgba(0, 0, 0, 0.25);
+    transition: opacity 0.25s, background 0.25s;
 }
 
 #controls .left {
@@ -46,7 +46,7 @@
 
 .text-shown {
     overflow: auto;
-    background: #f7f2d3;
+    /*background: #f7f2d3;*/
 }
 
 .text-shown .reveal {
@@ -54,7 +54,6 @@
     left: 5%;
     width: 50%;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.5), 0 0 64px rgba(0, 0, 0, 0.33);
-    background: #fefdf9;
 }
 
 .text-shown .text {
@@ -88,11 +87,12 @@
 }
 
 .text-shown .text .keywords {
-    border: 1px solid DarkKhaki;
     border-radius: 8px;
-    background-color: Khaki;
+    background-color: rgba(0, 0, 0, 0.1);
     list-style-type: square;
     padding: 1em 2em;
+    opacity: 0.75;
+    font-style: italic;
 }
 
 .text-shown .text a {
@@ -143,6 +143,7 @@
 .reveal pre {
     background-color: #3F3F3F;
 }
+
 
 /* additional stuff */
 
