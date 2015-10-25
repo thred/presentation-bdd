@@ -82,6 +82,7 @@
     opacity: 0.5;
     margin: 1em 0 6em 0;
 }
+
 .text-hidden .text {
     display: none;
 }
@@ -142,7 +143,6 @@
 .reveal pre {
     background-color: #3F3F3F
 }
-
 
 /* additional stuff */
 

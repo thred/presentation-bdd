@@ -770,7 +770,7 @@ And the cart should contain the article "ART000042"
                 </section>
 
                 <section>
-                    <h2>Konkretisierung</h2>
+                    <h2>Vor Umsetzung: Konkretisierung</h2>
                     <hr />
                     <p class="readable">Alle Beteiligten arbeiten mit</p>
                     <p class="readable">Einfache Fragen stellen</p>
@@ -893,13 +893,22 @@ But with a count of 2.
                     <div class="flex-left">
                         <img class="no-border" src="simple-impl.svg" />
 
-                        <pre style="width: 50%">
-                            <code class="Java">
-                                @Given("the user $name is logged in") public void ensureUserLoggedIn(String name) { User user = userSrevice.getCurrentUser();
-                                if (!name.equals(user.getName())) { userService.logout(); userService.login(name); user =
-                                userService.getCurrentUser(); } assert name.equals(user.getName()); }
-                            </code>
-                        </pre>
+                        <pre style="width: 50%"><code class="Java">
+@Given("the user $name is logged in")
+public void ensureUserLoggedIn(String name)
+{
+    User user = userSrevice.getCurrentUser();
+
+    if (!name.equals(user.getName()))
+    {
+        userService.logout();
+        userService.login(name);
+        user = userService.getCurrentUser();
+    }
+
+    assert name.equals(user.getName());
+}
+                        </code></pre>
                     </div>
 
                     <aside class="notes">

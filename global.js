@@ -1,8 +1,14 @@
 (function() {
 
-    var controlsVisible = true;
+    var _controlsVisible = true;
 
     Reveal.addEventListener('ready', function(event) {
+        Reveal.isInfoTextVisible = function() {
+            var classList = document.body.classList;
+
+            return (!classList.contains('text-hidden'));
+        };
+
         Reveal.toggleInfoText = function() {
             var classList = document.body.classList;
 
@@ -36,9 +42,9 @@
         };
 
         Reveal.toggleControls = function() {
-            controlsVisible = !controlsVisible;
+            _controlsVisible = !_controlsVisible;
 
-            document.getElementById('controls').style.visibility = (controlsVisible) ? 'visible' : 'hidden';
+            document.getElementById('controls').style.visibility = (_controlsVisible) ? 'visible' : 'hidden';
         };
 
         Reveal.addEventListener('slidechanged', function(event) {
@@ -63,5 +69,20 @@
         }, false);
 
         Reveal.updateInfoText();
+
+        var params = {};
+
+        location.search.substr(1).split("&").forEach(function(item) {
+            params[item.split("=")[0]] = item.split("=")[1];
+        });
+
+        if (params.transition == 'none') {
+            // call by speaker notes, deactivate stuff
+            if (Reveal.isInfoTextVisible()) {
+                Reveal.toggleInfoText();
+            }
+
+            Reveal.toggleControls();
+        }
     });
 })();
