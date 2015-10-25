@@ -931,12 +931,15 @@ public void ensureUserLoggedIn(String name)
                     <div class="flex-left">
                         <img class="no-border" src="enhanced-impl.svg" />
 
-                        <pre style="width: 50%">
-                            <code class="Java">
-                                @Given("the user $name is logged in") public void ensureUserLoggedIn(String name) { User user = userWorkflow.login(name);
-                                assert name.equals(user.getName()); }
-                            </code>
-                        </pre>
+                        <pre style="width: 50%"><code class="Java">
+@Given("the user $name is logged in")
+public void ensureUserLoggedIn(String name)
+{
+    User user = userWorkflow.login(name);
+
+    assert name.equals(user.getName());
+}
+                        </code></pre>
                     </div>
 
                     <aside class="notes">
