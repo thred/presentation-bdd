@@ -31,6 +31,8 @@
             if (notesNode) {
                 bodyNode.innerHTML = notesNode.innerHTML;
             }
+
+            document.getElementById('text-page-number').innerHTML = Math.floor(Reveal.getProgress() * (Reveal.getTotalSlides() - 1) + 1);
         };
 
         Reveal.toggleControls = function() {

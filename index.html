@@ -266,11 +266,11 @@
 
                         <div style="width: 50%">
                             <div>
-                                <pre><code class="AsciiDoc">
-Story: As a &lt;ROLE&gt;
-I want &lt;FEATURE&gt;
-in order to &lt;BENEFIT&gt;
-                                </code></pre>
+                                <pre>
+                                    <code class="AsciiDoc">
+                                        Story: As a &lt;ROLE&gt; I want &lt;FEATURE&gt; in order to &lt;BENEFIT&gt;
+                                    </code>
+                                </pre>
                             </div>
                         </div>
                     </div>
@@ -284,13 +284,11 @@ in order to &lt;BENEFIT&gt;
 
                         <div style="width: 50%">
                             <div>
-                                <pre><code class="gherkin">
-Feature:
-
-Given &lt;PRECONDITION&gt;
-When &lt;ACTION&gt;
-Then &lt;POSTCONDITION&gt;
-                                </code></pre>
+                                <pre>
+                                    <code class="gherkin">
+                                        Feature: Given &lt;PRECONDITION&gt; When &lt;ACTION&gt; Then &lt;POSTCONDITION&gt;
+                                    </code>
+                                </pre>
                             </div>
                         </div>
                     </div>
@@ -329,19 +327,13 @@ Then &lt;POSTCONDITION&gt;
                     <div class=flex>
                         <div style="width: 60%">
                             <div>
-                                <pre><code class="gherkin">
-Feature: Sales list
-
-As a manager
-I want to list all employees
-in order to select and edit one.
-
-Scenario:
-
-Given the list of employees is open
-When I click on the name of the first employee
-Then the detail page of the emplyee should open.
-                                </code></pre>
+                                <pre>
+                                    <code class="gherkin">
+                                        Feature: Sales list As a manager I want to list all employees in order to select and edit one. Scenario: Given the list of
+                                        employees is open When I click on the name of the first employee Then the detail
+                                        page of the emplyee should open.
+                                    </code>
+                                </pre>
                             </div>
                         </div>
 
@@ -481,13 +473,11 @@ Then the detail page of the emplyee should open.
                     <p class="readable">genau ein Anwendungsfall</p>
                     <p class="readable">Einfachheit ist Trumpf</p>
 
-                    <pre><code class="gherkin">
-User-Story: Add article to cart
-
-As a customer
-I want to select an article
-in order to put it into my shopping cart.
-                    </code></pre>
+                    <pre>
+                        <code class="gherkin">
+                            User-Story: Add article to cart As a customer I want to select an article in order to put it into my shopping cart.
+                        </code>
+                    </pre>
 
                     <aside class="notes">
                         <ul class="keywords">
@@ -550,16 +540,13 @@ in order to put it into my shopping cart.
                     <p class="readable">mehrere Szenarien je Story</p>
                     <p class="readable">Einfachheit ist Trumpf</p>
 
-                    <pre><code class="Gherkin">
-Scenario: Add article to cart
-
-[...]
-
-Given the detail page of article "ART000042" is open
-When the user clicks the "Add to Cart" button
-Then the added to cart message should appear
-And the cart should contain the article "ART000042"
-                    </code></pre>
+                    <pre>
+                        <code class="Gherkin">
+                            Scenario: Add article to cart [...] Given the detail page of article "ART000042" is open When the user clicks the "Add to
+                            Cart" button Then the added to cart message should appear And the cart should contain the article
+                            "ART000042"
+                        </code>
+                    </pre>
 
                     <aside class="notes">
                         <ul class="keywords">
@@ -843,25 +830,14 @@ And the cart should contain the article "ART000042"
                     <p class="readable">Bewertung: Wichtigkeit, Aufwand, Automatisierung</p>
                     <p class="readable">Formulierung der Szenarien</p>
 
-                    <pre><code class="Gherkin">
-User-Story: Add Article to Cart
-
-As a customer
-I want to select an article
-in order to put it into my shopping cart.
-
-[...]
-
-Scenario: Duplicate Article
-
-Given the shopping cart already contains an article.
-When the user selects the same article
-And clicks the "Add to Cart" button
-Then the cart should contain the article only once
-But with a count of 2.
-
-[...]
-                    </code></pre>
+                    <pre>
+                        <code class="Gherkin">
+                            User-Story: Add Article to Cart As a customer I want to select an article in order to put it into my shopping cart. [...]
+                            Scenario: Duplicate Article Given the shopping cart already contains an article. When the user
+                            selects the same article And clicks the "Add to Cart" button Then the cart should contain the
+                            article only once But with a count of 2. [...]
+                        </code>
+                    </pre>
 
                     <aside class="notes">
                         <ul class="keywords">
@@ -912,7 +888,8 @@ But with a count of 2.
                         <p><a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a> Nach dem Sprint wird das Story
                             File in den „Feature-Tree“ eingepflegt. Der „Feature-Tree“ ist nach den Modulen im System aufgebaut.
                             Die Übernahme erfolgt entweder durch kopieren der Datei oder durch händisches Anpassen von bestehen
-                            Story-Files.</p>
+                            Story-Files.
+                        </p>
                         <p>In einem Projekt der Porsche Informatik wird der „Feature-Tree“ sogar dazu verwendet, automatisch
                             eine Systemspezifikation zu generieren. Dazu werden die Story-Files und zusätzliche Dateien im
                             „Feature-Tree“ zu einem Dokument zusammengefasst. Dieser Prozess ist leider sehr aufwendig, das
@@ -929,21 +906,13 @@ But with a count of 2.
                     <div class="flex-left">
                         <img class="no-border" src="simple-impl.svg" />
 
-                        <pre style="width: 50%"><code class="Java">
-@Given("the user $name is logged in")
-public void ensureUserLoggedIn(String name)
-{
-    User user = userSrevice.getCurrentUser();
-
-    if (!name.equals(user.getName()))
-    {
-        userService.logout();
-        userService.login(name);
-        user = userService.getCurrentUser();
-    }
-    assert name.equals(user.getName());
-}
-                        </code></pre>
+                        <pre style="width: 50%">
+                            <code class="Java">
+                                @Given("the user $name is logged in") public void ensureUserLoggedIn(String name) { User user = userSrevice.getCurrentUser();
+                                if (!name.equals(user.getName())) { userService.logout(); userService.login(name); user =
+                                userService.getCurrentUser(); } assert name.equals(user.getName()); }
+                            </code>
+                        </pre>
                     </div>
 
                     <aside class="notes">
@@ -968,14 +937,12 @@ public void ensureUserLoggedIn(String name)
                     <div class="flex-left">
                         <img class="no-border" src="enhanced-impl.svg" />
 
-                        <pre style="width: 50%"><code class="Java">
-@Given("the user $name is logged in")
-public void ensureUserLoggedIn(String name)
-{
-    User user = userWorkflow.login(name);
-    assert name.equals(user.getName());
-}
-                        </code></pre>
+                        <pre style="width: 50%">
+                            <code class="Java">
+                                @Given("the user $name is logged in") public void ensureUserLoggedIn(String name) { User user = userWorkflow.login(name);
+                                assert name.equals(user.getName()); }
+                            </code>
+                        </pre>
                     </div>
 
                     <aside class="notes">
@@ -1563,8 +1530,8 @@ public void ensureUserLoggedIn(String name)
 
             <section data-transition="slide-in fade-out">
                 <p>
-                    <a href="http://thred.github.io/presentation-bdd/">Behavior Driven Development</a>: Vom Use-Case
-                    zum Test-Case</p>
+                    <a href="http://thred.github.io/presentation-bdd/">Behavior Driven Development</a>: Vom Use-Case zum
+                    Test-Case</p>
                 </p>
                 <p><a href="http://thred.github.io/presentation-bdd/">http://thred.github.io/presentation-bdd/</a></p>
                 <hr/>
@@ -1572,7 +1539,7 @@ public void ensureUserLoggedIn(String name)
                     <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
                         <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" />
                     </a>
-                    <br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>                        by Manfred Hantschel.
+                    <br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>                    by Manfred Hantschel.
                 </p>
             </section>
 
@@ -1582,7 +1549,11 @@ public void ensureUserLoggedIn(String name)
     </div>
 
     <div class="text">
-        <div id="text-body">
+        <div class="text-header">
+            <span id="text-page-number" style="float:right;"></span>
+            Behavior Driven Development
+        </div>
+        <div id="text-body" class="text-body">
         </div>
     </div>
 

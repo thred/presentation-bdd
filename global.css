@@ -67,7 +67,11 @@
     line-height: 1.5em;
 }
 
-#text-body {
+.text-header {
+    border-bottom: 1px solid black;
+}
+
+.text-body {
     padding: 1em 0 5em 0;
 }
 
