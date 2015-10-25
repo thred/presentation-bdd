@@ -46,10 +46,10 @@
 
 .text-shown {
     overflow: auto;
-    /*background: #f7f2d3;*/
 }
 
 .text-shown .reveal {
+    background-color: white;
     position: fixed;
     left: 5%;
     width: 50%;
@@ -62,7 +62,7 @@
     position: absolute;
     width: 35%;
     left: 60%;
-    color: #3F3F3F;
+    color: #604830;
     line-height: 1.5em;
 }
 
@@ -74,6 +74,7 @@
 
 .text-body {
     min-height: 240px;
+    text-align: justify;
 }
 
 .text-footer {
@@ -97,9 +98,14 @@
 
 .text-shown .text a {
     text-decoration: none;
-    color: #15106f;
-    font-style: bold;
-    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.25);
+    color: #804020;
+    font-weight: normal;
+    font-style: italic;
+    /*text-shadow: 0 2px 1px rgba(0, 0, 0, 0.25);*/
+}
+
+.text-shown .text a:hover {
+    text-decoration: underline;
 }
 
 .text-shown .text a:before {
