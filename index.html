@@ -300,15 +300,18 @@ Then &lt;POSTCONDITION&gt;
 
                     <aside class="notes">
                         <ul class="keywords">
-                            <li>Sprache</li>
-                            <li>User-Stories</li>
-                            <li>Akzeptanzkriterien</li>
+                            <li>Sprache für fachliche Abläufe</li>
+                            <ul>
+                                <li>&rarr; User-Stories</li>
+                                <li>&rarr; Akzeptanzkriterien</li>
+                            </ul>
+                            <li>einfache Sprache, nur fachlich</li>
                             <li>logisch ausgereift</li>
                         </ul>
 
                         <p>Für das Domain-Driven Design stellt BDD eine Sprache zur Verfügung, mit der es möglich ist die fachlichen
-                            Abläufe detailliert und standardisiert zu formulieren. Mit Hilfe der Sprache lassen sich User
-                            Stories verfassen und Akzeptanzkriterien definieren.
+                            Abläufe detailliert und standardisiert zu formulieren. Mit Hilfe der Sprache lassen sich User-Stories
+                            verfassen und Akzeptanzkriterien definieren.
                         </p>
                         <p>Die Sprache orientiert sich dabei am Benutzer selbst und ist für alle Beteiligten verständlich. Bei
                             der Beschreibung wird gänzlich auf technische Feinheiten verzichtet, lediglich dem fachlichen
@@ -553,7 +556,7 @@ in order to put it into my shopping cart.
                     <p class="readable">mehrere Szenarien je Story</p>
                     <p class="readable">Einfachheit ist Trumpf</p>
 
-                    <pre><code class="Gherkin">
+                    <pre><code class="gherkin">
 Scenario: Add article to cart
 
 [...]
@@ -566,8 +569,9 @@ And the cart should contain the article "ART000042"
 
                     <aside class="notes">
                         <ul class="keywords">
-                            <li>Automatisierung</li>
-                            <li>Given, When, Then</li>
+                            <li>Mehrere Akzeptanzkriterien je User-Story</li>
+                            <li>Sonder- und Problemfälle</li>
+                            <li>Given, When, Then &rarr; Automatisierung</li>
                         </ul>
 
                         <p>Zu jeder User-Story werden mehrere Akzeptanzkriterien verfasst. Diese Scenarios detaillieren die
@@ -589,10 +593,10 @@ And the cart should contain the article "ART000042"
 
                     <h2>Abstimmung mit Kunden</h2>
                     <hr/>
-                    <p class="readable">Gemeinsame Entwicklung</p>
-                    <p class="readable">Einbindung in Entwicklungsprozess</p>
+                    <p class="readable">Dadurch Einbindung in Entwicklungsprozess</p>
                     <p class="readable">Stories &rarr; Werkzeug</p>
-                    <p class="readable">Ersatz für Lasten- und Pflichtenheft?</p>
+                    <p class="readable">Redundanz vermeiden</p>
+                    <p class="readable minor">(Ersatz für Lasten- und Pflichtenheft?)</p>
 
                     <aside class="notes">
                         <ul class="keywords">
@@ -776,14 +780,19 @@ And the cart should contain the article "ART000042"
 
                     <h2>Typischer Entwicklungsprozess</h2>
                     <hr />
-                    <p class="readable">Product-Owner formuliert die Idee</p>
-                    <p class="readable">Anforderung wird in Datenbank erfasst</p>
+                    <p class="readable">1.<sub>)</sub> Product-Owner formuliert die Idee</p>
+                    <p class="readable">2.<sub>)</sub> Anforderung wird in Datenbank erfasst</p>
+                    <p class="readable">3.<sub>)</sub> Epic aus Anforderungen formulieren</p>
+                    <p class="readable">4.<sub>)</sub> User-Stories für Epics</p>
 
                     <aside class="notes">
                         <ul class="keywords">
-                            <li>Idee steht am Anfang</li>
-                            <li>Statusverfolgung</li>
-                            <li>Epics</li>
+                            <li>Idee steht am Anfang (Product-Owner, Kunde, Entwicklung)</li>
+                            <li>Anforderung erfassen</li>
+                            <ul>
+                                <li>offizielle Statusverfolgung</li>
+                            </ul>
+                            <li>erst Epics, dann User-Stories</li>
                         </ul>
 
                         <p>Am Anfang war die Idee. Diese wird meist vom Kunden bzw. dem Product-Owner ausgebrütet und formuliert.
@@ -796,8 +805,8 @@ And the cart should contain the article "ART000042"
                             wenn die Umsetzung für das nächste Wirtschaftsjahr geplant ist. Auch das deckt sich noch nicht
                             mit dem agilen Vorgehen.</p>
                         <p>Für große Anforderungen, die nicht in einem Sprint umgesetzt werden können, werden jetzt User Epics
-                            verfasst. User Epics sind Sammlungen von User-Stories, es müssen aber zu Beginn nicht alle User
-                            Stories ausformuliert sein.
+                            verfasst. User Epics sind Sammlungen von User-Stories, es müssen aber zu Beginn nicht alle User-Stories
+                            ausformuliert sein.
                         </p>
                         <p><a href="javascript:Reveal.next()">&rarr; next slide</a></p>
                     </aside>
@@ -817,7 +826,8 @@ And the cart should contain the article "ART000042"
 
                     <aside class="notes">
                         <ul class="keywords">
-                            <li>Konkretisierung</li>
+                            <li>Vor Umsetzung: Konkretisierung</li>
+                            <li>Beteiligung: Kunde, QA, Entw.</li>
                             <li>Fragen</li>
                             <li>Sonstige Dokumente</li>
                         </ul>
@@ -846,7 +856,7 @@ And the cart should contain the article "ART000042"
                     <p class="readable">Bewertung: Wichtigkeit, Aufwand, Automatisierung</p>
                     <p class="readable">Formulierung der Szenarien</p>
 
-                    <pre><code class="Gherkin">
+                    <pre><code class="gherkin">
 User-Story: Add Article to Cart
 
 As a customer
