@@ -70,12 +70,18 @@
 .text-header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     opacity: 0.5;
+    margin: 1em 0 1em 0;
 }
 
 .text-body {
-    padding: 1em 0 5em 0;
+    min-height: 240px;
 }
 
+.text-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
+    margin: 1em 0 6em 0;
+}
 .text-hidden .text {
     display: none;
 }
