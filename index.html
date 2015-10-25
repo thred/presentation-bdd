@@ -267,11 +267,13 @@
 
                         <div style="width: 50%">
                             <div>
-                                <pre>
-                                    <code class="AsciiDoc">
-                                        Story: As a &lt;ROLE&gt; I want &lt;FEATURE&gt; in order to &lt;BENEFIT&gt;
-                                    </code>
-                                </pre>
+                                <pre><code class="AsciiDoc">
+Story:
+
+As a &lt;ROLE&gt;
+I want &lt;FEATURE&gt;
+in order to &lt;BENEFIT&gt;
+                                </code></pre>
                             </div>
                         </div>
                     </div>
@@ -285,11 +287,13 @@
 
                         <div style="width: 50%">
                             <div>
-                                <pre>
-                                    <code class="gherkin">
-                                        Feature: Given &lt;PRECONDITION&gt; When &lt;ACTION&gt; Then &lt;POSTCONDITION&gt;
-                                    </code>
-                                </pre>
+                                <pre><code class="gherkin">
+Feature:
+
+Given &lt;PRECONDITION&gt;
+When &lt;ACTION&gt;
+Then &lt;POSTCONDITION&gt;
+                                </code></pre>
                             </div>
                         </div>
                     </div>
@@ -328,13 +332,19 @@
                     <div class=flex>
                         <div style="width: 60%">
                             <div>
-                                <pre>
-                                    <code class="gherkin">
-                                        Feature: Sales list As a manager I want to list all employees in order to select and edit one. Scenario: Given the list of
-                                        employees is open When I click on the name of the first employee Then the detail
-                                        page of the emplyee should open.
-                                    </code>
-                                </pre>
+                                <pre><code class="gherkin">
+Feature: Sales list
+
+As a manager
+I want to list all employees
+in order to select and edit one.
+
+Scenario:
+
+Given the list of employees is open
+When I click on the name of the first employee
+Then the detail page of the emplyee should open.
+                                </code></pre>
                             </div>
                         </div>
 
@@ -474,11 +484,13 @@
                     <p class="readable">genau ein Anwendungsfall</p>
                     <p class="readable">Einfachheit ist Trumpf</p>
 
-                    <pre>
-                        <code class="gherkin">
-                            User-Story: Add article to cart As a customer I want to select an article in order to put it into my shopping cart.
-                        </code>
-                    </pre>
+                    <pre><code class="gherkin">
+User-Story: Add article to cart
+
+As a customer
+I want to select an article
+in order to put it into my shopping cart.
+                    </code></pre>
 
                     <aside class="notes">
                         <ul class="keywords">
@@ -541,13 +553,16 @@
                     <p class="readable">mehrere Szenarien je Story</p>
                     <p class="readable">Einfachheit ist Trumpf</p>
 
-                    <pre>
-                        <code class="Gherkin">
-                            Scenario: Add article to cart [...] Given the detail page of article "ART000042" is open When the user clicks the "Add to
-                            Cart" button Then the added to cart message should appear And the cart should contain the article
-                            "ART000042"
-                        </code>
-                    </pre>
+                    <pre><code class="Gherkin">
+Scenario: Add article to cart
+
+[...]
+
+Given the detail page of article "ART000042" is open
+When the user clicks the "Add to Cart" button
+Then the added to cart message should appear
+And the cart should contain the article "ART000042"
+                    </code></pre>
 
                     <aside class="notes">
                         <ul class="keywords">
@@ -831,14 +846,25 @@
                     <p class="readable">Bewertung: Wichtigkeit, Aufwand, Automatisierung</p>
                     <p class="readable">Formulierung der Szenarien</p>
 
-                    <pre>
-                        <code class="Gherkin">
-                            User-Story: Add Article to Cart As a customer I want to select an article in order to put it into my shopping cart. [...]
-                            Scenario: Duplicate Article Given the shopping cart already contains an article. When the user
-                            selects the same article And clicks the "Add to Cart" button Then the cart should contain the
-                            article only once But with a count of 2. [...]
-                        </code>
-                    </pre>
+                    <pre><code class="Gherkin">
+User-Story: Add Article to Cart
+
+As a customer
+I want to select an article
+in order to put it into my shopping cart.
+
+[...]
+
+Scenario: Duplicate Article
+
+Given the shopping cart already contains an article.
+When the user selects the same article
+And clicks the "Add to Cart" button
+Then the cart should contain the article only once
+But with a count of 2.
+
+[...]
+                    </code></pre>
 
                     <aside class="notes">
                         <ul class="keywords">
