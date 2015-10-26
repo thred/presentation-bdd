@@ -188,6 +188,8 @@
 
 .reveal .minor {
     font-size: 80%;
+    line-height: 1em;
+    margin-bottom: 1.5em;
 }
 
 .reveal hr {
@@ -212,9 +214,8 @@
 }
 
 img[src="me.jpg"] {
-    width: 120px;
-    height: 160px;
-    float: right;
+    width: 160px;
+    height: auto;
 }
 
 .reveal .project-cartoon {

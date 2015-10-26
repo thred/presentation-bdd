@@ -89,10 +89,17 @@
             </section>
 
             <section id="me" data-transition="slide-in fade-out">
-                <img src="me.jpg" />
-                <h2>Manfred Hantschel</h2>
-                <hr />
-                <p class="readable">Software Entwickler, Porsche Informatik GmbH</p>
+                <div class="flex">
+                    <div style="width: 800px; margin-right: 32px;">
+                        <h2>Manfred Hantschel</h2>
+                        <hr />
+                        <p class="readable">Software Entwickler, Porsche Informatik GmbH</p>
+                    </div>
+
+                    <div style="width: 192px;">
+                        <img src="me.jpg" />
+                    </div>
+                </div>
 
                 <aside class="notes">
                     <p>Mein name ist Manfred Hantschel und ich bin Softwareentwickler bei der Porsche Informatik GmbH in Salzburg.</p>
@@ -107,7 +114,7 @@
             </section>
 
             <section class="contrast-bright" data-transition="zoom-in fade-out" data-background-transition="fade" data-background="weltmaschine.jpg">
-                <h2>Behavior Driven Developement</h2>
+                <h2>Behavior Driven Development</h2>
                 <hr />
                 <h2 class="readable">Theorie &amp; Praxis</h2>
 
@@ -326,7 +333,7 @@ Then &lt;POSTCONDITION&gt;
                         <p>Und bereits da werden viele Probleme gelöst. Aus meiner Erfahrung tauchen hier oft schon die großen
                             Probleme der Umsetzung auf – nämlich dann wenn der fachliche Prozess schon nicht logisch ausgereift
                             ist. Die Entwicklung kann fast alles umsetzen, einzige Vorbedingung: die Aufgabe muss deterministisch
-                            sein. Für die Formulierung des Akzeptanztests muss das Problem auf einem Level beleuchtet werden,
+                            sein. Für die Formulierung des Akzeptanz-Tests muss das Problem auf einem Level beleuchtet werden,
                             das logische Probleme frühzeitig zu Tage fördert.</p>
                     </aside>
                 </section>
@@ -348,15 +355,15 @@ in order to select and edit one.
 
 Scenario:
 
-Given the list of employees is open
-When I click on the name of the first employee
-Then the detail page of the emplyee should open.
+Given the list of employees is displayed
+When I click on the name of an employee
+Then the detail page should be opened.
                                 </code></pre>
                             </div>
                         </div>
 
                         <div style="width: 40%">
-                            <h2>Akzeptanztests</h2>
+                            <h2>Akzeptanz-Tests</h2>
                             <p class="readable">Konzentration auf das Problem</p>
                             <p class="readable">Eingehen auf fachliche Details</p>
                         </div>
@@ -366,15 +373,15 @@ Then the detail page of the emplyee should open.
                         <h3>BDD für's Test-Driven Development ...</h3>
 
                         <ul class="keywords">
-                            <li>Akzeptanztests</li>
+                            <li>Akzeptanz-Tests</li>
                             <li>fachliche Ebene</li>
                         </ul>
 
-                        <p>Für das Test-Driven Development stellt BDD ein Werkzeug zur Verfügung - nämlich Akzeptanztests.</p>
-                        <p>Akzeptanztests konzentrieren sich, wie von TDD gefordert, auf das Problem selbst. Die Umsetzung der
-                            Lösung kann zunächst vollkommen ignoriert werden. Die Tests bewegen sich auf einer rein fachlichen
+                        <p>Für das Test-Driven Development stellt BDD ein Werkzeug zur Verfügung - nämlich Akzeptanz-Tests.</p>
+                        <p>Akzeptanz-Tests konzentrieren sich, wie von TDD gefordert, auf das Problem selbst. Die Umsetzung
+                            der Lösung kann zunächst vollkommen ignoriert werden. Die Tests bewegen sich auf einer rein fachlichen
                             Ebene, anders als Unit-Tests. Trotzdem ist es möglich, ja gefordert, auf fachliche Details einzugehen.</p>
-                        <p>Durch die Schlüsselwörter ist es möglich die Akzeptanztests automatisch zu verarbeiten und programmtechnisch
+                        <p>Durch die Schlüsselwörter ist es möglich die Akzeptanz-Tests automatisch zu verarbeiten und programmtechnisch
                             Tests auf Grundlage der Kriterien verfassen.</p>
                     </aside>
                 </section>
@@ -428,7 +435,7 @@ Then the detail page of the emplyee should open.
                             <li>Explorativ, Usability, Abnahme</li>
                             <li>Unit-Tests</li>
                             <li>Performance-Tests</li>
-                            <li>Akzeptanztests</li>
+                            <li>Akzeptanz-Tests</li>
                         </ul>
 
                         <p>Versucht man nun die verschiedensten Testarten in dieses System einzuordnen, fällt das relativ leicht:</p>
@@ -546,6 +553,7 @@ in order to put it into my shopping cart.
                     <h2>Akzeptanzkriterien = Scenarios</h2>
                     <hr/>
                     <p class="readable">mehrere Szenarien je Story</p>
+                    <p class="readable">Sonder- und Problemfälle</p>
                     <p class="readable">Einfachheit ist Trumpf</p>
 
                     <pre><code class="gherkin">
@@ -553,7 +561,7 @@ Scenario: Add article to cart
 
 [...]
 
-Given the detail page of article "ART000042" is open
+Given the detail page of article "ART000042" is displayed
 When the user clicks the "Add to Cart" button
 Then the added to cart message should appear
 And the cart should contain the article "ART000042"
@@ -645,7 +653,7 @@ And the cart should contain the article "ART000042"
                     <h2>Umsetzung der Tests</h2>
                     <hr/>
                     <p class="readable">Implementation: Given, When, Then</p>
-                    <p class="readable">Test first</p>
+                    <p class="readable">Test-First</p>
                     <p class="readable">Eingebunden in Spezifikations- und Testprozess</p>
 
                     <aside class="notes">
@@ -683,7 +691,7 @@ And the cart should contain the article "ART000042"
                 <section>
                     <h2>Umsetzung und Abnahme</h2>
                     <hr/>
-                    <p class="readable">Umsetzung nach User-Stories und Acceptance Tests</p>
+                    <p class="readable">Umsetzung nach User-Stories und Akzeptanz-Tests</p>
                     <p class="readable">QA testet zunächst manuell, dann automatisiert</p>
                     <p class="readable">Automatische Spezifikation für Kunden</p>
 
@@ -757,18 +765,24 @@ And the cart should contain the article "ART000042"
                         <div style="width: 640px; margin-right: 32px;">
                             <h2>Porsche Informatik GmbH</h2>
                             <hr />
-                            <p class="readable">Teil der Porsche Holding</p>
                             <p class="readable"><a href="http://porscheinformatik.at">http://porscheinformatik.at</a></p>
-                            <p class="readable">Über 400 MA in allen Bereichen der IT</p>
-                            <p class="readable">Softwarelösungen für alle Bereiche des Automobilhandels</p>
-                            <hr />
-                            <p class="readable">BDD in mehreren großen Projekten</p>
                         </div>
 
                         <div style="width: 352px;">
                             <img src="poi.jpg" />
                         </div>
                     </div>
+
+                    <aside class="notes">
+                        <h3>Porsche Informatik GmbH</h3>
+
+                        <ul class="keywords">
+                            <li>Teil der Porsche Holding</li>
+                            <li>400 MA in allen Bereichen der IT</li>
+                            <li>Softwarelösungen für Automobilhandel</li>
+                            <li>BDD in mehreren großen Projekten</li>
+                        </ul>
+                    </aside>
                 </section>
 
                 <section>
@@ -849,8 +863,7 @@ And the cart should contain the article "ART000042"
 
                     <h2>Vor Sprint: Formalisierung</h2>
                     <hr/>
-                    <p class="readable">Bewertung für Automatisierung:</p>
-                    <p class="minor readable">Wichtigkeit, Aufwand, Sinn</p>
+                    <p class="readable">Bewertung für Automatisierung: Wichtigkeit, Aufwand, Sinn</p>
                     <p class="readable">Formulierung der Szenarien</p>
 
                     <pre><code class="gherkin">
@@ -941,11 +954,11 @@ But with a count of 2.
                     <div class="flex-left">
                         <img class="no-border" src="simple-impl.svg" />
 
-                        <pre style="width: 50%"><code class="Java">
+                        <pre style="width: 50%; font-size: 16px;"><code class="Java">
 @Given("the user $name is logged in")
 public void ensureUserLoggedIn(String name)
 {
-    User user = userSrevice.getCurrentUser();
+    User user = userService.getCurrentUser();
 
     if (!name.equals(user.getName()))
     {
@@ -981,7 +994,10 @@ public void ensureUserLoggedIn(String name)
                     <div class="flex-left">
                         <img class="no-border" src="enhanced-impl.svg" />
 
-                        <pre style="width: 50%"><code class="Java">
+                        <pre style="width: 50%; font-size: 16px;"><code class="Java">
+@Autowired
+private UserWorkflow userWorkflow;
+
 @Given("the user $name is logged in")
 public void ensureUserLoggedIn(String name)
 {
@@ -1052,7 +1068,7 @@ public void ensureUserLoggedIn(String name)
                     <h2>Was haben wir erriecht?</h2>
                     <hr/>
                     <p class="readable">Anpassungen nur an einer Stelle</p>
-                    <p class="readable">Wiederverwendung der Workflows, Componenten und Pages</p>
+                    <p class="readable">Wiederverwendung der Workflows, Components und Pages</p>
                     <p class="readable">Mapping unterstützt Test-Driven-Development</p>
                     <p class="readable">Automatisierungstool ist austauschbar</p>
 
@@ -1134,7 +1150,7 @@ public void ensureUserLoggedIn(String name)
                         <h4>BDD ist mehr (als automatisierte GUI-Tests)</h4>
                         <p>
                             Die GUI-Tests, die anhand der Feature-Files ablaufen sind beeindruckend. Leider wird aber BDD oft auf dieses Feature reduziert.
-                            Wird weder der kommunikative Ansatz genützt noch das "Test first"-Prinzip eingehalten kann man
+                            Wird weder der kommunikative Ansatz genützt noch das "Test-First"-Prinzip eingehalten kann man
                             kaum mehr von BDD sprechen. Dann ist es den Aufwand auch nicht mehr wert die Feature-Files zu
                             pflegen; es reicht mit Selenium GUI-Tests zu implementieren.
                     </aside>
@@ -1168,7 +1184,7 @@ public void ensureUserLoggedIn(String name)
                             <hr />
 
                             <h3>Automatisierte Builds</h3>
-                            <p class="readable">Build &rarr; Test &rarr; Deployment &rarr; Acceptance Tests &rarr; Documentation</p>
+                            <p class="readable">Build &rarr; Test &rarr; Deployment &rarr; Akzeptanz-Tests &rarr; Documentation</p>
 
                             <h3>Lokale Tests</h3>
                             <p class="readable">Gegen Entwicklungsumgebung</p>
@@ -1191,8 +1207,8 @@ public void ensureUserLoggedIn(String name)
 
                         <p>Wir verwenden Jenkins als CI-Umgebung. Dieser führt mehrmals am Tag einen vollständigen Build durch
                             und deployt die Applikation automatisch auf ein Testsystem. Sobald der Applikationsserver gestartet
-                            worden ist, beginnt der Akzeptanztest. Bei Fehlern werden sowohl der Product-Owner als auch der
-                            zuständige technische Architekt per Email verständigt.</p>
+                            worden ist, beginnt der Akzeptanz-Test. Bei Fehlern werden sowohl der Product-Owner als auch
+                            der zuständige technische Architekt per Email verständigt.</p>
                         <p>Anschließend wird noch die aktuelle Systemspezifikation generiert.</p>
                         <p>Dieses Vorgehen ist durch das Buch [Continous Delivery] inspiriert.</p>
                         <p>Natürlich können Entwickler Tests auch lokal durchführen. Dabei spielt die Robustheit der Tests wieder
@@ -1216,8 +1232,8 @@ public void ensureUserLoggedIn(String name)
                             <li>Ausführung trennen</li>
                         </ul>
 
-                        <p>Sobald man mehrere Akzeptanztests hat kann die Laufzeit der Tests zu einem Problem werden. Jenkins
-                            kann Jobs parallelisieren und die Ergebnisse wieder vereinen. Die Akzeptanztests werden in mehrere
+                        <p>Sobald man mehrere Akzeptanz-Tests hat kann die Laufzeit der Tests zu einem Problem werden. Jenkins
+                            kann Jobs parallelisieren und die Ergebnisse wieder vereinen. Die Akzeptanz-Tests werden in mehrere
                             Gruppen geteilt und parallel ausgeführt.
                         </p>
                         <p>Zur Zeit haben wir noch in keinem Projekt große Probleme mit der Laufzeit. Die Parallelisierung haben
@@ -1429,7 +1445,7 @@ public void ensureUserLoggedIn(String name)
                             <li>Durch POI Entwickelt</li>
                         </ul>
 
-                        <p>Hausintern werden alle Läufe von Akzeptanztests zentral getrackt. Dadurch ist es möglich die Tests
+                        <p>Hausintern werden alle Läufe von Akzeptanz-Tests zentral getrackt. Dadurch ist es möglich die Tests
                             historisch zu vergleichen. Dies ist hilfreich um z.B. Tests mit langer Laufzeit oder geringer
                             Robustheit zu finden.</p>
                         <p>Das Tool wurde von der Porsche Informatik entwickelt und ist Open Source.</p>
