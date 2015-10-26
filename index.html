@@ -806,6 +806,7 @@ And the cart should contain the article "ART000042"
                                 <li>offizielle Statusverfolgung</li>
                             </ul>
                             <li>erst Epics, dann User-Stories</li>
+                            <li>User-Stories noch nicht ausformuliert</li>
                         </ul>
 
                         <p>Am Anfang war die Idee. Diese wird meist vom Kunden bzw. dem Product-Owner ausgebrütet und formuliert.
@@ -842,6 +843,7 @@ And the cart should contain the article "ART000042"
                             <li>Vor Umsetzung: Konkretisierung</li>
                             <li>Beteiligung: Kunde, QA, Entw.</li>
                             <li>einfache Fragen</li>
+                            <li>Szenarien noch nicht maschinell verarbeitbar</li>
                             <li>weitere Dokumente: UI-Mockups, Aufwände, ...</li>
                         </ul>
 
@@ -1106,48 +1108,50 @@ public void ensureUserLoggedIn(String name)
                     <h1>Do's &amp; Don't's</h1>
                     <hr/>
                     <p class="readable">Nicht alles automatisieren</p>
-                    <p class="readable">Szenarien müssen lesbar bleiben</p>
-                    <p class="readable">Keep it simple</p>
-                    <p class="readable">Auf die Wartbarkeit achten</p>
+                    <p class="readable">KISS</p>
                     <p class="readable">Robustheit, Robustheit, Robustheit</p>
-                    <p class="readable">BDD ist mehr (als automatisierte GUI-Tests)</p>
+                    <p class="readable">BDD ist mehr als automatisierte GUI-Tests</p>
 
                     <aside class="notes">
                         <h3>Do's &amp; Don't's</h3>
 
                         <ul class="keywords">
                             <li>Nicht alles automatisieren</li>
-                            <li>Szenarien müssen lesbar bleiben</li>
-                            <li>Keep it simple</li>
-                            <li>Auf die Wartbarkeit achten</li>
+                            <li>KISS - z.B. Datumsfeld</li>
                             <li>Robustheit</li>
-                            <li>BDD ist mehr (als automatisierte GUI-Tests)</li>
+                            <li>BDD ist mehr als automatisierte GUI-Tests</li>
                         </ul>
 
                         <h4>Nicht alles automatisieren</h4>
                         <p>
                             Je mehr man automatisiert, umso mehr muss man auch pflegen. Selbst wenn man ein ausgeklügeltes Framework verwendet, Anpassungen
-                            wird es immer geben. BDD können keine erfahrene QA-Abteilung ersetzen.</p>
+                            wird es immer geben. BDD kann sowieso keine erfahrene QA-Abteilung ersetzen, also sollten wir
+                            in erster Linie essentielle Teile der Applikation testen. Wir nennen das Positiv-Tests.</p>
+
                         <h4>Szenarien müssen lesbar bleiben</h4>
                         <p>
                             Verketten Sie nicht unzählige Vorbedingungen in einem Scenario nur weil es die Steps schon gibt. Verstecken Sie die Komplexität
                             lieber in der Implementierung der Steps und formulieren Sie aussagekräftige Steps.
                         </p>
+
                         <h4>Machen Sie sich das Leben so leicht wie es geht</h4>
                         <p>
                             Je komplizierter der Weg vom Scenario bis zur fertigen Automatisierung ist, umso schwieriger wird es sein, ihre Entwickler
                             zum Mitmachen zu bewegen.</p>
+
                         <h4>Vergessen Sie nicht auf die Wartbarkeit zu achten</h4>
                         <p>
                             ... steht etwas im Widerspruch zur obigen Aussage. Wenn man aber Steps mit Record&amp;Replay Scripten automatisiert, ist
                             man schnell in der Wartungsfalle und kommt nur unglaublich schwer wieder heraus.</p>
                         <h4>Robustheit, Robustheit, Robustheit</h4>
+
                         <p>
                             Achten Sie bei Tests auf ihre Robustheit. Kein Test geht von Vorbedingungen aus, die nicht spezifiziert sind. Will ich einen
                             Artikel verkaufen, muss ein verkaufbarer Arktikel verfügbar sein. Das "Given" überprüft ob ein
                             solcher Artikel vorhanden ist, legt wenn nötig einen an und merkt sich die Id, damit der Artikel
                             im "When" verkauft werden kann. Stories sollten ihre Testdaten aufräumen, und wenn die eigenen
                             Testdaten zu Beginn schon in der Datenbank sind, trotzdem laufen.</p>
+
                         <h4>BDD ist mehr (als automatisierte GUI-Tests)</h4>
                         <p>
                             Die GUI-Tests, die anhand der Feature-Files ablaufen sind beeindruckend. Leider wird aber BDD oft auf dieses Feature reduziert.
