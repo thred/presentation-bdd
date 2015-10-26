@@ -164,7 +164,8 @@
                         <ul class="keywords">
                             <li>Methodik</li>
                             <li>Dan North, 2006</li>
-                            <li>TDD verbessern</li>
+                            <li>TDD verbessern &rarr; nicht im Designprozess</li>
+                            <li>BDD löst Probleme und geht weiter</li>
                         </ul>
 
                         <p>
@@ -191,9 +192,13 @@
                         <h3>Bessere Zusammenarbeit</h3>
 
                         <ul class="keywords">
-                            <li>Entwickler <a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a></li>
-                            <li>QA <a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a></li>
-                            <li>Product Owner <a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a></li>
+                            <li>Zusammenarbeit verbessern</li>
+                            <ul>
+                                <li>Entwickler <a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a></li>
+                                <li>QA <a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a></li>
+                                <li>Product Owner <a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a></li>
+                            </ul>
+                            <li>TDD als Benefit</li>
                         </ul>
 
                         <p>In erster Linie soll die Zusammenarbeit zwischen</p>
@@ -221,8 +226,9 @@
                             <li>Domain-Driven-Design
                                 <ul>
                                     <li>Konzentration auf Fachlogik anstatt Technik</li>
+                                    <li>Komplexe fachliche Zusammenhänge zerteilen</li>
                                     <li>vereinfachte Problemlösung</li>
-                                    <li>Am Ziel vorbei entwickeln</li>
+                                    <li>Entwickler sehen nur Teilbereich</li>
                                 </ul>
                             </li>
                             <li>Test-Driven-Development
@@ -314,7 +320,7 @@ Then &lt;POSTCONDITION&gt;
                         <h3>BDD für's Domain-Driven Design ...</h3>
 
                         <ul class="keywords">
-                            <li>Sprache für fachliche Abläufe</li>
+                            <li>standardisierte Sprache für fachliche Abläufe</li>
                             <ul>
                                 <li>&rarr; User-Stories</li>
                                 <li>&rarr; Akzeptanzkriterien</li>
@@ -374,8 +380,9 @@ Then the detail page should be opened.
                         <h3>BDD für's Test-Driven Development ...</h3>
 
                         <ul class="keywords">
-                            <li>Akzeptanz-Tests</li>
-                            <li>fachliche Ebene</li>
+                            <li>Werkzeug: Akzeptanz-Tests</li>
+                            <li>konzentration auf Problem</li>
+                            <li>fachliche Ebene (anders als Unit-Tests)</li>
                         </ul>
 
                         <p>Für das Test-Driven Development stellt BDD ein Werkzeug zur Verfügung - nämlich Akzeptanz-Tests.</p>
@@ -484,7 +491,7 @@ Then the detail page should be opened.
                     <h2>Fallbeispiel = User-Story</h2>
                     <hr/>
                     <p class="readable">genau ein Anwendungsfall</p>
-                    <p class="readable">Einfachheit ist Trumpf</p>
+                    <p class="readable">ideal aus Benutzersicht</p>
 
                     <pre><code class="gherkin">
 User-Story: Add article to cart
@@ -493,6 +500,8 @@ As a customer
 I want to select an article
 in order to put it into my shopping cart.
                     </code></pre>
+
+                    <p class="minor readable">&rarr; vermeidet Redundanz in Lasten- und Pflichenheft, Use-Cases und Konzepten</p>
 
                     <aside class="notes">
                         <h3>Fallbeispiel = User-Story</h3>
@@ -553,7 +562,8 @@ in order to put it into my shopping cart.
                 <section>
                     <h2>Akzeptanzkriterien = Scenarios</h2>
                     <hr/>
-                    <p class="readable">mehrere Szenarien je Story</p>
+                    <p class="readable">mehrere Szenarien je User-Story</p>
+                    <p class="readable">Aktionen eines Benutzers</p>
                     <p class="readable">Sonder- und Problemfälle</p>
                     <p class="readable">Einfachheit ist Trumpf</p>
 
@@ -573,7 +583,7 @@ And the cart should contain the article "ART000042"
 
                         <ul class="keywords">
                             <li>Mehrere Akzeptanzkriterien je User-Story</li>
-                            <li>Sonder- und Problemfälle</li>
+                            <li>Aktionen, Sonder- und Problemfälle</li>
                             <li>Given, When, Then &rarr; Automatisierung</li>
                         </ul>
 
@@ -596,15 +606,15 @@ And the cart should contain the article "ART000042"
                     <hr/>
                     <p class="readable">Dadurch Einbindung in Entwicklungsprozess</p>
                     <p class="readable">Stories &rarr; Werkzeug</p>
-                    <p class="readable">Redundanz vermeiden</p>
-                    <p class="readable minor">(Ersatz für Lasten- und Pflichtenheft?)</p>
+                    <p class="readable">fachliche Fehler früh erkennen</p>
 
                     <aside class="notes">
                         <h3>Abstimmung mit Kunden</h3>
 
                         <ul class="keywords">
                             <li>Abstimmung Kunde &rarr; eingebunden</li>
-                            <li>Ersetzt teilweise Lasten- und Pflichtenheft</li>
+                            <li>Stories &rarr; Werkzeug</li>
+                            <li>fachliche Fehler früh erkennen</li>
                         </ul>
 
                         <p>Die fertigen User-Stories und Akzeptanzkriterien werden mit dem Kunden gemeinsam entwickelt, oder
@@ -779,7 +789,7 @@ And the cart should contain the article "ART000042"
 
                         <ul class="keywords">
                             <li>Teil der Porsche Holding</li>
-                            <li>400 MA in allen Bereichen der IT</li>
+                            <li>über 400 MA in allen Bereichen der IT</li>
                             <li>Softwarelösungen für Automobilhandel</li>
                             <li>BDD in mehreren großen Projekten</li>
                         </ul>
