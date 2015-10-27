@@ -143,6 +143,9 @@
     }
 }
 
+.speaker-controls-notes .value {
+    background-color: red;
+}
 
 /* fixing some stuff */
 

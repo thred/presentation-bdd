@@ -27,15 +27,22 @@
 
         Reveal.updateInfoText = function() {
             var currentSlide = Reveal.getCurrentSlide();
-            var notesNode = currentSlide.querySelector('aside.notes');
+            var notesNodes = currentSlide.querySelectorAll('aside.notes');
             var bodyNode = document.getElementById('text-body');
 
             while (bodyNode.firstChild) {
                 bodyNode.removeChild(bodyNode.firstChild);
             }
 
-            if (notesNode) {
-                bodyNode.innerHTML = notesNode.innerHTML;
+            if (notesNodes) {
+                for (var i = 0; i < notesNodes.length; i++) {
+                    console.log(notesNodes[i]);
+                    var div = document.createElement('div');
+
+                    div.innerHTML = notesNodes[i].innerHTML;
+
+                    bodyNode.appendChild(div);
+                }
             }
 
             document.getElementById('text-page-number').innerHTML = Math.floor(Reveal.getProgress() * (Reveal.getTotalSlides() - 1) + 1);
