@@ -145,6 +145,14 @@
                 </div>
 
                 <aside class="notes">
+                    <h2>Manfred Hantschel</h2>
+                    <ul class="keywords">
+                        <li>Softwareentwickler bei Porsche Informatik</li>
+                        <li>seit 15 Jahren Entwickler</li>
+                        <li>seit 2011 BDD</li>
+                    </ul>
+                </aside>
+                <aside class="notes">
                     <p>Mein name ist Manfred Hantschel und ich bin Softwareentwickler bei der Porsche Informatik GmbH in Salzburg.</p>
                     <p>Meine Aufgaben reichen von der technischen Umsetzung und Leitung bis hin zur Produktverantwortung für
                         mehrere Projekte. Die Palette der Applikationen reicht dabei von internationalen webbasierten Unternehmensportalen,
@@ -202,6 +210,7 @@
                                 <li>Product Owner <a href="javascript:Reveal.nextFragment()">&rarr; next fragment</a></li>
                             </ul>
                             <li>TDD als Benefit</li>
+                            <li>Oh, wie sich der Kunde freut!</li>
                         </ul>
                     </aside>
                     <aside class="notes">
@@ -283,9 +292,10 @@
 
                     <div class=flex>
                         <div style="width: 50%">
-                            <h2>Sprache</h2>
-                            <p class="readable">standardisiert</p>
-                            <p class="readable">detailiert fachlichen Ablauf</p>
+                            <p class="readable">standardisierte Sprache für fachlichen Ablauf</p>
+                            <h2>Beschreibt:</h2>
+                            <p class="readable">User-Stories</p>
+                            <p class="readable">Akzeptanzkriterien</p>
                         </div>
 
                         <div style="width: 50%">
@@ -297,19 +307,6 @@ As a &lt;ROLE&gt;
 I want &lt;FEATURE&gt;
 in order to &lt;BENEFIT&gt;
                                 </code></pre>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class=flex>
-                        <div style="width: 50%">
-                            <h2>Beschreibung</h2>
-                            <p class="readable">User-Stories</p>
-                            <p class="readable">Akzeptanzkriterien</p>
-                        </div>
-
-                        <div style="width: 50%">
-                            <div>
                                 <pre><code class="gherkin">
 Feature:
 
@@ -320,6 +317,10 @@ Then &lt;POSTCONDITION&gt;
                             </div>
                         </div>
                     </div>
+
+                    <p class="readable">&rarr; findet frühzeitig fachliche Fehler
+                        <img src="customer.png" class="icon" />
+                    </p>
 
                     <aside class="notes">
                         <h3>BDD für's Domain-Driven Design ...</h3>
@@ -373,11 +374,13 @@ When I click on the name of an employee
 Then the detail page should be opened.
                                 </code></pre>
                             </div>
+                            <p class="readable minor">&rarr; Schlüsselwörter</p>
                         </div>
 
                         <div style="width: 40%">
                             <h2>Akzeptanz-Tests</h2>
                             <p class="readable">Konzentration auf das Problem</p>
+                            <p class="readable">Umsetzung kann ignoriert werden</p>
                             <p class="readable">Eingehen auf fachliche Details</p>
                         </div>
                     </div>
@@ -724,16 +727,18 @@ And the cart should contain the article "ART000042"
                     <p class="readable">QA testet zunächst manuell, dann automatisiert</p>
                     <p class="readable">Automatische Spezifikation für Kunden</p>
 
-                    <div class="development" style="height: 480px; left: 512px;"></div>
-                    <div class="qa" style="height: 480px; left: 256px;"></div>
+                    <div class="development" style="height: 480px; left: 256px;"></div>
+                    <div class="qa" style="height: 480px; left: 540px;"></div>
                     <div class="customer" style="height: 480px; left: 768px;"></div>
 
                     <aside class="notes">
                         <h3>Umsetzung und Abnahme</h3>
 
                         <ul class="keywords">
-                            <li>QA einbinden</li>
+                            <li>vollständgie Entwicklung</li>
+                            <li>QA einbinden &rarr; Testumfang?</li>
                             <li>Testkatalog ergänzen</li>
+                            <li>Spezifikation für Kunden</li>
                         </ul>
                     </aside>
                     <aside class="notes">
@@ -945,7 +950,7 @@ But with a count of 2.
                 </section>
 
                 <section>
-                    <h2>Stationen eines Story-Files</h2>
+                    <h2>Stationen eines Feature-Files</h2>
                     <hr />
                     <div class="flex">
                         <img class="no-border" src="wip.svg" />
@@ -953,7 +958,7 @@ But with a count of 2.
                     </div>
 
                     <aside class="notes">
-                        <h3>Stationen eines Story-Files</h3>
+                        <h3>Stationen eines Feature-Files</h3>
 
                         <ul class="keywords">
                             <li>Verzeichnisse</li>
@@ -965,9 +970,10 @@ But with a count of 2.
                         </ul>
                     </aside>
                     <aside class="notes">
-                        <p>Im Entwicklungszyklus durchwandert ein Story-File dann mehrere Stationen. Diese sind als Verzeichnisse
-                            im Repository abgebildet. Grundsätzlich wird zwischen Stories unterschieden, die sich in Entwicklung
-                            befinden und jenen, die fertig umgesetzt wurden und Teil der Systemspezifikation werden.</p>
+                        <p>Im Entwicklungszyklus durchwandert ein Story-File (jetzt Feature-File) dann mehrere Stationen. Diese
+                            sind als Verzeichnisse im Repository abgebildet. Grundsätzlich wird zwischen Stories unterschieden,
+                            die sich in Entwicklung befinden und jenen, die fertig umgesetzt wurden und Teil der Systemspezifikation
+                            werden.</p>
                         <p>Zunächst befindet sich ein Story-File in "preparation". Soll die Story im Sprint umgesetzt werden,
                             wird das File in "current" verschoben. Wenn die Umsetzung erledigt wurde, wird das File in "finished"
                             verschoben.
@@ -1140,7 +1146,7 @@ public void ensureUserLoggedIn(String name)
                     </aside>
                 </section>
 
-                <section>
+                <section data-background="rgb(68, 32, 0)" class="contrast-bright">
                     <div class="development-female" style="top: -64px; left: 90%;"></div>
                     <div class="development-male" style="top: -64px; left: 10%;"></div>
                     <h1>Do's &amp; Don't's</h1>

@@ -189,6 +189,14 @@
     box-shadow: none;
 }
 
+.reveal .icon {
+    border: none;
+    box-shadow: none;
+    height: 3em;
+    width: auto;
+    vertical-align: middle;
+}
+
 .reveal .minor {
     font-size: 80%;
     line-height: 1em;
